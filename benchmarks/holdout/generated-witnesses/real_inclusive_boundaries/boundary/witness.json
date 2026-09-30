@@ -1,0 +1,125 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "reading",
+        "columns": [
+          {
+            "name": "reading_id",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48
+            ]
+          },
+          {
+            "name": "value",
+            "type": "REAL",
+            "nullable": true,
+            "domain": [
+              -0.5,
+              0.0,
+              0.5,
+              0.5000000000000001,
+              1.0,
+              1.5
+            ]
+          }
+        ],
+        "primary_key": [
+          "reading_id"
+        ],
+        "unique": [],
+        "foreign_keys": []
+      }
+    ]
+  },
+  "instance": {
+    "reading": [
+      [
+        45,
+        1.0
+      ]
+    ]
+  },
+  "reference": "SELECT reading_id FROM reading WHERE value>=0.5 AND value<=1.0",
+  "candidate": "SELECT reading_id FROM reading WHERE value>0.5 AND value<1.0",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 0,
+    "reference_only_count": 1,
+    "candidate_only_count": 0
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "reading_id"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "45"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "reading_id"
+    ],
+    "rows": [],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "c1be55dff8b68104163e966f473f00fbfd699172144d671d4afda03825f3d742",
+    "instance_sha256": "3fc29311bcd21721b587f0d85720de8f3a5559c9ef414c4902c75acd6d15a5c0",
+    "reference_sha256": "2d48a9a21649ff1a92d802d870eec00da074d03ac22543d3dede383e0442d788",
+    "candidate_sha256": "fab2fd076dba4a6c37b636d0fe3a174021d068d6b9281a1e280d294ae0b97435"
+  },
+  "search": {
+    "seed": 712003,
+    "strategy": "boundary",
+    "trial_budget": 32,
+    "max_rows": 8
+  },
+  "reduction": {
+    "status": "minimized",
+    "checks": 6,
+    "initial_rows": 8,
+    "final_rows": 1,
+    "row_1_minimal": true,
+    "inconclusive_checks": 0,
+    "guarantee": "No schema-valid single-row deletion preserves a successful result mismatch"
+  },
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "7a02f623b5cbf613671c2ce0311987414f4892d7b59cc0902ad783bd29499a06"
+}

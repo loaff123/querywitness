@@ -1,0 +1,205 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "purchase",
+        "columns": [
+          {
+            "name": "purchase_id",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              17,
+              29,
+              43
+            ]
+          }
+        ],
+        "primary_key": [
+          "purchase_id"
+        ],
+        "unique": [],
+        "foreign_keys": []
+      },
+      {
+        "name": "purchase_line",
+        "columns": [
+          {
+            "name": "purchase_id",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              17,
+              29,
+              43
+            ]
+          },
+          {
+            "name": "units",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              1,
+              2,
+              3,
+              5
+            ]
+          }
+        ],
+        "primary_key": [],
+        "unique": [],
+        "foreign_keys": [
+          {
+            "columns": [
+              "purchase_id"
+            ],
+            "references": {
+              "table": "purchase",
+              "columns": [
+                "purchase_id"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "annotation",
+        "columns": [
+          {
+            "name": "purchase_id",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              17,
+              29,
+              43
+            ]
+          },
+          {
+            "name": "label",
+            "type": "TEXT",
+            "nullable": false,
+            "domain": [
+              "packed",
+              "checked",
+              "東京"
+            ]
+          }
+        ],
+        "primary_key": [],
+        "unique": [
+          [
+            "purchase_id",
+            "label"
+          ]
+        ],
+        "foreign_keys": [
+          {
+            "columns": [
+              "purchase_id"
+            ],
+            "references": {
+              "table": "purchase",
+              "columns": [
+                "purchase_id"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "instance": {
+    "purchase": [
+      [
+        17
+      ]
+    ],
+    "purchase_line": [
+      [
+        17,
+        5
+      ]
+    ],
+    "annotation": []
+  },
+  "reference": "SELECT p.purchase_id,SUM(l.units) FROM purchase AS p JOIN purchase_line AS l ON l.purchase_id=p.purchase_id GROUP BY p.purchase_id",
+  "candidate": "SELECT p.purchase_id,SUM(l.units) FROM purchase AS p JOIN purchase_line AS l ON l.purchase_id=p.purchase_id JOIN annotation AS a ON a.purchase_id=p.purchase_id GROUP BY p.purchase_id",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 0,
+    "reference_only_count": 1,
+    "candidate_only_count": 0
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "purchase_id",
+      "SUM(l.units)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "17"
+        },
+        {
+          "type": "integer",
+          "value": "5"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "purchase_id",
+      "SUM(l.units)"
+    ],
+    "rows": [],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "186e58a7d54de26060b54bf584dd5aafdafe2311c0d94e591603b448f291fc61",
+    "instance_sha256": "9a31aa378cb48d6a5f8e2a6569837ea28445e83afeba6cf1b56c73b923df6395",
+    "reference_sha256": "845c1ef8ca3a97eea4c72c29eece14e3c66a89327b9fcae61f2db9442217d7c1",
+    "candidate_sha256": "c09a18283adcbefe8d0b20bf1971674540e13f4ca3b660f70f67df5283b68f5b"
+  },
+  "search": {
+    "seed": 712001,
+    "strategy": "random",
+    "trial_budget": 32,
+    "max_rows": 8
+  },
+  "reduction": {
+    "status": "minimized",
+    "checks": 7,
+    "initial_rows": 6,
+    "final_rows": 2,
+    "row_1_minimal": true,
+    "inconclusive_checks": 0,
+    "guarantee": "No schema-valid single-row deletion preserves a successful result mismatch"
+  },
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "371f12cfa79c10fa6281a47044ad8ba476c11632288afbdbc81ade3ca0bf2a02"
+}

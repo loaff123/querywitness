@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>QueryWitness · Replayable counterexample</title><style>body{max-width:1000px;margin:3rem auto;padding:0 1.3rem;font:16px/1.55 system-ui;color:#183032;background:#f5f7f4}h1{font-size:2.8rem;letter-spacing:-.04em}pre,.table{padding:1rem;background:white;border:1px solid #d4ddd6;border-radius:12px;overflow:auto}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:.55rem;border-bottom:1px solid #d4ddd6}code{overflow-wrap:anywhere}.badge{color:#80551e}footer{padding:2rem 0;font-size:.85rem}</style><body><p class="badge">OBSERVED COUNTEREXAMPLE · BAG SEMANTICS</p><h1>One database. Two different answers.</h1><p>Both queries executed successfully. This fixture preserves the declared constraints. No-counterexample results never establish equivalence.</p><h2>Reference</h2><pre>SELECT label,COUNT(*) FROM label_event GROUP BY label</pre><h2>Candidate</h2><pre>SELECT label,COUNT(DISTINCT score) FROM label_event GROUP BY label</pre><h2>Witness tables</h2><h3>label_event</h3><div class="table"><table><thead><tr><th>label</th><th>score</th></tr></thead><tbody><tr><td></td><td>0</td></tr><tr><td></td><td>0</td></tr></tbody></table></div><h2>Comparison</h2><pre>{
+  &quot;policy&quot;: &quot;bag&quot;,
+  &quot;reference_status&quot;: &quot;ok&quot;,
+  &quot;candidate_status&quot;: &quot;ok&quot;,
+  &quot;status&quot;: &quot;mismatch&quot;,
+  &quot;reason&quot;: &quot;observed_rows&quot;,
+  &quot;reference_rows&quot;: 1,
+  &quot;candidate_rows&quot;: 1,
+  &quot;reference_only_count&quot;: 1,
+  &quot;candidate_only_count&quot;: 1
+}</pre><h2>Reference output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;label&quot;,
+    &quot;COUNT(*)&quot;
+  ],
+  &quot;rows&quot;: [
+    [
+      {
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;value&quot;: &quot;&quot;
+      },
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;2&quot;
+      }
+    ]
+  ],
+  &quot;detail&quot;: null
+}</pre><h2>Candidate output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;label&quot;,
+    &quot;COUNT(DISTINCT score)&quot;
+  ],
+  &quot;rows&quot;: [
+    [
+      {
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;value&quot;: &quot;&quot;
+      },
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;1&quot;
+      }
+    ]
+  ],
+  &quot;detail&quot;: null
+}</pre><h2>Reduction</h2><pre>{
+  &quot;status&quot;: &quot;minimized&quot;,
+  &quot;checks&quot;: 16,
+  &quot;initial_rows&quot;: 8,
+  &quot;final_rows&quot;: 2,
+  &quot;row_1_minimal&quot;: true,
+  &quot;inconclusive_checks&quot;: 0,
+  &quot;guarantee&quot;: &quot;No schema-valid single-row deletion preserves a successful result mismatch&quot;
+}</pre><h2>Replay</h2><pre>querywitness replay witness.json</pre><h2>Provenance</h2><pre>{
+  &quot;sqlite_version&quot;: &quot;3.53.1&quot;,
+  &quot;sqlglot_version&quot;: &quot;27.29.0&quot;,
+  &quot;python_version&quot;: &quot;3.12.14&quot;,
+  &quot;schema_sha256&quot;: &quot;4569f8d4e433328f84b32740d086416b44d87aa1cf171bc311584d0935d38f3a&quot;,
+  &quot;instance_sha256&quot;: &quot;b57abc95acb59046337fce64e69816452c3aaae85fff33803749e6c77c939679&quot;,
+  &quot;reference_sha256&quot;: &quot;8b9fd586583767155c403e3814dd74fe15cb0c209cfbfb3bfd6b3456da350fa6&quot;,
+  &quot;candidate_sha256&quot;: &quot;b5180af6ac6d2cbd570617f017e7c6e35608ceaa61b12fca9b0194c62660edfd&quot;
+}</pre><footer>Checksum: <code>2d5315afb436e038ebc45796b92f6757e263c106d723ea266db0d49382c0e66c</code><p>Contains the supplied SQL and database values. Review before sharing. Restricted local execution is not a multi-tenant security sandbox.</p></footer></body></html>

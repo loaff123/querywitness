@@ -1,0 +1,139 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "label_event",
+        "columns": [
+          {
+            "name": "label",
+            "type": "TEXT",
+            "nullable": false,
+            "domain": [
+              "é",
+              "é",
+              "東京",
+              "",
+              "alpha"
+            ]
+          },
+          {
+            "name": "score",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              0,
+              1,
+              2,
+              5
+            ]
+          }
+        ],
+        "primary_key": [],
+        "unique": [],
+        "foreign_keys": []
+      }
+    ]
+  },
+  "instance": {
+    "label_event": [
+      [
+        "",
+        0
+      ],
+      [
+        "",
+        0
+      ]
+    ]
+  },
+  "reference": "SELECT label,COUNT(*) FROM label_event GROUP BY label",
+  "candidate": "SELECT label,COUNT(DISTINCT score) FROM label_event GROUP BY label",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 1,
+    "reference_only_count": 1,
+    "candidate_only_count": 1
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "label",
+      "COUNT(*)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": ""
+        },
+        {
+          "type": "integer",
+          "value": "2"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "label",
+      "COUNT(DISTINCT score)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": ""
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "4569f8d4e433328f84b32740d086416b44d87aa1cf171bc311584d0935d38f3a",
+    "instance_sha256": "b57abc95acb59046337fce64e69816452c3aaae85fff33803749e6c77c939679",
+    "reference_sha256": "8b9fd586583767155c403e3814dd74fe15cb0c209cfbfb3bfd6b3456da350fa6",
+    "candidate_sha256": "b5180af6ac6d2cbd570617f017e7c6e35608ceaa61b12fca9b0194c62660edfd"
+  },
+  "search": {
+    "seed": 712002,
+    "strategy": "boundary",
+    "trial_budget": 32,
+    "max_rows": 8
+  },
+  "reduction": {
+    "status": "minimized",
+    "checks": 16,
+    "initial_rows": 8,
+    "final_rows": 2,
+    "row_1_minimal": true,
+    "inconclusive_checks": 0,
+    "guarantee": "No schema-valid single-row deletion preserves a successful result mismatch"
+  },
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "2d5315afb436e038ebc45796b92f6757e263c106d723ea266db0d49382c0e66c"
+}

@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>QueryWitness · Replayable counterexample</title><style>body{max-width:1000px;margin:3rem auto;padding:0 1.3rem;font:16px/1.55 system-ui;color:#183032;background:#f5f7f4}h1{font-size:2.8rem;letter-spacing:-.04em}pre,.table{padding:1rem;background:white;border:1px solid #d4ddd6;border-radius:12px;overflow:auto}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:.55rem;border-bottom:1px solid #d4ddd6}code{overflow-wrap:anywhere}.badge{color:#80551e}footer{padding:2rem 0;font-size:.85rem}</style><body><p class="badge">OBSERVED COUNTEREXAMPLE · BAG SEMANTICS</p><h1>One database. Two different answers.</h1><p>Both queries executed successfully. This fixture preserves the declared constraints. No-counterexample results never establish equivalence.</p><h2>Reference</h2><pre>SELECT SUM(x) FROM t</pre><h2>Candidate</h2><pre>SELECT SUM(DISTINCT x) FROM t</pre><h2>Witness tables</h2><h3>t</h3><div class="table"><table><thead><tr><th>x</th></tr></thead><tbody><tr><td>20</td></tr><tr><td>20</td></tr></tbody></table></div><h2>Comparison</h2><pre>{
+  &quot;policy&quot;: &quot;bag&quot;,
+  &quot;reference_status&quot;: &quot;ok&quot;,
+  &quot;candidate_status&quot;: &quot;ok&quot;,
+  &quot;status&quot;: &quot;mismatch&quot;,
+  &quot;reason&quot;: &quot;observed_rows&quot;,
+  &quot;reference_rows&quot;: 1,
+  &quot;candidate_rows&quot;: 1,
+  &quot;reference_only_count&quot;: 1,
+  &quot;candidate_only_count&quot;: 1
+}</pre><h2>Reference output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;SUM(x)&quot;
+  ],
+  &quot;rows&quot;: [
+    [
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;40&quot;
+      }
+    ]
+  ],
+  &quot;detail&quot;: null
+}</pre><h2>Candidate output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;SUM(DISTINCT x)&quot;
+  ],
+  &quot;rows&quot;: [
+    [
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;20&quot;
+      }
+    ]
+  ],
+  &quot;detail&quot;: null
+}</pre><h2>Reduction</h2><pre>{
+  &quot;status&quot;: &quot;minimized&quot;,
+  &quot;checks&quot;: 8,
+  &quot;initial_rows&quot;: 7,
+  &quot;final_rows&quot;: 2,
+  &quot;row_1_minimal&quot;: true,
+  &quot;inconclusive_checks&quot;: 0,
+  &quot;guarantee&quot;: &quot;No schema-valid single-row deletion preserves a successful result mismatch&quot;
+}</pre><h2>Replay</h2><pre>querywitness replay witness.json</pre><h2>Provenance</h2><pre>{
+  &quot;sqlite_version&quot;: &quot;3.53.1&quot;,
+  &quot;sqlglot_version&quot;: &quot;27.29.0&quot;,
+  &quot;python_version&quot;: &quot;3.12.14&quot;,
+  &quot;schema_sha256&quot;: &quot;13599c71dcf946d4cb364292ba7f4f73d8e57c819ed4764a3437f36e099237c2&quot;,
+  &quot;instance_sha256&quot;: &quot;9e2e066a407d219aaeba4a6d73748ec6b44a0f091393f50a69c3be70d1a2bb99&quot;,
+  &quot;reference_sha256&quot;: &quot;09467db290b7a5d2fbaafbd301d0aa02a110671edff6df8fd56065c866e30c93&quot;,
+  &quot;candidate_sha256&quot;: &quot;5a2bdb54cf70f65bf4bcb4538b05de13c092f1ef6a0b708583f996f813731b3a&quot;
+}</pre><footer>Checksum: <code>5697318bb45c87287bf35d9d9e7dd048b8c5eedad083e9c3b79dc70bee8bb7cf</code><p>Contains the supplied SQL and database values. Review before sharing. Restricted local execution is not a multi-tenant security sandbox.</p></footer></body></html>

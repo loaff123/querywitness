@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>QueryWitness · Replayable counterexample</title><style>body{max-width:1000px;margin:3rem auto;padding:0 1.3rem;font:16px/1.55 system-ui;color:#183032;background:#f5f7f4}h1{font-size:2.8rem;letter-spacing:-.04em}pre,.table{padding:1rem;background:white;border:1px solid #d4ddd6;border-radius:12px;overflow:auto}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:.55rem;border-bottom:1px solid #d4ddd6}code{overflow-wrap:anywhere}.badge{color:#80551e}footer{padding:2rem 0;font-size:.85rem}</style><body><p class="badge">OBSERVED COUNTEREXAMPLE · BAG SEMANTICS</p><h1>One database. Two different answers.</h1><p>Both queries executed successfully. This fixture preserves the declared constraints. No-counterexample results never establish equivalence.</p><h2>Reference</h2><pre>SELECT p.purchase_id,SUM(l.units) FROM purchase AS p JOIN purchase_line AS l ON l.purchase_id=p.purchase_id GROUP BY p.purchase_id</pre><h2>Candidate</h2><pre>SELECT p.purchase_id,SUM(l.units) FROM purchase AS p JOIN purchase_line AS l ON l.purchase_id=p.purchase_id JOIN annotation AS a ON a.purchase_id=p.purchase_id GROUP BY p.purchase_id</pre><h2>Witness tables</h2><h3>purchase</h3><div class="table"><table><thead><tr><th>purchase_id</th></tr></thead><tbody><tr><td>17</td></tr></tbody></table></div><h3>purchase_line</h3><div class="table"><table><thead><tr><th>purchase_id</th><th>units</th></tr></thead><tbody><tr><td>17</td><td>5</td></tr></tbody></table></div><h3>annotation</h3><div class="table"><table><thead><tr><th>purchase_id</th><th>label</th></tr></thead><tbody></tbody></table></div><h2>Comparison</h2><pre>{
+  &quot;policy&quot;: &quot;bag&quot;,
+  &quot;reference_status&quot;: &quot;ok&quot;,
+  &quot;candidate_status&quot;: &quot;ok&quot;,
+  &quot;status&quot;: &quot;mismatch&quot;,
+  &quot;reason&quot;: &quot;observed_rows&quot;,
+  &quot;reference_rows&quot;: 1,
+  &quot;candidate_rows&quot;: 0,
+  &quot;reference_only_count&quot;: 1,
+  &quot;candidate_only_count&quot;: 0
+}</pre><h2>Reference output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;purchase_id&quot;,
+    &quot;SUM(l.units)&quot;
+  ],
+  &quot;rows&quot;: [
+    [
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;17&quot;
+      },
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;5&quot;
+      }
+    ]
+  ],
+  &quot;detail&quot;: null
+}</pre><h2>Candidate output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;purchase_id&quot;,
+    &quot;SUM(l.units)&quot;
+  ],
+  &quot;rows&quot;: [],
+  &quot;detail&quot;: null
+}</pre><h2>Reduction</h2><pre>{
+  &quot;status&quot;: &quot;minimized&quot;,
+  &quot;checks&quot;: 7,
+  &quot;initial_rows&quot;: 6,
+  &quot;final_rows&quot;: 2,
+  &quot;row_1_minimal&quot;: true,
+  &quot;inconclusive_checks&quot;: 0,
+  &quot;guarantee&quot;: &quot;No schema-valid single-row deletion preserves a successful result mismatch&quot;
+}</pre><h2>Replay</h2><pre>querywitness replay witness.json</pre><h2>Provenance</h2><pre>{
+  &quot;sqlite_version&quot;: &quot;3.53.1&quot;,
+  &quot;sqlglot_version&quot;: &quot;27.29.0&quot;,
+  &quot;python_version&quot;: &quot;3.12.14&quot;,
+  &quot;schema_sha256&quot;: &quot;186e58a7d54de26060b54bf584dd5aafdafe2311c0d94e591603b448f291fc61&quot;,
+  &quot;instance_sha256&quot;: &quot;9a31aa378cb48d6a5f8e2a6569837ea28445e83afeba6cf1b56c73b923df6395&quot;,
+  &quot;reference_sha256&quot;: &quot;845c1ef8ca3a97eea4c72c29eece14e3c66a89327b9fcae61f2db9442217d7c1&quot;,
+  &quot;candidate_sha256&quot;: &quot;c09a18283adcbefe8d0b20bf1971674540e13f4ca3b660f70f67df5283b68f5b&quot;
+}</pre><footer>Checksum: <code>94dcae65c53bc056e2b6b628d548e7ebc3835efe7bed0a807b7f427b011a14e1</code><p>Contains the supplied SQL and database values. Review before sharing. Restricted local execution is not a multi-tenant security sandbox.</p></footer></body></html>

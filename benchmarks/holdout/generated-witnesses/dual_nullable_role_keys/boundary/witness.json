@@ -1,0 +1,225 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "account",
+        "columns": [
+          {
+            "name": "account_id",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              101,
+              202,
+              303
+            ]
+          },
+          {
+            "name": "handle",
+            "type": "TEXT",
+            "nullable": false,
+            "domain": [
+              "élise",
+              "東京",
+              "dev"
+            ]
+          }
+        ],
+        "primary_key": [
+          "account_id"
+        ],
+        "unique": [
+          [
+            "handle"
+          ]
+        ],
+        "foreign_keys": []
+      },
+      {
+        "name": "review_job",
+        "columns": [
+          {
+            "name": "job_id",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "name": "creator_id",
+            "type": "INTEGER",
+            "nullable": true,
+            "domain": [
+              101,
+              202,
+              303
+            ]
+          },
+          {
+            "name": "approver_id",
+            "type": "INTEGER",
+            "nullable": true,
+            "domain": [
+              101,
+              202,
+              303
+            ]
+          }
+        ],
+        "primary_key": [
+          "job_id"
+        ],
+        "unique": [],
+        "foreign_keys": [
+          {
+            "columns": [
+              "creator_id"
+            ],
+            "references": {
+              "table": "account",
+              "columns": [
+                "account_id"
+              ]
+            }
+          },
+          {
+            "columns": [
+              "approver_id"
+            ],
+            "references": {
+              "table": "account",
+              "columns": [
+                "account_id"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "instance": {
+    "account": [
+      [
+        202,
+        "élise"
+      ],
+      [
+        101,
+        "dev"
+      ]
+    ],
+    "review_job": [
+      [
+        14,
+        101,
+        202
+      ]
+    ]
+  },
+  "reference": "SELECT j.job_id,c.handle,a.handle FROM review_job AS j LEFT JOIN account AS c ON c.account_id=j.creator_id LEFT JOIN account AS a ON a.account_id=j.approver_id",
+  "candidate": "SELECT j.job_id,c.handle,a.handle FROM review_job AS j LEFT JOIN account AS c ON c.account_id=j.creator_id LEFT JOIN account AS a ON a.account_id=j.creator_id",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 1,
+    "reference_only_count": 1,
+    "candidate_only_count": 1
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "job_id",
+      "handle",
+      "handle"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "14"
+        },
+        {
+          "type": "text",
+          "value": "dev"
+        },
+        {
+          "type": "text",
+          "value": "élise"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "job_id",
+      "handle",
+      "handle"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "14"
+        },
+        {
+          "type": "text",
+          "value": "dev"
+        },
+        {
+          "type": "text",
+          "value": "dev"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "b787aca8eef9bdecc34916dd186015b99232847329b68002025dbe3f3895afb0",
+    "instance_sha256": "3ab5517ae3d12a1287491e01b7b3c77fbdbf3c233de14e89bb37d928915c7e67",
+    "reference_sha256": "e2e2fa5f9ce6a489ca3feae3c9acfddea4a6c87383740b4fe1abf105e6d9f679",
+    "candidate_sha256": "9b6039da783fd08dd3caa412d58a800fc69ca003902b7a07cd89fd6ecd514076"
+  },
+  "search": {
+    "seed": 712001,
+    "strategy": "boundary",
+    "trial_budget": 32,
+    "max_rows": 8
+  },
+  "reduction": {
+    "status": "minimized",
+    "checks": 8,
+    "initial_rows": 9,
+    "final_rows": 3,
+    "row_1_minimal": true,
+    "inconclusive_checks": 0,
+    "guarantee": "No schema-valid single-row deletion preserves a successful result mismatch"
+  },
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "e62f461a3a947c5dce99b4852a9b9992a513ff19839565e9f6f274124abb694e"
+}

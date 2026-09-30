@@ -1,0 +1,1008 @@
+{
+  "format": "querywitness/frozen-validation-cases",
+  "format_version": 1,
+  "license": "MIT",
+  "description": "Small independently-authored holdout validation set, authored separately from the 12 development catalog fixtures after reading the API and catalog to avoid exact copies. Not an external benchmark, expert-reviewed set, or statistically representative sample. The author could inspect generator code; this is not a blind evaluation.",
+  "freeze_policy": "Freeze this complete case/parameter file and record its raw-byte SHA256 before the first generated evaluation. Never tune cases, domains, seeds, budgets, or generator after observing these results. Record misses, unsupported cases, errors, and invalid oracle fixtures explicitly.",
+  "evaluation": {
+    "methods": [
+      "random",
+      "boundary"
+    ],
+    "variants": [
+      "mutant",
+      "equivalent_control"
+    ],
+    "policy": "bag",
+    "seed_start": 712000,
+    "trials_per_method": 32,
+    "seed_end_inclusive": 712031,
+    "max_rows": 8,
+    "execution_limits": {
+      "rows": 10000,
+      "bytes": 2000000,
+      "vm_steps": 1000000,
+      "seconds": 2.0,
+      "sql_bytes": 32768
+    },
+    "stop_after_first_hit": false,
+    "reduction": {
+      "max_checks": 500,
+      "seconds": 30.0
+    }
+  },
+  "cases": [
+    {
+      "id": "composite_partial_null",
+      "title": "Partial NULL composite references count as incomplete",
+      "mechanism": "A composite foreign key permits one NULL component; requiring both components to be NULL misses partial references. The NOT EXISTS control relies on the declared composite FK and non-NULL parent primary key.",
+      "schema": {
+        "tables": [
+          {
+            "name": "rack",
+            "columns": [
+              {
+                "name": "zone",
+                "type": "TEXT",
+                "nullable": false,
+                "domain": [
+                  "east",
+                  "west"
+                ]
+              },
+              {
+                "name": "slot",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  7,
+                  9
+                ]
+              }
+            ],
+            "primary_key": [
+              "zone",
+              "slot"
+            ]
+          },
+          {
+            "name": "dispatch",
+            "columns": [
+              {
+                "name": "ticket",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36
+                ]
+              },
+              {
+                "name": "zone",
+                "type": "TEXT",
+                "nullable": true,
+                "domain": [
+                  "east",
+                  "west"
+                ]
+              },
+              {
+                "name": "slot",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  7,
+                  9
+                ]
+              }
+            ],
+            "primary_key": [
+              "ticket"
+            ],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "zone",
+                  "slot"
+                ],
+                "references": {
+                  "table": "rack",
+                  "columns": [
+                    "zone",
+                    "slot"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT ticket FROM dispatch WHERE zone IS NULL OR slot IS NULL",
+      "mutant": "SELECT ticket FROM dispatch WHERE zone IS NULL AND slot IS NULL",
+      "equivalent_control": "SELECT d.ticket FROM dispatch AS d WHERE NOT EXISTS (SELECT 1 FROM rack AS r WHERE r.zone=d.zone AND r.slot=d.slot)",
+      "masking": {
+        "instance": {
+          "rack": [
+            [
+              "east",
+              7
+            ]
+          ],
+          "dispatch": [
+            [
+              31,
+              "east",
+              7
+            ],
+            [
+              34,
+              null,
+              null
+            ]
+          ]
+        },
+        "expected_reference": [
+          [
+            34
+          ]
+        ],
+        "expected_mutant": [
+          [
+            34
+          ]
+        ],
+        "expected_equivalent_control": [
+          [
+            34
+          ]
+        ]
+      },
+      "revealing": {
+        "instance": {
+          "rack": [
+            [
+              "east",
+              7
+            ]
+          ],
+          "dispatch": [
+            [
+              31,
+              "east",
+              null
+            ],
+            [
+              32,
+              null,
+              7
+            ],
+            [
+              33,
+              "east",
+              7
+            ],
+            [
+              34,
+              null,
+              null
+            ]
+          ]
+        },
+        "expected_reference": [
+          [
+            31
+          ],
+          [
+            32
+          ],
+          [
+            34
+          ]
+        ],
+        "expected_mutant": [
+          [
+            34
+          ]
+        ],
+        "expected_equivalent_control": [
+          [
+            31
+          ],
+          [
+            32
+          ],
+          [
+            34
+          ]
+        ]
+      },
+      "oracle_explanation": "Tickets 31 and 32 each lack one key component and 34 lacks both; ticket 33 has a complete matching rack. The mutant retains only 34."
+    },
+    {
+      "id": "dual_nullable_role_keys",
+      "title": "Two nullable role foreign keys must use their own columns",
+      "mechanism": "A mistaken approver join reuses the creator key. Independent nullable creator and approver references expose changed names and NULL extension, including Unicode names.",
+      "schema": {
+        "tables": [
+          {
+            "name": "account",
+            "columns": [
+              {
+                "name": "account_id",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  101,
+                  202,
+                  303
+                ]
+              },
+              {
+                "name": "handle",
+                "type": "TEXT",
+                "nullable": false,
+                "domain": [
+                  "élise",
+                  "東京",
+                  "dev"
+                ]
+              }
+            ],
+            "primary_key": [
+              "account_id"
+            ],
+            "unique": [
+              [
+                "handle"
+              ]
+            ]
+          },
+          {
+            "name": "review_job",
+            "columns": [
+              {
+                "name": "job_id",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16
+                ]
+              },
+              {
+                "name": "creator_id",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  101,
+                  202,
+                  303
+                ]
+              },
+              {
+                "name": "approver_id",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  101,
+                  202,
+                  303
+                ]
+              }
+            ],
+            "primary_key": [
+              "job_id"
+            ],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "creator_id"
+                ],
+                "references": {
+                  "table": "account",
+                  "columns": [
+                    "account_id"
+                  ]
+                }
+              },
+              {
+                "columns": [
+                  "approver_id"
+                ],
+                "references": {
+                  "table": "account",
+                  "columns": [
+                    "account_id"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT j.job_id,c.handle,a.handle FROM review_job AS j LEFT JOIN account AS c ON c.account_id=j.creator_id LEFT JOIN account AS a ON a.account_id=j.approver_id",
+      "mutant": "SELECT j.job_id,c.handle,a.handle FROM review_job AS j LEFT JOIN account AS c ON c.account_id=j.creator_id LEFT JOIN account AS a ON a.account_id=j.creator_id",
+      "equivalent_control": "SELECT j.job_id,c.handle,a.handle FROM review_job AS j LEFT JOIN account AS a ON a.account_id=j.approver_id LEFT JOIN account AS c ON c.account_id=j.creator_id",
+      "masking": {
+        "instance": {
+          "account": [
+            [
+              101,
+              "élise"
+            ]
+          ],
+          "review_job": [
+            [
+              11,
+              101,
+              101
+            ],
+            [
+              14,
+              null,
+              null
+            ]
+          ]
+        },
+        "expected_reference": [
+          [
+            11,
+            "élise",
+            "élise"
+          ],
+          [
+            14,
+            null,
+            null
+          ]
+        ],
+        "expected_mutant": [
+          [
+            11,
+            "élise",
+            "élise"
+          ],
+          [
+            14,
+            null,
+            null
+          ]
+        ],
+        "expected_equivalent_control": [
+          [
+            11,
+            "élise",
+            "élise"
+          ],
+          [
+            14,
+            null,
+            null
+          ]
+        ]
+      },
+      "revealing": {
+        "instance": {
+          "account": [
+            [
+              101,
+              "élise"
+            ],
+            [
+              202,
+              "東京"
+            ]
+          ],
+          "review_job": [
+            [
+              11,
+              101,
+              202
+            ],
+            [
+              12,
+              101,
+              null
+            ],
+            [
+              13,
+              null,
+              202
+            ],
+            [
+              14,
+              null,
+              null
+            ]
+          ]
+        },
+        "expected_reference": [
+          [
+            11,
+            "élise",
+            "東京"
+          ],
+          [
+            12,
+            "élise",
+            null
+          ],
+          [
+            13,
+            null,
+            "東京"
+          ],
+          [
+            14,
+            null,
+            null
+          ]
+        ],
+        "expected_mutant": [
+          [
+            11,
+            "élise",
+            "élise"
+          ],
+          [
+            12,
+            "élise",
+            "élise"
+          ],
+          [
+            13,
+            null,
+            null
+          ],
+          [
+            14,
+            null,
+            null
+          ]
+        ],
+        "expected_equivalent_control": [
+          [
+            11,
+            "élise",
+            "東京"
+          ],
+          [
+            12,
+            "élise",
+            null
+          ],
+          [
+            13,
+            null,
+            "東京"
+          ],
+          [
+            14,
+            null,
+            null
+          ]
+        ]
+      },
+      "oracle_explanation": "Job 11 has different creator and approver; job 12 has only a creator, job 13 only an approver, and job 14 neither. Each left join independently supplies its role or NULL."
+    },
+    {
+      "id": "unicode_duplicate_labels",
+      "title": "Duplicate Unicode labels retain row multiplicity",
+      "mechanism": "Counting distinct scores within a text group undercounts duplicate rows. Composed é and decomposed e + combining acute are different SQLite BINARY text values; the suite does not request Unicode normalization.",
+      "schema": {
+        "tables": [
+          {
+            "name": "label_event",
+            "columns": [
+              {
+                "name": "label",
+                "type": "TEXT",
+                "nullable": false,
+                "domain": [
+                  "é",
+                  "é",
+                  "東京",
+                  "",
+                  "alpha"
+                ]
+              },
+              {
+                "name": "score",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  0,
+                  1,
+                  2,
+                  5
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT label,COUNT(*) FROM label_event GROUP BY label",
+      "mutant": "SELECT label,COUNT(DISTINCT score) FROM label_event GROUP BY label",
+      "equivalent_control": "SELECT label,SUM(1) FROM label_event GROUP BY label",
+      "masking": {
+        "instance": {
+          "label_event": [
+            [
+              "é",
+              1
+            ],
+            [
+              "東京",
+              2
+            ]
+          ]
+        },
+        "expected_reference": [
+          [
+            "é",
+            1
+          ],
+          [
+            "東京",
+            1
+          ]
+        ],
+        "expected_mutant": [
+          [
+            "é",
+            1
+          ],
+          [
+            "東京",
+            1
+          ]
+        ],
+        "expected_equivalent_control": [
+          [
+            "é",
+            1
+          ],
+          [
+            "東京",
+            1
+          ]
+        ]
+      },
+      "revealing": {
+        "instance": {
+          "label_event": [
+            [
+              "é",
+              1
+            ],
+            [
+              "é",
+              1
+            ],
+            [
+              "é",
+              1
+            ],
+            [
+              "東京",
+              2
+            ],
+            [
+              "東京",
+              5
+            ]
+          ]
+        },
+        "expected_reference": [
+          [
+            "é",
+            2
+          ],
+          [
+            "é",
+            1
+          ],
+          [
+            "東京",
+            2
+          ]
+        ],
+        "expected_mutant": [
+          [
+            "é",
+            1
+          ],
+          [
+            "é",
+            1
+          ],
+          [
+            "東京",
+            2
+          ]
+        ],
+        "expected_equivalent_control": [
+          [
+            "é",
+            2
+          ],
+          [
+            "é",
+            1
+          ],
+          [
+            "東京",
+            2
+          ]
+        ]
+      },
+      "oracle_explanation": "The composed label has two rows but one distinct score; the decomposed label is its own one-row group; 東京 has two rows with two different scores."
+    },
+    {
+      "id": "real_inclusive_boundaries",
+      "title": "Closed REAL interval keeps both endpoints",
+      "mechanism": "Replacing inclusive comparisons by strict inequalities loses exactly representable endpoints. A neighboring representable float above 0.5 is retained by both queries, and NULL is retained by neither.",
+      "schema": {
+        "tables": [
+          {
+            "name": "reading",
+            "columns": [
+              {
+                "name": "reading_id",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  41,
+                  42,
+                  43,
+                  44,
+                  45,
+                  46,
+                  47,
+                  48
+                ]
+              },
+              {
+                "name": "value",
+                "type": "REAL",
+                "nullable": true,
+                "domain": [
+                  -0.5,
+                  0.0,
+                  0.5,
+                  0.5000000000000001,
+                  1.0,
+                  1.5
+                ]
+              }
+            ],
+            "primary_key": [
+              "reading_id"
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT reading_id FROM reading WHERE value>=0.5 AND value<=1.0",
+      "mutant": "SELECT reading_id FROM reading WHERE value>0.5 AND value<1.0",
+      "equivalent_control": "SELECT reading_id FROM reading WHERE value BETWEEN 0.5 AND 1.0",
+      "masking": {
+        "instance": {
+          "reading": [
+            [
+              41,
+              0.0
+            ],
+            [
+              43,
+              0.5000000000000001
+            ],
+            [
+              45,
+              null
+            ]
+          ]
+        },
+        "expected_reference": [
+          [
+            43
+          ]
+        ],
+        "expected_mutant": [
+          [
+            43
+          ]
+        ],
+        "expected_equivalent_control": [
+          [
+            43
+          ]
+        ]
+      },
+      "revealing": {
+        "instance": {
+          "reading": [
+            [
+              41,
+              0.0
+            ],
+            [
+              42,
+              0.5
+            ],
+            [
+              43,
+              0.5000000000000001
+            ],
+            [
+              44,
+              1.0
+            ],
+            [
+              45,
+              null
+            ]
+          ]
+        },
+        "expected_reference": [
+          [
+            42
+          ],
+          [
+            43
+          ],
+          [
+            44
+          ]
+        ],
+        "expected_mutant": [
+          [
+            43
+          ]
+        ],
+        "expected_equivalent_control": [
+          [
+            42
+          ],
+          [
+            43
+          ],
+          [
+            44
+          ]
+        ]
+      },
+      "oracle_explanation": "The closed range includes 0.5, its supplied next representable neighbor, and 1.0. Strict inequalities remove the two endpoints."
+    },
+    {
+      "id": "three_table_join_grain",
+      "title": "A second one-to-many relation inflates line totals",
+      "mechanism": "Joining per-order annotations before aggregation repeats each line once per annotation. The correct total is computed at line grain; the equivalent control aggregates lines before joining the primary-key order table.",
+      "schema": {
+        "tables": [
+          {
+            "name": "purchase",
+            "columns": [
+              {
+                "name": "purchase_id",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  17,
+                  29,
+                  43
+                ]
+              }
+            ],
+            "primary_key": [
+              "purchase_id"
+            ]
+          },
+          {
+            "name": "purchase_line",
+            "columns": [
+              {
+                "name": "purchase_id",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  17,
+                  29,
+                  43
+                ]
+              },
+              {
+                "name": "units",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  1,
+                  2,
+                  3,
+                  5
+                ]
+              }
+            ],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "purchase_id"
+                ],
+                "references": {
+                  "table": "purchase",
+                  "columns": [
+                    "purchase_id"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "annotation",
+            "columns": [
+              {
+                "name": "purchase_id",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  17,
+                  29,
+                  43
+                ]
+              },
+              {
+                "name": "label",
+                "type": "TEXT",
+                "nullable": false,
+                "domain": [
+                  "packed",
+                  "checked",
+                  "東京"
+                ]
+              }
+            ],
+            "unique": [
+              [
+                "purchase_id",
+                "label"
+              ]
+            ],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "purchase_id"
+                ],
+                "references": {
+                  "table": "purchase",
+                  "columns": [
+                    "purchase_id"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT p.purchase_id,SUM(l.units) FROM purchase AS p JOIN purchase_line AS l ON l.purchase_id=p.purchase_id GROUP BY p.purchase_id",
+      "mutant": "SELECT p.purchase_id,SUM(l.units) FROM purchase AS p JOIN purchase_line AS l ON l.purchase_id=p.purchase_id JOIN annotation AS a ON a.purchase_id=p.purchase_id GROUP BY p.purchase_id",
+      "equivalent_control": "SELECT p.purchase_id,s.units FROM purchase AS p JOIN (SELECT purchase_id,SUM(units) AS units FROM purchase_line GROUP BY purchase_id) AS s ON s.purchase_id=p.purchase_id",
+      "masking": {
+        "instance": {
+          "purchase": [
+            [
+              17
+            ]
+          ],
+          "purchase_line": [
+            [
+              17,
+              2
+            ]
+          ],
+          "annotation": [
+            [
+              17,
+              "packed"
+            ]
+          ]
+        },
+        "expected_reference": [
+          [
+            17,
+            2
+          ]
+        ],
+        "expected_mutant": [
+          [
+            17,
+            2
+          ]
+        ],
+        "expected_equivalent_control": [
+          [
+            17,
+            2
+          ]
+        ]
+      },
+      "revealing": {
+        "instance": {
+          "purchase": [
+            [
+              17
+            ],
+            [
+              29
+            ]
+          ],
+          "purchase_line": [
+            [
+              17,
+              2
+            ],
+            [
+              17,
+              5
+            ],
+            [
+              29,
+              1
+            ]
+          ],
+          "annotation": [
+            [
+              17,
+              "packed"
+            ],
+            [
+              17,
+              "checked"
+            ],
+            [
+              29,
+              "東京"
+            ]
+          ]
+        },
+        "expected_reference": [
+          [
+            17,
+            7
+          ],
+          [
+            29,
+            1
+          ]
+        ],
+        "expected_mutant": [
+          [
+            17,
+            14
+          ],
+          [
+            29,
+            1
+          ]
+        ],
+        "expected_equivalent_control": [
+          [
+            17,
+            7
+          ],
+          [
+            29,
+            1
+          ]
+        ]
+      },
+      "oracle_explanation": "Purchase 17 totals 2+5=7 units, but two annotations duplicate both lines, yielding 14. Purchase 29 has one unit and one annotation, so both queries return 1."
+    }
+  ]
+}

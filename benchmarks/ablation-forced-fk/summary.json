@@ -1,0 +1,979 @@
+{
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "catalog_sha256": "b66d9951c9e9c989f390b008ec3b437c67e0af9eeb58d4d1bd575db6d6151542",
+  "families": 12,
+  "trials_per_run": 16,
+  "repeats": 8,
+  "seed": 20260930,
+  "max_rows": 8,
+  "matched_budget_runs": 384,
+  "matched_budget_instance_evaluations": 6144,
+  "control_mismatches": 0,
+  "inconclusive_instances": 0,
+  "benign_detected_families": 0,
+  "method_detection": {
+    "random": {
+      "detected_family_runs": 85,
+      "total_family_runs": 96,
+      "detected_distinct_families": 11
+    },
+    "boundary": {
+      "detected_family_runs": 88,
+      "total_family_runs": 96,
+      "detected_distinct_families": 11
+    }
+  },
+  "by_family": [
+    {
+      "id": "join_multiplicity",
+      "title": "A join multiplies existence",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 89,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              3,
+              1,
+              2,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 88,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "count_nullable",
+      "title": "COUNT ignores NULL values",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 65,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              2,
+              1,
+              6,
+              3,
+              2,
+              3
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 75,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "not_in_null",
+      "title": "NOT IN meets an unknown",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "left_join_filter",
+      "title": "WHERE removes the preserved side",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 91,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              1,
+              1,
+              3,
+              1,
+              2,
+              2
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 85,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              2,
+              4,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "sum_distinct",
+      "title": "A value is not a row identity",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 49,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              6,
+              4,
+              5,
+              3,
+              1,
+              3,
+              4
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 61,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "average_grain",
+      "title": "The average of averages changes weight",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 65,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              2,
+              1,
+              3,
+              1,
+              3,
+              4
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 68,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              4,
+              1,
+              1,
+              1,
+              1,
+              2,
+              4
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "null_negation",
+      "title": "NULL is not ordinary negation",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 65,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              2,
+              1,
+              6,
+              3,
+              2,
+              3
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 75,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "empty_aggregate",
+      "title": "An empty sum needs a policy",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 5,
+            "instance_evaluations": 128,
+            "mismatch_instances": 12,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              5,
+              9,
+              5,
+              null,
+              2,
+              null,
+              2,
+              null
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 25,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              5,
+              7,
+              5,
+              7,
+              6,
+              7,
+              7,
+              7
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "union_multiplicity",
+      "title": "UNION eliminates duplicates",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 70,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              3,
+              4,
+              3,
+              1,
+              3,
+              2
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 84,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "correlated_filter",
+      "title": "A missing correlation becomes global",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 77,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              3,
+              1,
+              3,
+              1,
+              2,
+              2
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 75,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              2,
+              4,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "inclusive_boundary",
+      "title": "One endpoint changes the answer",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 57,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              6,
+              4,
+              1,
+              4,
+              8,
+              3,
+              3,
+              2
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 60,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              6,
+              4,
+              1,
+              1,
+              1,
+              3,
+              1,
+              1
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    },
+    {
+      "id": "having_grain",
+      "title": "Filtering rows is not filtering groups",
+      "methods": {
+        "random": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 81,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              2,
+              1,
+              3,
+              1,
+              2,
+              2
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "boundary": {
+          "mutant": {
+            "runs": 8,
+            "detected_runs": 8,
+            "instance_evaluations": 128,
+            "mismatch_instances": 85,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "equivalent_control": {
+            "runs": 8,
+            "detected_runs": 0,
+            "instance_evaluations": 128,
+            "mismatch_instances": 0,
+            "inconclusive_instances": 0,
+            "first_mismatch_trials": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      },
+      "benign_status": "agreement"
+    }
+  ],
+  "elapsed_seconds": 22.426957,
+  "interpretation": "Synthetic regression coverage only. Seed repetitions are not independent tasks. No LLM, SOTA, population-generalization, or equivalence-proof claim."
+}

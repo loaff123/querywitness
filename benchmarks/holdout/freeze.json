@@ -1,0 +1,11 @@
+{
+  "format": "querywitness/holdout-freeze",
+  "format_version": 1,
+  "frozen_at_runtime_utc": "2026-09-30T15:56:58.956738+00:00",
+  "case_file": "benchmarks/holdout-cases.json",
+  "case_file_sha256": "db43f222ba5d2e36999abf78e269322a20cf149253a95dadadfcc5431b366ae7",
+  "generator_file": "src/querywitness/generate.py",
+  "generator_sha256": "dbd35f2b1f119f8044016856dabfd43128a7e719406a8687193f977b6b5bc522",
+  "first_generated_evaluation_started": false,
+  "protocol": "All five cases, literal oracle outputs, domains, constraints, seeds and budgets fixed before any generated evaluation. No tuning after freeze. Generator nullable-FK correction completed before freeze."
+}

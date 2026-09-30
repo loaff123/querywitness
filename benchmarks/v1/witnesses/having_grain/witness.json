@@ -1,0 +1,139 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "t",
+        "columns": [
+          {
+            "name": "g",
+            "type": "TEXT",
+            "nullable": false,
+            "domain": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "name": "x",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              20
+            ]
+          }
+        ],
+        "primary_key": [],
+        "unique": [],
+        "foreign_keys": []
+      }
+    ]
+  },
+  "instance": {
+    "t": [
+      [
+        "B",
+        10
+      ],
+      [
+        "B",
+        20
+      ]
+    ]
+  },
+  "reference": "SELECT g,SUM(x) FROM t GROUP BY g HAVING SUM(x)>10",
+  "candidate": "SELECT g,SUM(x) FROM t WHERE x>10 GROUP BY g",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 1,
+    "reference_only_count": 1,
+    "candidate_only_count": 1
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "g",
+      "SUM(x)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "B"
+        },
+        {
+          "type": "integer",
+          "value": "30"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "g",
+      "SUM(x)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "B"
+        },
+        {
+          "type": "integer",
+          "value": "20"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "b97604064863f5d931e5914fb1fadaea93344d7d1a7edf714f5a4a12d990e6ca",
+    "instance_sha256": "eefc98d44e1e2d9d4fa6931411d45c6ef69d94d48ad2b6401726185729546048",
+    "reference_sha256": "5734a598bd1557086403548dda7c6f460385632b36708a72e83181366323e406",
+    "candidate_sha256": "bd59a7773e7a31e35c87bbfe8c848f20c6af02097e0f022d857a56c08e639706"
+  },
+  "search": {
+    "seed": 20260930,
+    "strategy": "random",
+    "trial_budget": 16,
+    "max_rows": 8
+  },
+  "reduction": {
+    "status": "minimized",
+    "checks": 8,
+    "initial_rows": 7,
+    "final_rows": 2,
+    "row_1_minimal": true,
+    "inconclusive_checks": 0,
+    "guarantee": "No schema-valid single-row deletion preserves a successful result mismatch"
+  },
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "597461de5d81a9866efcc87e3a9505e664646329ed74643d82542f0d33d4febf"
+}

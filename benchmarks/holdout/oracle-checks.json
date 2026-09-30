@@ -1,0 +1,1394 @@
+[
+  {
+    "case": "composite_partial_null",
+    "fixture": "masking",
+    "query": "reference",
+    "expected_rows": [
+      [
+        34
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "ticket"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "34"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "composite_partial_null",
+    "fixture": "masking",
+    "query": "mutant",
+    "expected_rows": [
+      [
+        34
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "ticket"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "34"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "composite_partial_null",
+    "fixture": "masking",
+    "query": "equivalent_control",
+    "expected_rows": [
+      [
+        34
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "ticket"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "34"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "composite_partial_null",
+    "fixture": "revealing",
+    "query": "reference",
+    "expected_rows": [
+      [
+        31
+      ],
+      [
+        32
+      ],
+      [
+        34
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "ticket"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "31"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "32"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "34"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "composite_partial_null",
+    "fixture": "revealing",
+    "query": "mutant",
+    "expected_rows": [
+      [
+        34
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "ticket"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "34"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "composite_partial_null",
+    "fixture": "revealing",
+    "query": "equivalent_control",
+    "expected_rows": [
+      [
+        31
+      ],
+      [
+        32
+      ],
+      [
+        34
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "ticket"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "31"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "32"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "34"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "dual_nullable_role_keys",
+    "fixture": "masking",
+    "query": "reference",
+    "expected_rows": [
+      [
+        11,
+        "élise",
+        "élise"
+      ],
+      [
+        14,
+        null,
+        null
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "job_id",
+        "handle",
+        "handle"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "11"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "14"
+          },
+          {
+            "type": "null",
+            "value": null
+          },
+          {
+            "type": "null",
+            "value": null
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "dual_nullable_role_keys",
+    "fixture": "masking",
+    "query": "mutant",
+    "expected_rows": [
+      [
+        11,
+        "élise",
+        "élise"
+      ],
+      [
+        14,
+        null,
+        null
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "job_id",
+        "handle",
+        "handle"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "11"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "14"
+          },
+          {
+            "type": "null",
+            "value": null
+          },
+          {
+            "type": "null",
+            "value": null
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "dual_nullable_role_keys",
+    "fixture": "masking",
+    "query": "equivalent_control",
+    "expected_rows": [
+      [
+        11,
+        "élise",
+        "élise"
+      ],
+      [
+        14,
+        null,
+        null
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "job_id",
+        "handle",
+        "handle"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "11"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "14"
+          },
+          {
+            "type": "null",
+            "value": null
+          },
+          {
+            "type": "null",
+            "value": null
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "dual_nullable_role_keys",
+    "fixture": "revealing",
+    "query": "reference",
+    "expected_rows": [
+      [
+        11,
+        "élise",
+        "東京"
+      ],
+      [
+        12,
+        "élise",
+        null
+      ],
+      [
+        13,
+        null,
+        "東京"
+      ],
+      [
+        14,
+        null,
+        null
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "job_id",
+        "handle",
+        "handle"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "11"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          },
+          {
+            "type": "text",
+            "value": "東京"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "12"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          },
+          {
+            "type": "null",
+            "value": null
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "13"
+          },
+          {
+            "type": "null",
+            "value": null
+          },
+          {
+            "type": "text",
+            "value": "東京"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "14"
+          },
+          {
+            "type": "null",
+            "value": null
+          },
+          {
+            "type": "null",
+            "value": null
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "dual_nullable_role_keys",
+    "fixture": "revealing",
+    "query": "mutant",
+    "expected_rows": [
+      [
+        11,
+        "élise",
+        "élise"
+      ],
+      [
+        12,
+        "élise",
+        "élise"
+      ],
+      [
+        13,
+        null,
+        null
+      ],
+      [
+        14,
+        null,
+        null
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "job_id",
+        "handle",
+        "handle"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "11"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "12"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "13"
+          },
+          {
+            "type": "null",
+            "value": null
+          },
+          {
+            "type": "null",
+            "value": null
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "14"
+          },
+          {
+            "type": "null",
+            "value": null
+          },
+          {
+            "type": "null",
+            "value": null
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "dual_nullable_role_keys",
+    "fixture": "revealing",
+    "query": "equivalent_control",
+    "expected_rows": [
+      [
+        11,
+        "élise",
+        "東京"
+      ],
+      [
+        12,
+        "élise",
+        null
+      ],
+      [
+        13,
+        null,
+        "東京"
+      ],
+      [
+        14,
+        null,
+        null
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "job_id",
+        "handle",
+        "handle"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "11"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          },
+          {
+            "type": "text",
+            "value": "東京"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "12"
+          },
+          {
+            "type": "text",
+            "value": "élise"
+          },
+          {
+            "type": "null",
+            "value": null
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "13"
+          },
+          {
+            "type": "null",
+            "value": null
+          },
+          {
+            "type": "text",
+            "value": "東京"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "14"
+          },
+          {
+            "type": "null",
+            "value": null
+          },
+          {
+            "type": "null",
+            "value": null
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "unicode_duplicate_labels",
+    "fixture": "masking",
+    "query": "reference",
+    "expected_rows": [
+      [
+        "é",
+        1
+      ],
+      [
+        "東京",
+        1
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "label",
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          {
+            "type": "text",
+            "value": "é"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "東京"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "unicode_duplicate_labels",
+    "fixture": "masking",
+    "query": "mutant",
+    "expected_rows": [
+      [
+        "é",
+        1
+      ],
+      [
+        "東京",
+        1
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "label",
+        "COUNT(DISTINCT score)"
+      ],
+      "rows": [
+        [
+          {
+            "type": "text",
+            "value": "é"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "東京"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "unicode_duplicate_labels",
+    "fixture": "masking",
+    "query": "equivalent_control",
+    "expected_rows": [
+      [
+        "é",
+        1
+      ],
+      [
+        "東京",
+        1
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "label",
+        "SUM(1)"
+      ],
+      "rows": [
+        [
+          {
+            "type": "text",
+            "value": "é"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "東京"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "unicode_duplicate_labels",
+    "fixture": "revealing",
+    "query": "reference",
+    "expected_rows": [
+      [
+        "é",
+        2
+      ],
+      [
+        "é",
+        1
+      ],
+      [
+        "東京",
+        2
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "label",
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          {
+            "type": "text",
+            "value": "é"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "é"
+          },
+          {
+            "type": "integer",
+            "value": "2"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "東京"
+          },
+          {
+            "type": "integer",
+            "value": "2"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "unicode_duplicate_labels",
+    "fixture": "revealing",
+    "query": "mutant",
+    "expected_rows": [
+      [
+        "é",
+        1
+      ],
+      [
+        "é",
+        1
+      ],
+      [
+        "東京",
+        2
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "label",
+        "COUNT(DISTINCT score)"
+      ],
+      "rows": [
+        [
+          {
+            "type": "text",
+            "value": "é"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "é"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "東京"
+          },
+          {
+            "type": "integer",
+            "value": "2"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "unicode_duplicate_labels",
+    "fixture": "revealing",
+    "query": "equivalent_control",
+    "expected_rows": [
+      [
+        "é",
+        2
+      ],
+      [
+        "é",
+        1
+      ],
+      [
+        "東京",
+        2
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "label",
+        "SUM(1)"
+      ],
+      "rows": [
+        [
+          {
+            "type": "text",
+            "value": "é"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "é"
+          },
+          {
+            "type": "integer",
+            "value": "2"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "東京"
+          },
+          {
+            "type": "integer",
+            "value": "2"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "real_inclusive_boundaries",
+    "fixture": "masking",
+    "query": "reference",
+    "expected_rows": [
+      [
+        43
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "reading_id"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "43"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "real_inclusive_boundaries",
+    "fixture": "masking",
+    "query": "mutant",
+    "expected_rows": [
+      [
+        43
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "reading_id"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "43"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "real_inclusive_boundaries",
+    "fixture": "masking",
+    "query": "equivalent_control",
+    "expected_rows": [
+      [
+        43
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "reading_id"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "43"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "real_inclusive_boundaries",
+    "fixture": "revealing",
+    "query": "reference",
+    "expected_rows": [
+      [
+        42
+      ],
+      [
+        43
+      ],
+      [
+        44
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "reading_id"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "42"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "43"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "44"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "real_inclusive_boundaries",
+    "fixture": "revealing",
+    "query": "mutant",
+    "expected_rows": [
+      [
+        43
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "reading_id"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "43"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "real_inclusive_boundaries",
+    "fixture": "revealing",
+    "query": "equivalent_control",
+    "expected_rows": [
+      [
+        42
+      ],
+      [
+        43
+      ],
+      [
+        44
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "reading_id"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "42"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "43"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "44"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "three_table_join_grain",
+    "fixture": "masking",
+    "query": "reference",
+    "expected_rows": [
+      [
+        17,
+        2
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "purchase_id",
+        "SUM(l.units)"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "17"
+          },
+          {
+            "type": "integer",
+            "value": "2"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "three_table_join_grain",
+    "fixture": "masking",
+    "query": "mutant",
+    "expected_rows": [
+      [
+        17,
+        2
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "purchase_id",
+        "SUM(l.units)"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "17"
+          },
+          {
+            "type": "integer",
+            "value": "2"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "three_table_join_grain",
+    "fixture": "masking",
+    "query": "equivalent_control",
+    "expected_rows": [
+      [
+        17,
+        2
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "purchase_id",
+        "units"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "17"
+          },
+          {
+            "type": "integer",
+            "value": "2"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "three_table_join_grain",
+    "fixture": "revealing",
+    "query": "reference",
+    "expected_rows": [
+      [
+        17,
+        7
+      ],
+      [
+        29,
+        1
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "purchase_id",
+        "SUM(l.units)"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "17"
+          },
+          {
+            "type": "integer",
+            "value": "7"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "29"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "three_table_join_grain",
+    "fixture": "revealing",
+    "query": "mutant",
+    "expected_rows": [
+      [
+        17,
+        14
+      ],
+      [
+        29,
+        1
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "purchase_id",
+        "SUM(l.units)"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "17"
+          },
+          {
+            "type": "integer",
+            "value": "14"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "29"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  },
+  {
+    "case": "three_table_join_grain",
+    "fixture": "revealing",
+    "query": "equivalent_control",
+    "expected_rows": [
+      [
+        17,
+        7
+      ],
+      [
+        29,
+        1
+      ]
+    ],
+    "observation": {
+      "status": "ok",
+      "columns": [
+        "purchase_id",
+        "units"
+      ],
+      "rows": [
+        [
+          {
+            "type": "integer",
+            "value": "17"
+          },
+          {
+            "type": "integer",
+            "value": "7"
+          }
+        ],
+        [
+          {
+            "type": "integer",
+            "value": "29"
+          },
+          {
+            "type": "integer",
+            "value": "1"
+          }
+        ]
+      ],
+      "detail": null
+    },
+    "passed": true
+  }
+]

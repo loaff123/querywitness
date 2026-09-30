@@ -1,0 +1,58 @@
+{
+  "status": "reproduced",
+  "exact_observations": true,
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 1,
+    "reference_only_count": 1,
+    "candidate_only_count": 1
+  },
+  "recorded_sqlite_version": "3.53.1",
+  "current_sqlite_version": "3.53.1",
+  "runtime_version_changed": false,
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "label",
+      "COUNT(*)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "é"
+        },
+        {
+          "type": "integer",
+          "value": "2"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "label",
+      "COUNT(DISTINCT score)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "é"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    ],
+    "detail": null
+  }
+}

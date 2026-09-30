@@ -1,0 +1,152 @@
+{
+  "status": "reproduced",
+  "exact_observations": true,
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 4,
+    "candidate_rows": 4,
+    "reference_only_count": 3,
+    "candidate_only_count": 3
+  },
+  "recorded_sqlite_version": "3.53.1",
+  "current_sqlite_version": "3.53.1",
+  "runtime_version_changed": false,
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "job_id",
+      "handle",
+      "handle"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "11"
+        },
+        {
+          "type": "text",
+          "value": "élise"
+        },
+        {
+          "type": "text",
+          "value": "東京"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "12"
+        },
+        {
+          "type": "text",
+          "value": "élise"
+        },
+        {
+          "type": "null",
+          "value": null
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "13"
+        },
+        {
+          "type": "null",
+          "value": null
+        },
+        {
+          "type": "text",
+          "value": "東京"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "14"
+        },
+        {
+          "type": "null",
+          "value": null
+        },
+        {
+          "type": "null",
+          "value": null
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "job_id",
+      "handle",
+      "handle"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "11"
+        },
+        {
+          "type": "text",
+          "value": "élise"
+        },
+        {
+          "type": "text",
+          "value": "élise"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "12"
+        },
+        {
+          "type": "text",
+          "value": "élise"
+        },
+        {
+          "type": "text",
+          "value": "élise"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "13"
+        },
+        {
+          "type": "null",
+          "value": null
+        },
+        {
+          "type": "null",
+          "value": null
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "14"
+        },
+        {
+          "type": "null",
+          "value": null
+        },
+        {
+          "type": "null",
+          "value": null
+        }
+      ]
+    ],
+    "detail": null
+  }
+}

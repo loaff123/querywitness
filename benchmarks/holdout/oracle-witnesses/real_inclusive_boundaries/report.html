@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>QueryWitness · Replayable counterexample</title><style>body{max-width:1000px;margin:3rem auto;padding:0 1.3rem;font:16px/1.55 system-ui;color:#183032;background:#f5f7f4}h1{font-size:2.8rem;letter-spacing:-.04em}pre,.table{padding:1rem;background:white;border:1px solid #d4ddd6;border-radius:12px;overflow:auto}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:.55rem;border-bottom:1px solid #d4ddd6}code{overflow-wrap:anywhere}.badge{color:#80551e}footer{padding:2rem 0;font-size:.85rem}</style><body><p class="badge">OBSERVED COUNTEREXAMPLE · BAG SEMANTICS</p><h1>One database. Two different answers.</h1><p>Both queries executed successfully. This fixture preserves the declared constraints. No-counterexample results never establish equivalence.</p><h2>Reference</h2><pre>SELECT reading_id FROM reading WHERE value&gt;=0.5 AND value&lt;=1.0</pre><h2>Candidate</h2><pre>SELECT reading_id FROM reading WHERE value&gt;0.5 AND value&lt;1.0</pre><h2>Witness tables</h2><h3>reading</h3><div class="table"><table><thead><tr><th>reading_id</th><th>value</th></tr></thead><tbody><tr><td>41</td><td>0.0</td></tr><tr><td>42</td><td>0.5</td></tr><tr><td>43</td><td>0.5000000000000001</td></tr><tr><td>44</td><td>1.0</td></tr><tr><td>45</td><td>NULL</td></tr></tbody></table></div><h2>Comparison</h2><pre>{
+  &quot;policy&quot;: &quot;bag&quot;,
+  &quot;reference_status&quot;: &quot;ok&quot;,
+  &quot;candidate_status&quot;: &quot;ok&quot;,
+  &quot;status&quot;: &quot;mismatch&quot;,
+  &quot;reason&quot;: &quot;observed_rows&quot;,
+  &quot;reference_rows&quot;: 3,
+  &quot;candidate_rows&quot;: 1,
+  &quot;reference_only_count&quot;: 2,
+  &quot;candidate_only_count&quot;: 0
+}</pre><h2>Reference output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;reading_id&quot;
+  ],
+  &quot;rows&quot;: [
+    [
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;42&quot;
+      }
+    ],
+    [
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;43&quot;
+      }
+    ],
+    [
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;44&quot;
+      }
+    ]
+  ],
+  &quot;detail&quot;: null
+}</pre><h2>Candidate output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;reading_id&quot;
+  ],
+  &quot;rows&quot;: [
+    [
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;43&quot;
+      }
+    ]
+  ],
+  &quot;detail&quot;: null
+}</pre><h2>Reduction</h2><pre>null</pre><h2>Replay</h2><pre>querywitness replay witness.json</pre><h2>Provenance</h2><pre>{
+  &quot;sqlite_version&quot;: &quot;3.53.1&quot;,
+  &quot;sqlglot_version&quot;: &quot;27.29.0&quot;,
+  &quot;python_version&quot;: &quot;3.12.14&quot;,
+  &quot;schema_sha256&quot;: &quot;c1be55dff8b68104163e966f473f00fbfd699172144d671d4afda03825f3d742&quot;,
+  &quot;instance_sha256&quot;: &quot;d422aa9aae0f991460efcf778cfc010a2029c55dc12ee5d3da4b918771955683&quot;,
+  &quot;reference_sha256&quot;: &quot;2d48a9a21649ff1a92d802d870eec00da074d03ac22543d3dede383e0442d788&quot;,
+  &quot;candidate_sha256&quot;: &quot;fab2fd076dba4a6c37b636d0fe3a174021d068d6b9281a1e280d294ae0b97435&quot;
+}</pre><footer>Checksum: <code>042a8411e38f056de7ccb14f5fa7cf3658dd88a9e4cf69922e5bece3eae51383</code><p>Contains the supplied SQL and database values. Review before sharing. Restricted local execution is not a multi-tenant security sandbox.</p></footer></body></html>

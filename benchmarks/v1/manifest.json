@@ -1,0 +1,65 @@
+{
+  "format": "querywitness/benchmark",
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "catalog_sha256": "b66d9951c9e9c989f390b008ec3b437c67e0af9eeb58d4d1bd575db6d6151542",
+  "python_version": "3.12.14",
+  "sqlite_version": "3.53.1",
+  "sqlglot_version": "27.29.0",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "configuration": {
+    "trials": 16,
+    "repeats": 8,
+    "seed": 20260930,
+    "max_rows": 8,
+    "families": [
+      "join_multiplicity",
+      "count_nullable",
+      "not_in_null",
+      "left_join_filter",
+      "sum_distinct",
+      "average_grain",
+      "null_negation",
+      "empty_aggregate",
+      "union_multiplicity",
+      "correlated_filter",
+      "inclusive_boundary",
+      "having_grain"
+    ],
+    "execution_limits": {
+      "rows": 10000,
+      "bytes": 2000000,
+      "vm_steps": 1000000,
+      "seconds": 2.0,
+      "sql_bytes": 32768
+    }
+  },
+  "raw_trial_columns": [
+    "seed",
+    "comparison_status",
+    "instance_sha256",
+    "input_rows",
+    "reference_status",
+    "candidate_status"
+  ],
+  "baseline_notes": "Single benign is one hand-authored masking fixture per family. Random and boundary are equal trial-budget paired seed sweeps; neither stops after a hit. Witness reduction is outside the comparison budget and included in wall time.",
+  "oracle_validation": {
+    "families": 12,
+    "fixture_query_executions": 72,
+    "failures": []
+  },
+  "file_sha256": {
+    "raw/average_grain.jsonl": "3c501c9aa426113c960e823676ca694cab44e29a920c1145d3a508a1aea0f9ba",
+    "raw/correlated_filter.jsonl": "2c216a71667dee459b42a6b2fc40a26c1c09bd2377d933fded9f118448f251f8",
+    "raw/count_nullable.jsonl": "eb0eb420ff8210fae9ee2bcae0b7c67122776a61ea440d50819f035892bdcb04",
+    "raw/empty_aggregate.jsonl": "b5b2325208e09432fb89604c636f297e48c1972d2ac60018a7e2bd525ce9e61f",
+    "raw/having_grain.jsonl": "d4efbef1d10a6ba4522f52271762dc9de17da6c72b3268b59d0dde226fa26e14",
+    "raw/inclusive_boundary.jsonl": "5dfa09f3fec15be319a03fd52d653992f1833dea98641edec576f8cc4882f95c",
+    "raw/join_multiplicity.jsonl": "c5f717ae0cd91c04a8531402a590e4154cebc31e00e3df5a01f57cd8527c2d63",
+    "raw/left_join_filter.jsonl": "79d429f27f4bbb52478fffc6843dc99601655de182fedbdd0e33dcfef05879ea",
+    "raw/not_in_null.jsonl": "6e83e1e456bd74b55af573431c394694383fe5ba613866afd968859f23e6235f",
+    "raw/null_negation.jsonl": "41c065f862a62f82143c1c05014ba1d5f48d4ea3764e9152c134d7f97f2d23e7",
+    "raw/sum_distinct.jsonl": "0e3d059ce6d5ad37d7246e4e1c24f59f8e46f1639f1217a617244b231a711013",
+    "raw/union_multiplicity.jsonl": "7c124572ef4b9fa616b11b444f593d75905c5b1e1560d5ecf9d2158d501eac4d"
+  }
+}

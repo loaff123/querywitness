@@ -1,0 +1,529 @@
+{
+  "format": "querywitness/holdout-summary",
+  "format_version": 1,
+  "interpretation": "Small independently-authored holdout validation set, separate from the 12 development fixtures. Not an external benchmark, expert-reviewed set, blind evaluation, or statistically representative sample. The author read the API, development catalog, and generator. Cases and parameters were frozen before generated evaluation; no post-result tuning was performed. Agreement within a finite budget does not establish equivalence.",
+  "case_file_sha256": "db43f222ba5d2e36999abf78e269322a20cf149253a95dadadfcc5431b366ae7",
+  "cases": 5,
+  "configuration": {
+    "methods": [
+      "random",
+      "boundary"
+    ],
+    "variants": [
+      "mutant",
+      "equivalent_control"
+    ],
+    "policy": "bag",
+    "seed_start": 712000,
+    "trials_per_method": 32,
+    "seed_end_inclusive": 712031,
+    "max_rows": 8,
+    "execution_limits": {
+      "rows": 10000,
+      "bytes": 2000000,
+      "vm_steps": 1000000,
+      "seconds": 2.0,
+      "sql_bytes": 32768
+    },
+    "stop_after_first_hit": false,
+    "reduction": {
+      "max_checks": 500,
+      "seconds": 30.0
+    }
+  },
+  "planned_generated_instances": 320,
+  "planned_comparisons": 640,
+  "generated_instance_attempts": 320,
+  "generation_status_counts": {
+    "ok": 320
+  },
+  "completed_comparisons": 640,
+  "inconclusive_comparisons": 0,
+  "unsupported_query_comparisons": 0,
+  "query_error_comparisons": 0,
+  "unsupported_generation_attempts": 0,
+  "generation_error_attempts": 0,
+  "control_mismatch_comparisons": 0,
+  "oracle_query_checks": 30,
+  "oracle_query_passes": 30,
+  "witness_replays": [
+    {
+      "case": "composite_partial_null",
+      "source": "oracle",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "composite_partial_null",
+      "source": "random",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "composite_partial_null",
+      "source": "boundary",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "dual_nullable_role_keys",
+      "source": "oracle",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "dual_nullable_role_keys",
+      "source": "random",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "dual_nullable_role_keys",
+      "source": "boundary",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "unicode_duplicate_labels",
+      "source": "oracle",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "unicode_duplicate_labels",
+      "source": "random",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "unicode_duplicate_labels",
+      "source": "boundary",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "real_inclusive_boundaries",
+      "source": "oracle",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "real_inclusive_boundaries",
+      "source": "random",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "real_inclusive_boundaries",
+      "source": "boundary",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "three_table_join_grain",
+      "source": "oracle",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "three_table_join_grain",
+      "source": "random",
+      "status": "reproduced",
+      "exact_observations": true
+    },
+    {
+      "case": "three_table_join_grain",
+      "source": "boundary",
+      "status": "reproduced",
+      "exact_observations": true
+    }
+  ],
+  "method_outcomes": {
+    "random": {
+      "detected_cases": 5,
+      "missed_cases": 0,
+      "other_cases": 0,
+      "total_cases": 5
+    },
+    "boundary": {
+      "detected_cases": 5,
+      "missed_cases": 0,
+      "other_cases": 0,
+      "total_cases": 5
+    }
+  },
+  "by_case": [
+    {
+      "id": "composite_partial_null",
+      "methods": {
+        "random": {
+          "planned_instances": 32,
+          "generation_status_counts": {
+            "ok": 32
+          },
+          "mutant": {
+            "comparisons": 32,
+            "agreement": 13,
+            "mismatch": 19,
+            "inconclusive": 0,
+            "first_mismatch_trial": 1,
+            "outcome": "detected",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          },
+          "equivalent_control": {
+            "comparisons": 32,
+            "agreement": 32,
+            "mismatch": 0,
+            "inconclusive": 0,
+            "first_mismatch_trial": null,
+            "outcome": "no_mismatch_within_budget",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          }
+        },
+        "boundary": {
+          "planned_instances": 32,
+          "generation_status_counts": {
+            "ok": 32
+          },
+          "mutant": {
+            "comparisons": 32,
+            "agreement": 14,
+            "mismatch": 18,
+            "inconclusive": 0,
+            "first_mismatch_trial": 2,
+            "outcome": "detected",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          },
+          "equivalent_control": {
+            "comparisons": 32,
+            "agreement": 32,
+            "mismatch": 0,
+            "inconclusive": 0,
+            "first_mismatch_trial": null,
+            "outcome": "no_mismatch_within_budget",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          }
+        }
+      },
+      "status": "evaluated"
+    },
+    {
+      "id": "dual_nullable_role_keys",
+      "methods": {
+        "random": {
+          "planned_instances": 32,
+          "generation_status_counts": {
+            "ok": 32
+          },
+          "mutant": {
+            "comparisons": 32,
+            "agreement": 9,
+            "mismatch": 23,
+            "inconclusive": 0,
+            "first_mismatch_trial": 2,
+            "outcome": "detected",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          },
+          "equivalent_control": {
+            "comparisons": 32,
+            "agreement": 32,
+            "mismatch": 0,
+            "inconclusive": 0,
+            "first_mismatch_trial": null,
+            "outcome": "no_mismatch_within_budget",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          }
+        },
+        "boundary": {
+          "planned_instances": 32,
+          "generation_status_counts": {
+            "ok": 32
+          },
+          "mutant": {
+            "comparisons": 32,
+            "agreement": 8,
+            "mismatch": 24,
+            "inconclusive": 0,
+            "first_mismatch_trial": 2,
+            "outcome": "detected",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          },
+          "equivalent_control": {
+            "comparisons": 32,
+            "agreement": 32,
+            "mismatch": 0,
+            "inconclusive": 0,
+            "first_mismatch_trial": null,
+            "outcome": "no_mismatch_within_budget",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          }
+        }
+      },
+      "status": "evaluated"
+    },
+    {
+      "id": "unicode_duplicate_labels",
+      "methods": {
+        "random": {
+          "planned_instances": 32,
+          "generation_status_counts": {
+            "ok": 32
+          },
+          "mutant": {
+            "comparisons": 32,
+            "agreement": 21,
+            "mismatch": 11,
+            "inconclusive": 0,
+            "first_mismatch_trial": 5,
+            "outcome": "detected",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          },
+          "equivalent_control": {
+            "comparisons": 32,
+            "agreement": 32,
+            "mismatch": 0,
+            "inconclusive": 0,
+            "first_mismatch_trial": null,
+            "outcome": "no_mismatch_within_budget",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          }
+        },
+        "boundary": {
+          "planned_instances": 32,
+          "generation_status_counts": {
+            "ok": 32
+          },
+          "mutant": {
+            "comparisons": 32,
+            "agreement": 17,
+            "mismatch": 15,
+            "inconclusive": 0,
+            "first_mismatch_trial": 3,
+            "outcome": "detected",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          },
+          "equivalent_control": {
+            "comparisons": 32,
+            "agreement": 32,
+            "mismatch": 0,
+            "inconclusive": 0,
+            "first_mismatch_trial": null,
+            "outcome": "no_mismatch_within_budget",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          }
+        }
+      },
+      "status": "evaluated"
+    },
+    {
+      "id": "real_inclusive_boundaries",
+      "methods": {
+        "random": {
+          "planned_instances": 32,
+          "generation_status_counts": {
+            "ok": 32
+          },
+          "mutant": {
+            "comparisons": 32,
+            "agreement": 9,
+            "mismatch": 23,
+            "inconclusive": 0,
+            "first_mismatch_trial": 3,
+            "outcome": "detected",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          },
+          "equivalent_control": {
+            "comparisons": 32,
+            "agreement": 32,
+            "mismatch": 0,
+            "inconclusive": 0,
+            "first_mismatch_trial": null,
+            "outcome": "no_mismatch_within_budget",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          }
+        },
+        "boundary": {
+          "planned_instances": 32,
+          "generation_status_counts": {
+            "ok": 32
+          },
+          "mutant": {
+            "comparisons": 32,
+            "agreement": 10,
+            "mismatch": 22,
+            "inconclusive": 0,
+            "first_mismatch_trial": 4,
+            "outcome": "detected",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          },
+          "equivalent_control": {
+            "comparisons": 32,
+            "agreement": 32,
+            "mismatch": 0,
+            "inconclusive": 0,
+            "first_mismatch_trial": null,
+            "outcome": "no_mismatch_within_budget",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          }
+        }
+      },
+      "status": "evaluated"
+    },
+    {
+      "id": "three_table_join_grain",
+      "methods": {
+        "random": {
+          "planned_instances": 32,
+          "generation_status_counts": {
+            "ok": 32
+          },
+          "mutant": {
+            "comparisons": 32,
+            "agreement": 11,
+            "mismatch": 21,
+            "inconclusive": 0,
+            "first_mismatch_trial": 2,
+            "outcome": "detected",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          },
+          "equivalent_control": {
+            "comparisons": 32,
+            "agreement": 32,
+            "mismatch": 0,
+            "inconclusive": 0,
+            "first_mismatch_trial": null,
+            "outcome": "no_mismatch_within_budget",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          }
+        },
+        "boundary": {
+          "planned_instances": 32,
+          "generation_status_counts": {
+            "ok": 32
+          },
+          "mutant": {
+            "comparisons": 32,
+            "agreement": 11,
+            "mismatch": 21,
+            "inconclusive": 0,
+            "first_mismatch_trial": 2,
+            "outcome": "detected",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          },
+          "equivalent_control": {
+            "comparisons": 32,
+            "agreement": 32,
+            "mismatch": 0,
+            "inconclusive": 0,
+            "first_mismatch_trial": null,
+            "outcome": "no_mismatch_within_budget",
+            "reference_status_counts": {
+              "ok": 32
+            },
+            "candidate_status_counts": {
+              "ok": 32
+            }
+          }
+        }
+      },
+      "status": "evaluated"
+    }
+  ],
+  "errors": [],
+  "elapsed_seconds": 3.474847
+}

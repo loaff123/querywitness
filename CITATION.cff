@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: >-
+  If you use QueryWitness, cite this software and record the exact version,
+  commit, SQLite runtime, catalog hash, comparison policy, and experiment budget.
+type: software
+title: "QueryWitness: Bounded SQLite Counterexample Search and Replay"
+version: 0.1.0
+authors:
+  - name: "loaff123"
+    website: "https://github.com/loaff123"
+repository-code: "https://github.com/loaff123/querywitness"
+url: "https://github.com/loaff123/querywitness"
+license: MIT
+abstract: >-
+  A local Python tool for bounded differential testing of SQLite query pairs,
+  schema-valid synthetic instance generation, constraint-preserving row
+  reduction, and replayable counterexample artifacts. Includes a 12-family
+  original synthetic regression catalog and an equal-trial-budget evaluation
+  runner. Finding no counterexample within a finite budget does not prove equivalence.
+keywords:
+  - SQL
+  - SQLite
+  - differential testing
+  - counterexamples
+  - reproducibility

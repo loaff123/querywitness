@@ -1,0 +1,107 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "t",
+        "columns": [
+          {
+            "name": "x",
+            "type": "INTEGER",
+            "nullable": true,
+            "domain": [
+              -1,
+              0,
+              1,
+              2,
+              10,
+              20
+            ]
+          }
+        ],
+        "primary_key": [],
+        "unique": [],
+        "foreign_keys": []
+      }
+    ]
+  },
+  "instance": {
+    "t": [
+      [
+        null
+      ]
+    ]
+  },
+  "reference": "SELECT x FROM t WHERE x IS NULL OR x<>1",
+  "candidate": "SELECT x FROM t WHERE NOT (x=1)",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 0,
+    "reference_only_count": 1,
+    "candidate_only_count": 0
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "x"
+    ],
+    "rows": [
+      [
+        {
+          "type": "null",
+          "value": null
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "x"
+    ],
+    "rows": [],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "13599c71dcf946d4cb364292ba7f4f73d8e57c819ed4764a3437f36e099237c2",
+    "instance_sha256": "93b5dca1135d90c94d958f63a8414352add08b9bbf95e1a5fa9a5e6333bb707e",
+    "reference_sha256": "e503aff20adec64d5021e025e5566291c2aa7ff6affef54f9c6766dda2b5f44b",
+    "candidate_sha256": "d46611487950a0a513afe438e5877291dfbd6cb1d0cfc292b4f483334ba9ac18"
+  },
+  "search": {
+    "seed": 20260930,
+    "strategy": "random",
+    "trial_budget": 16,
+    "max_rows": 8
+  },
+  "reduction": {
+    "status": "minimized",
+    "checks": 7,
+    "initial_rows": 7,
+    "final_rows": 1,
+    "row_1_minimal": true,
+    "inconclusive_checks": 0,
+    "guarantee": "No schema-valid single-row deletion preserves a successful result mismatch"
+  },
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "61b9d2bd2852b0a656f3ae1f586144caa4b96aac88d076e4b37784ddcd2f6ee1"
+}

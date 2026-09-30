@@ -1,0 +1,78 @@
+{
+  "status": "reproduced",
+  "exact_observations": true,
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 2,
+    "candidate_rows": 2,
+    "reference_only_count": 1,
+    "candidate_only_count": 1
+  },
+  "recorded_sqlite_version": "3.53.1",
+  "current_sqlite_version": "3.53.1",
+  "runtime_version_changed": false,
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "purchase_id",
+      "SUM(l.units)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "17"
+        },
+        {
+          "type": "integer",
+          "value": "7"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "29"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "purchase_id",
+      "SUM(l.units)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "17"
+        },
+        {
+          "type": "integer",
+          "value": "14"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "29"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    ],
+    "detail": null
+  }
+}

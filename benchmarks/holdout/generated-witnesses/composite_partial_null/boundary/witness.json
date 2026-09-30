@@ -1,0 +1,173 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "rack",
+        "columns": [
+          {
+            "name": "zone",
+            "type": "TEXT",
+            "nullable": false,
+            "domain": [
+              "east",
+              "west"
+            ]
+          },
+          {
+            "name": "slot",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              7,
+              9
+            ]
+          }
+        ],
+        "primary_key": [
+          "zone",
+          "slot"
+        ],
+        "unique": [],
+        "foreign_keys": []
+      },
+      {
+        "name": "dispatch",
+        "columns": [
+          {
+            "name": "ticket",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              31,
+              32,
+              33,
+              34,
+              35,
+              36
+            ]
+          },
+          {
+            "name": "zone",
+            "type": "TEXT",
+            "nullable": true,
+            "domain": [
+              "east",
+              "west"
+            ]
+          },
+          {
+            "name": "slot",
+            "type": "INTEGER",
+            "nullable": true,
+            "domain": [
+              7,
+              9
+            ]
+          }
+        ],
+        "primary_key": [
+          "ticket"
+        ],
+        "unique": [],
+        "foreign_keys": [
+          {
+            "columns": [
+              "zone",
+              "slot"
+            ],
+            "references": {
+              "table": "rack",
+              "columns": [
+                "zone",
+                "slot"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "instance": {
+    "rack": [],
+    "dispatch": [
+      [
+        32,
+        "east",
+        null
+      ]
+    ]
+  },
+  "reference": "SELECT ticket FROM dispatch WHERE zone IS NULL OR slot IS NULL",
+  "candidate": "SELECT ticket FROM dispatch WHERE zone IS NULL AND slot IS NULL",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 0,
+    "reference_only_count": 1,
+    "candidate_only_count": 0
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "ticket"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "32"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "ticket"
+    ],
+    "rows": [],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "e8cf80b642813bb174390c3da19688062a62e2957bf5b78023c0d617114fb32d",
+    "instance_sha256": "ba9d06c87bfba30f172f9cba44ee9a7cb35c9ba877c6918585f90d04f9c918bc",
+    "reference_sha256": "03f337e4d0c8cbd831596cc31e7b99de300271a7d8086ae696f8aa42ed24e5ab",
+    "candidate_sha256": "fcd6c5121ab1cce37acfc43c39da89dc37df15df1a4631e676a682c48b94e41f"
+  },
+  "search": {
+    "seed": 712001,
+    "strategy": "boundary",
+    "trial_budget": 32,
+    "max_rows": 8
+  },
+  "reduction": {
+    "status": "minimized",
+    "checks": 7,
+    "initial_rows": 9,
+    "final_rows": 1,
+    "row_1_minimal": true,
+    "inconclusive_checks": 0,
+    "guarantee": "No schema-valid single-row deletion preserves a successful result mismatch"
+  },
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "27423cfe0d9913c32c2168ca4e0fc1bb9af15a4fd08530b101531d11fcfff583"
+}

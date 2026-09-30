@@ -1,0 +1,174 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "p",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "primary_key": [
+          "id"
+        ],
+        "unique": [],
+        "foreign_keys": []
+      },
+      {
+        "name": "c",
+        "columns": [
+          {
+            "name": "pid",
+            "type": "INTEGER",
+            "nullable": true,
+            "domain": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "name": "amount",
+            "type": "INTEGER",
+            "nullable": true,
+            "domain": [
+              -1,
+              0,
+              1,
+              5,
+              10,
+              20
+            ]
+          }
+        ],
+        "primary_key": [],
+        "unique": [],
+        "foreign_keys": [
+          {
+            "columns": [
+              "pid"
+            ],
+            "references": {
+              "table": "p",
+              "columns": [
+                "id"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "instance": {
+    "p": [
+      [
+        1
+      ]
+    ],
+    "c": [
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        20
+      ]
+    ]
+  },
+  "reference": "SELECT p.id FROM p WHERE EXISTS (SELECT 1 FROM c WHERE c.pid=p.id)",
+  "candidate": "SELECT p.id FROM p JOIN c ON c.pid=p.id",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 2,
+    "reference_only_count": 0,
+    "candidate_only_count": 1
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "id"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "id"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "3ec64ab47a60bb98115c3874523c8a6a593b7aba836f8bc43f64ae3fc0dc81f8",
+    "instance_sha256": "c4ab8a2add2b37c58ad3966c4f77ace2f44e0badb2f1e86fe89e24bbc299f599",
+    "reference_sha256": "0fcc274c1648fef962f2aa7b884604e61b8b709c33a02b5c16f27967f21ce556",
+    "candidate_sha256": "eb913a8d12bb9685dd31f3398f33cd884735b432d36249039ae7fd30d1584f35"
+  },
+  "search": {
+    "seed": 20260932,
+    "strategy": "random",
+    "trial_budget": 16,
+    "max_rows": 8
+  },
+  "reduction": {
+    "status": "minimized",
+    "checks": 13,
+    "initial_rows": 9,
+    "final_rows": 3,
+    "row_1_minimal": true,
+    "inconclusive_checks": 0,
+    "guarantee": "No schema-valid single-row deletion preserves a successful result mismatch"
+  },
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "3b40c7cefb98f986782a8d7729348b94c1a91dd739052561403e7534545d93b1"
+}

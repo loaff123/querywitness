@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>QueryWitness · Replayable counterexample</title><style>body{max-width:1000px;margin:3rem auto;padding:0 1.3rem;font:16px/1.55 system-ui;color:#183032;background:#f5f7f4}h1{font-size:2.8rem;letter-spacing:-.04em}pre,.table{padding:1rem;background:white;border:1px solid #d4ddd6;border-radius:12px;overflow:auto}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:.55rem;border-bottom:1px solid #d4ddd6}code{overflow-wrap:anywhere}.badge{color:#80551e}footer{padding:2rem 0;font-size:.85rem}</style><body><p class="badge">OBSERVED COUNTEREXAMPLE · BAG SEMANTICS</p><h1>One database. Two different answers.</h1><p>Both queries executed successfully. This fixture preserves the declared constraints. No-counterexample results never establish equivalence.</p><h2>Reference</h2><pre>SELECT g,SUM(x) FROM t GROUP BY g HAVING SUM(x)&gt;10</pre><h2>Candidate</h2><pre>SELECT g,SUM(x) FROM t WHERE x&gt;10 GROUP BY g</pre><h2>Witness tables</h2><h3>t</h3><div class="table"><table><thead><tr><th>g</th><th>x</th></tr></thead><tbody><tr><td>B</td><td>10</td></tr><tr><td>B</td><td>20</td></tr></tbody></table></div><h2>Comparison</h2><pre>{
+  &quot;policy&quot;: &quot;bag&quot;,
+  &quot;reference_status&quot;: &quot;ok&quot;,
+  &quot;candidate_status&quot;: &quot;ok&quot;,
+  &quot;status&quot;: &quot;mismatch&quot;,
+  &quot;reason&quot;: &quot;observed_rows&quot;,
+  &quot;reference_rows&quot;: 1,
+  &quot;candidate_rows&quot;: 1,
+  &quot;reference_only_count&quot;: 1,
+  &quot;candidate_only_count&quot;: 1
+}</pre><h2>Reference output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;g&quot;,
+    &quot;SUM(x)&quot;
+  ],
+  &quot;rows&quot;: [
+    [
+      {
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;value&quot;: &quot;B&quot;
+      },
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;30&quot;
+      }
+    ]
+  ],
+  &quot;detail&quot;: null
+}</pre><h2>Candidate output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;g&quot;,
+    &quot;SUM(x)&quot;
+  ],
+  &quot;rows&quot;: [
+    [
+      {
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;value&quot;: &quot;B&quot;
+      },
+      {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;value&quot;: &quot;20&quot;
+      }
+    ]
+  ],
+  &quot;detail&quot;: null
+}</pre><h2>Reduction</h2><pre>{
+  &quot;status&quot;: &quot;minimized&quot;,
+  &quot;checks&quot;: 8,
+  &quot;initial_rows&quot;: 7,
+  &quot;final_rows&quot;: 2,
+  &quot;row_1_minimal&quot;: true,
+  &quot;inconclusive_checks&quot;: 0,
+  &quot;guarantee&quot;: &quot;No schema-valid single-row deletion preserves a successful result mismatch&quot;
+}</pre><h2>Replay</h2><pre>querywitness replay witness.json</pre><h2>Provenance</h2><pre>{
+  &quot;sqlite_version&quot;: &quot;3.53.1&quot;,
+  &quot;sqlglot_version&quot;: &quot;27.29.0&quot;,
+  &quot;python_version&quot;: &quot;3.12.14&quot;,
+  &quot;schema_sha256&quot;: &quot;b97604064863f5d931e5914fb1fadaea93344d7d1a7edf714f5a4a12d990e6ca&quot;,
+  &quot;instance_sha256&quot;: &quot;eefc98d44e1e2d9d4fa6931411d45c6ef69d94d48ad2b6401726185729546048&quot;,
+  &quot;reference_sha256&quot;: &quot;5734a598bd1557086403548dda7c6f460385632b36708a72e83181366323e406&quot;,
+  &quot;candidate_sha256&quot;: &quot;bd59a7773e7a31e35c87bbfe8c848f20c6af02097e0f022d857a56c08e639706&quot;
+}</pre><footer>Checksum: <code>597461de5d81a9866efcc87e3a9505e664646329ed74643d82542f0d33d4febf</code><p>Contains the supplied SQL and database values. Review before sharing. Restricted local execution is not a multi-tenant security sandbox.</p></footer></body></html>

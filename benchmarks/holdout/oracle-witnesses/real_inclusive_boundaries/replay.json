@@ -1,0 +1,60 @@
+{
+  "status": "reproduced",
+  "exact_observations": true,
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 3,
+    "candidate_rows": 1,
+    "reference_only_count": 2,
+    "candidate_only_count": 0
+  },
+  "recorded_sqlite_version": "3.53.1",
+  "current_sqlite_version": "3.53.1",
+  "runtime_version_changed": false,
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "reading_id"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "42"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "43"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "44"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "reading_id"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "43"
+        }
+      ]
+    ],
+    "detail": null
+  }
+}

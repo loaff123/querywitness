@@ -1,0 +1,133 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.1.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "t",
+        "columns": [
+          {
+            "name": "g",
+            "type": "TEXT",
+            "nullable": false,
+            "domain": [
+              "A",
+              "B"
+            ]
+          },
+          {
+            "name": "x",
+            "type": "INTEGER",
+            "nullable": false,
+            "domain": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              20
+            ]
+          }
+        ],
+        "primary_key": [],
+        "unique": [],
+        "foreign_keys": []
+      }
+    ]
+  },
+  "instance": {
+    "t": [
+      [
+        "A",
+        0
+      ],
+      [
+        "B",
+        6
+      ],
+      [
+        "B",
+        0
+      ]
+    ]
+  },
+  "reference": "SELECT AVG(x) FROM t",
+  "candidate": "SELECT AVG(a) FROM (SELECT g,AVG(x) AS a FROM t GROUP BY g)",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 1,
+    "reference_only_count": 1,
+    "candidate_only_count": 1
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "AVG(x)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "real",
+          "value": "0x1.0000000000000p+1"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "AVG(a)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "real",
+          "value": "0x1.8000000000000p+0"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "b97604064863f5d931e5914fb1fadaea93344d7d1a7edf714f5a4a12d990e6ca",
+    "instance_sha256": "23f2c8d83d49272819470b2ed75649399d60f85edc34e8b7000a536e621d33a2",
+    "reference_sha256": "ab098665482fbed6202f9f579826d2b8ef513601a72d051a1fb5d95798913169",
+    "candidate_sha256": "137eca8f7ba497b0357b6ed6b529e2a73d61abab8feedf847166b6a11e29bc0d"
+  },
+  "search": {
+    "seed": 20260930,
+    "strategy": "random",
+    "trial_budget": 16,
+    "max_rows": 8
+  },
+  "reduction": {
+    "status": "minimized",
+    "checks": 10,
+    "initial_rows": 7,
+    "final_rows": 3,
+    "row_1_minimal": true,
+    "inconclusive_checks": 0,
+    "guarantee": "No schema-valid single-row deletion preserves a successful result mismatch"
+  },
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "49b0a0b3af9300d2de152f4b625b9b5be2706323ca7954fe52386ebaf405fb58"
+}

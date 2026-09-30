@@ -1,0 +1,1033 @@
+{
+  "format_version": 1,
+  "license": "MIT",
+  "catalog_version": "0.1.0",
+  "description": "12 hand-authored synthetic SQL error families, one mutant and one algebraically motivated equivalent control per family. Not a representative benchmark of real workloads or LLM outputs.",
+  "cases": [
+    {
+      "id": "join_multiplicity",
+      "title": "A join multiplies existence",
+      "mechanism": "An inner join repeats a parent for every matching child; EXISTS returns a parent once.",
+      "schema": {
+        "tables": [
+          {
+            "name": "p",
+            "columns": [
+              {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "primary_key": [
+              "id"
+            ]
+          },
+          {
+            "name": "c",
+            "columns": [
+              {
+                "name": "pid",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              {
+                "name": "amount",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  -1,
+                  0,
+                  1,
+                  5,
+                  10,
+                  20
+                ]
+              }
+            ],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "pid"
+                ],
+                "references": {
+                  "table": "p",
+                  "columns": [
+                    "id"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT p.id FROM p WHERE EXISTS (SELECT 1 FROM c WHERE c.pid=p.id)",
+      "mutant": "SELECT p.id FROM p JOIN c ON c.pid=p.id",
+      "equivalent_control": "SELECT DISTINCT p.id FROM p JOIN c ON c.pid=p.id",
+      "policy": "bag",
+      "benign": {
+        "p": [
+          [
+            1
+          ]
+        ],
+        "c": [
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      "revealing": {
+        "p": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "c": [
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            10
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          1
+        ]
+      ],
+      "expected_mutant": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "count_nullable",
+      "title": "COUNT ignores NULL values",
+      "mechanism": "COUNT(*) counts rows; COUNT(x) skips NULL.",
+      "schema": {
+        "tables": [
+          {
+            "name": "t",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  -1,
+                  0,
+                  1,
+                  2,
+                  10,
+                  20
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT COUNT(x) FROM t",
+      "mutant": "SELECT COUNT(*) FROM t",
+      "equivalent_control": "SELECT COUNT(CASE WHEN x IS NOT NULL THEN 1 END) FROM t",
+      "policy": "bag",
+      "benign": {
+        "t": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "revealing": {
+        "t": [
+          [
+            1
+          ],
+          [
+            null
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          1
+        ]
+      ],
+      "expected_mutant": [
+        [
+          2
+        ]
+      ],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "not_in_null",
+      "title": "NOT IN meets an unknown",
+      "mechanism": "One NULL in the subquery changes NOT IN to unknown for unmatched values.",
+      "schema": {
+        "tables": [
+          {
+            "name": "p",
+            "columns": [
+              {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "primary_key": [
+              "id"
+            ]
+          },
+          {
+            "name": "c",
+            "columns": [
+              {
+                "name": "pid",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              {
+                "name": "amount",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  -1,
+                  0,
+                  1,
+                  5,
+                  10,
+                  20
+                ]
+              }
+            ],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "pid"
+                ],
+                "references": {
+                  "table": "p",
+                  "columns": [
+                    "id"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT p.id FROM p WHERE NOT EXISTS (SELECT 1 FROM c WHERE c.pid=p.id)",
+      "mutant": "SELECT p.id FROM p WHERE p.id NOT IN (SELECT pid FROM c)",
+      "equivalent_control": "SELECT p.id FROM p LEFT JOIN c ON c.pid=p.id WHERE c.pid IS NULL",
+      "policy": "bag",
+      "benign": {
+        "p": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "c": [
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      "revealing": {
+        "p": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "c": [
+          [
+            1,
+            5
+          ],
+          [
+            null,
+            0
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          2
+        ]
+      ],
+      "expected_mutant": [],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "left_join_filter",
+      "title": "WHERE removes the preserved side",
+      "mechanism": "A right-table filter in WHERE removes NULL-extended parents.",
+      "schema": {
+        "tables": [
+          {
+            "name": "p",
+            "columns": [
+              {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "primary_key": [
+              "id"
+            ]
+          },
+          {
+            "name": "c",
+            "columns": [
+              {
+                "name": "pid",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              {
+                "name": "amount",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  -1,
+                  0,
+                  1,
+                  5,
+                  10,
+                  20
+                ]
+              }
+            ],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "pid"
+                ],
+                "references": {
+                  "table": "p",
+                  "columns": [
+                    "id"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT p.id,c.amount FROM p LEFT JOIN c ON c.pid=p.id AND c.amount>0",
+      "mutant": "SELECT p.id,c.amount FROM p LEFT JOIN c ON c.pid=p.id WHERE c.amount>0",
+      "equivalent_control": "SELECT p.id,c.amount FROM p LEFT JOIN (SELECT pid,amount FROM c WHERE amount>0) AS c ON c.pid=p.id",
+      "policy": "bag",
+      "benign": {
+        "p": [
+          [
+            1
+          ]
+        ],
+        "c": [
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      "revealing": {
+        "p": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "c": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          null
+        ]
+      ],
+      "expected_mutant": [
+        [
+          1,
+          5
+        ]
+      ],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "sum_distinct",
+      "title": "A value is not a row identity",
+      "mechanism": "SUM(DISTINCT x) discards equal values belonging to separate rows.",
+      "schema": {
+        "tables": [
+          {
+            "name": "t",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  -1,
+                  0,
+                  1,
+                  2,
+                  10,
+                  20
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT SUM(x) FROM t",
+      "mutant": "SELECT SUM(DISTINCT x) FROM t",
+      "equivalent_control": "SELECT SUM(x+0) FROM t",
+      "policy": "bag",
+      "benign": {
+        "t": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "revealing": {
+        "t": [
+          [
+            2
+          ],
+          [
+            2
+          ],
+          [
+            null
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          4
+        ]
+      ],
+      "expected_mutant": [
+        [
+          2
+        ]
+      ],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "average_grain",
+      "title": "The average of averages changes weight",
+      "mechanism": "Group means need row-count weights when groups have different sizes.",
+      "schema": {
+        "tables": [
+          {
+            "name": "t",
+            "columns": [
+              {
+                "name": "g",
+                "type": "TEXT",
+                "nullable": false,
+                "domain": [
+                  "A",
+                  "B"
+                ]
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  20
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT AVG(x) FROM t",
+      "mutant": "SELECT AVG(a) FROM (SELECT g,AVG(x) AS a FROM t GROUP BY g)",
+      "equivalent_control": "SELECT AVG(x+0) FROM t",
+      "policy": "bag",
+      "benign": {
+        "t": [
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            10
+          ]
+        ]
+      },
+      "revealing": {
+        "t": [
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            10
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          4.0
+        ]
+      ],
+      "expected_mutant": [
+        [
+          5.5
+        ]
+      ],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "null_negation",
+      "title": "NULL is not ordinary negation",
+      "mechanism": "NOT(x=1) stays unknown at NULL; an explicit missing-value policy is different.",
+      "schema": {
+        "tables": [
+          {
+            "name": "t",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  -1,
+                  0,
+                  1,
+                  2,
+                  10,
+                  20
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT x FROM t WHERE x IS NULL OR x<>1",
+      "mutant": "SELECT x FROM t WHERE NOT (x=1)",
+      "equivalent_control": "SELECT x FROM t WHERE x IS NOT 1",
+      "policy": "bag",
+      "benign": {
+        "t": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "revealing": {
+        "t": [
+          [
+            1
+          ],
+          [
+            null
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          null
+        ],
+        [
+          2
+        ]
+      ],
+      "expected_mutant": [
+        [
+          2
+        ]
+      ],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "empty_aggregate",
+      "title": "An empty sum needs a policy",
+      "mechanism": "SUM on no rows is NULL; COALESCE can define an explicit zero.",
+      "schema": {
+        "tables": [
+          {
+            "name": "t",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  -1,
+                  0,
+                  1,
+                  2,
+                  10,
+                  20
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT COALESCE(SUM(x),0) FROM t",
+      "mutant": "SELECT SUM(x) FROM t",
+      "equivalent_control": "SELECT IFNULL(SUM(x),0) FROM t",
+      "policy": "bag",
+      "benign": {
+        "t": [
+          [
+            1
+          ]
+        ]
+      },
+      "revealing": {
+        "t": []
+      },
+      "expected_reference": [
+        [
+          0
+        ]
+      ],
+      "expected_mutant": [
+        [
+          null
+        ]
+      ],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "union_multiplicity",
+      "title": "UNION eliminates duplicates",
+      "mechanism": "UNION removes duplicates within and across its branches.",
+      "schema": {
+        "tables": [
+          {
+            "name": "t",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  -1,
+                  0,
+                  1,
+                  2,
+                  10,
+                  20
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT x FROM t WHERE x<=1 UNION ALL SELECT x FROM t WHERE x>1",
+      "mutant": "SELECT x FROM t WHERE x<=1 UNION SELECT x FROM t WHERE x>1",
+      "equivalent_control": "SELECT x FROM t",
+      "policy": "bag",
+      "benign": {
+        "t": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "revealing": {
+        "t": [
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "expected_mutant": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "correlated_filter",
+      "title": "A missing correlation becomes global",
+      "mechanism": "Uncorrelated EXISTS selects every parent when any child passes.",
+      "schema": {
+        "tables": [
+          {
+            "name": "p",
+            "columns": [
+              {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "primary_key": [
+              "id"
+            ]
+          },
+          {
+            "name": "c",
+            "columns": [
+              {
+                "name": "pid",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              {
+                "name": "amount",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  -1,
+                  0,
+                  1,
+                  5,
+                  10,
+                  20
+                ]
+              }
+            ],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "pid"
+                ],
+                "references": {
+                  "table": "p",
+                  "columns": [
+                    "id"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT p.id FROM p WHERE EXISTS (SELECT 1 FROM c WHERE c.pid=p.id AND c.amount>0)",
+      "mutant": "SELECT p.id FROM p WHERE EXISTS (SELECT 1 FROM c WHERE c.amount>0)",
+      "equivalent_control": "SELECT DISTINCT p.id FROM p JOIN c ON c.pid=p.id WHERE c.amount>0",
+      "policy": "bag",
+      "benign": {
+        "p": [
+          [
+            1
+          ]
+        ],
+        "c": [
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      "revealing": {
+        "p": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "c": [
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          1
+        ]
+      ],
+      "expected_mutant": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "inclusive_boundary",
+      "title": "One endpoint changes the answer",
+      "mechanism": "The inclusive threshold retains exactly the boundary value.",
+      "schema": {
+        "tables": [
+          {
+            "name": "t",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  -1,
+                  0,
+                  1,
+                  2,
+                  10,
+                  20
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT x FROM t WHERE x>=10",
+      "mutant": "SELECT x FROM t WHERE x>10",
+      "equivalent_control": "SELECT x FROM t WHERE NOT (x<10)",
+      "policy": "bag",
+      "benign": {
+        "t": [
+          [
+            1
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      "revealing": {
+        "t": [
+          [
+            1
+          ],
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          10
+        ],
+        [
+          20
+        ]
+      ],
+      "expected_mutant": [
+        [
+          20
+        ]
+      ],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    },
+    {
+      "id": "having_grain",
+      "title": "Filtering rows is not filtering groups",
+      "mechanism": "Several smaller values may qualify only after aggregation.",
+      "schema": {
+        "tables": [
+          {
+            "name": "t",
+            "columns": [
+              {
+                "name": "g",
+                "type": "TEXT",
+                "nullable": false,
+                "domain": [
+                  "A",
+                  "B"
+                ]
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": false,
+                "domain": [
+                  0,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  20
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference": "SELECT g,SUM(x) FROM t GROUP BY g HAVING SUM(x)>10",
+      "mutant": "SELECT g,SUM(x) FROM t WHERE x>10 GROUP BY g",
+      "equivalent_control": "SELECT g,s FROM (SELECT g,SUM(x) AS s FROM t GROUP BY g) WHERE s>10",
+      "policy": "bag",
+      "benign": {
+        "t": [
+          [
+            "A",
+            20
+          ],
+          [
+            "B",
+            2
+          ]
+        ]
+      },
+      "revealing": {
+        "t": [
+          [
+            "A",
+            6
+          ],
+          [
+            "A",
+            6
+          ],
+          [
+            "B",
+            2
+          ]
+        ]
+      },
+      "expected_reference": [
+        [
+          "A",
+          12
+        ]
+      ],
+      "expected_mutant": [],
+      "origin": "Original synthetic pedagogical fixture; manually specified oracle, no expert-review claim"
+    }
+  ]
+}
