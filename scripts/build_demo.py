@@ -7,6 +7,7 @@ library. Missing, drifted, or checksum-invalid inputs fail before output changes
 from __future__ import annotations
 
 import argparse
+import ast
 import hashlib
 import html
 import json
@@ -20,6 +21,14 @@ TEMPLATES = ROOT / 'site'
 QUERY_AWARE_DEMO = ROOT / 'benchmarks/query-aware-demo'
 MARKER = '.querywitness-generated'
 REPO = 'https://github.com/loaff123/querywitness'
+# Match pyproject.toml's dynamic version source without importing dependencies.
+PACKAGE_VERSION = next(
+    ast.literal_eval(node.value)
+    for node in ast.parse((ROOT / 'src/querywitness/__init__.py').read_text(encoding='utf-8')).body
+    if isinstance(node, ast.Assign)
+    and any(isinstance(target, ast.Name) and target.id == '__version__' for target in node.targets)
+)
+
 
 
 def esc(value):
@@ -221,7 +230,7 @@ def build_site(benchmark, catalog_path, output):
     context = {'NAVIGATION': ''.join(navigation), 'FAMILIES': ''.join(families), 'BENCHMARK': render_benchmark(summary, benchmark),
                'FAMILY_COUNT': number(summary['families']), 'WITNESS_COUNT': number(len(witnesses)),
                'COMPARISON_COUNT': number(summary['matched_budget_instance_evaluations']),
-               'CONTROL_MISMATCHES': number(summary['control_mismatches']), 'TOOL_VERSION': esc(summary['tool_version']),
+               'CONTROL_MISMATCHES': number(summary['control_mismatches']), 'TOOL_VERSION': esc(PACKAGE_VERSION),
                'SQLITE_VERSION': esc(manifest.get('sqlite_version', 'recorded in witness')), 'CATALOG_HASH': esc(summary['catalog_sha256']), 'REPO': REPO}
     document = (TEMPLATES / 'index.html').read_text(encoding='utf-8')
     for key, value in context.items():

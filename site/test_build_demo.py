@@ -53,6 +53,22 @@ class ExplorerTests(unittest.TestCase):
         # A deliberate rebuild only replaces previously generated output.
         builder.build_site(self.benchmark, self.catalog, out)
 
+    def test_badge_uses_current_package_version_not_frozen_benchmark(self):
+        from querywitness import __version__
+        source = self.root / 'historic-version'
+        shutil.copytree(self.benchmark, source)
+        summary_path = source / 'summary.json'
+        summary = json.loads(summary_path.read_text())
+        summary['tool_version'] = '0.0.0-historical-fixture'
+        summary_path.write_text(json.dumps(summary))
+        original_summary = summary_path.read_bytes()
+        out = self.root / 'historic-version-site'
+        builder.build_site(source, self.catalog, out)
+        html = (out / 'index.html').read_text()
+        self.assertIn(f'<span class="version">v{__version__}</span>', html)
+        self.assertNotIn('<span class="version">v0.0.0-historical-fixture</span>', html)
+        self.assertEqual((out / 'downloads/summary.json').read_bytes(), original_summary)
+
     def test_missing_input_never_creates_results(self):
         out = self.root / 'missing-result'
         with self.assertRaises((ValueError, FileNotFoundError)):
