@@ -1,0 +1,208 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.2.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "regression_input",
+        "columns": [
+          {
+            "name": "x",
+            "type": "INTEGER",
+            "nullable": true
+          }
+        ],
+        "primary_key": [],
+        "unique": [],
+        "foreign_keys": []
+      }
+    ]
+  },
+  "instance": {
+    "regression_input": [
+      [
+        7
+      ],
+      [
+        7
+      ],
+      [
+        7
+      ],
+      [
+        7
+      ],
+      [
+        7
+      ],
+      [
+        7
+      ],
+      [
+        7
+      ],
+      [
+        7
+      ]
+    ]
+  },
+  "reference": "SELECT (5 - x = 2) AS result FROM regression_input",
+  "candidate": "SELECT (x = 7) AS result FROM regression_input",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 8,
+    "candidate_rows": 8,
+    "reference_only_count": 8,
+    "candidate_only_count": 8
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "result"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "result"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "f3143b1278bd92571721f5d71f4d02832f80930dc3468099810ce87674ef6509",
+    "instance_sha256": "4612413ebe44fe2a1d41f0cd7262994b2ddca54179be3fee843c0aa94dfbe26c",
+    "reference_sha256": "fa1ab0ef572b81795446099695e8a9335e7ea95663f5fcdcede042b996b769ec",
+    "candidate_sha256": "12df8a60dd58f415e79a6aac0a022f4e9084ee50f0008bb5944bb430a8b38ebd"
+  },
+  "search": {
+    "source": "frozen-sqlglot-cohort-all-trial-evaluation",
+    "method": "query_aware",
+    "repeat": 0,
+    "trial_zero_based": 0,
+    "seed": 20260930,
+    "completed_trials_per_repeat": 64,
+    "case_id": "subtraction_02:parent",
+    "record_index": 2048,
+    "minimized": false
+  },
+  "reduction": null,
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "5f07eb194e441010ffbb3cd784d575fceee7e5e61f2d2f04aad67da7a96df373"
+}

@@ -1,0 +1,45 @@
+{
+  "format_version": 1,
+  "stage": "public_reproduction_of_recorded_frozen_evaluation",
+  "cohort_archive_sha256": "8e632734ee596baed3eb7af72f5abb3176d5dbe7951d6bc146d7b1dcda1bd703",
+  "cohort_protocol_sha256": "4d9c65d7e20d791cca0d6ba8cabfc3b8a9ce6a21a8064d7216190bed755eb9da",
+  "querywitness_commit": "4a9bfc55e9e6d2b0e02257a0c01fe0131317d8d9",
+  "querywitness_version": "0.2.0",
+  "sqlglot_version": "27.29.0",
+  "methods": [
+    "random",
+    "boundary",
+    "query_aware"
+  ],
+  "repeat_seeds": [
+    20260930,
+    20261930,
+    20262930,
+    20263930
+  ],
+  "trials": 64,
+  "trial_seed_rule": "start_seed + zero_based_trial_index, matching the existing original-suite harness",
+  "case_order": "evaluation-cases.json order, unchanged",
+  "loop_order": "case, method, repeat seed, trial",
+  "max_rows": 8,
+  "policy": "bag",
+  "limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "planned_unique_tasks": 55,
+  "known_different_tasks": 27,
+  "intended_controls": 28,
+  "upstream_bug_clusters": 3,
+  "planned_trials": 42240,
+  "implementation": "Call unchanged generate_instance for random/boundary and compile_plan/generate_query_aware for query_aware. Execute and compare through unchanged engine.execute and compare.compare_results, with frozen guards and limits.",
+  "recording": "Persist full rows, typed observations, statuses, errors, both-empty indicator, seed, schedule/statistics where supplied, effective pools, per-stage time, every planned trial including post-first-witness trials.",
+  "errors": "Retain schema, planning, generation, runtime-guard, SQL and comparison failures as inconclusive. Do not edit the frozen cohort or tune generators. A plan failure only blocks query_aware, not baseline strategies.",
+  "replay": "Independently validate every instance against its raw frozen single-table nullable-INTEGER schema. Replay every mismatch trial through the frozen standard-library SQLite checker in original and reverse insertion order; require mismatch both times and bag agreement with product observations. Record whether the data contain distinct rows so nontrivial reversals are separated from vacuous ones.",
+  "controls": "A mismatch on an intended control is a contradiction requiring independent replay and upstream-source inspection; retain and report it rather than removing the task.",
+  "analysis": "Report 27 known-different and 28 intended-control denominators separately; per-task/repeat and per-cluster counts; paired gains/losses across the same tasks/seeds; all errors/both-empty/time. No superiority or population-recall claim from this three-cluster source-informed cohort.",
+  "immutability": "A new output directory and a new execution manifest are required. This reproduces the frozen design without overwriting the recorded run."
+}

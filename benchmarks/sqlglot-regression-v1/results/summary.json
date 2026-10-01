@@ -1,0 +1,585 @@
+{
+  "format_version": 1,
+  "all_42240_scheduled_trial_keys_present_once": true,
+  "unique_tasks": 55,
+  "known_different_tasks": 27,
+  "intended_controls": 28,
+  "upstream_bug_clusters": 3,
+  "methods": {
+    "random": {
+      "planned_trials": 14080,
+      "known_different_task_denominator": 27,
+      "tasks_found_any_seed": 24,
+      "known_different_task_repeat_denominator": 108,
+      "task_repeats_with_witness": 96,
+      "per_repeat_known_different_tasks_found": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "misses": [
+        {
+          "case_id": "subtraction_02:parent",
+          "repeats": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "case_id": "subtraction_07:parent",
+          "repeats": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "case_id": "subtraction_13:parent",
+          "repeats": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "intended_control_task_denominator": 28,
+      "intended_control_tasks_with_mismatch": [],
+      "trial_counts": {
+        "agreement": 10090,
+        "mismatch": 3990
+      },
+      "trial_counts_by_role": {
+        "detection": {
+          "agreement": 2922,
+          "mismatch": 3990
+        },
+        "intended_control": {
+          "agreement": 7168
+        }
+      },
+      "both_empty_trials": 1155,
+      "generated_rows": 60775,
+      "stage_seconds": {
+        "candidate_seconds": 5.5447076596319675,
+        "comparison_seconds": 0.30650761880679056,
+        "generation_seconds": 0.5197759914663038,
+        "product_trial_seconds": 13.11703522791504,
+        "reference_seconds": 6.364118584286189,
+        "validation_seconds": 0.09357277942763176
+      },
+      "conditional_first_hit_trial_zero_based": {
+        "n_detected_task_repeats": 96,
+        "median": 0.0,
+        "max": 5,
+        "warning": "Conditional on detection; excludes misses, not a time-to-detection comparison."
+      },
+      "cluster_coverage": [
+        {
+          "cluster": "coalesce_operand_order",
+          "known_different_tasks": 6,
+          "tasks_found_any_seed": 6,
+          "per_repeat_tasks_found": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "any_task_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_tasks_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "cluster": "conditional_precedence",
+          "known_different_tasks": 8,
+          "tasks_found_any_seed": 8,
+          "per_repeat_tasks_found": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "any_task_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_tasks_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "cluster": "subtraction",
+          "known_different_tasks": 13,
+          "tasks_found_any_seed": 10,
+          "per_repeat_tasks_found": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "any_task_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_tasks_found_each_repeat": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    "boundary": {
+      "planned_trials": 14080,
+      "known_different_task_denominator": 27,
+      "tasks_found_any_seed": 24,
+      "known_different_task_repeat_denominator": 108,
+      "task_repeats_with_witness": 96,
+      "per_repeat_known_different_tasks_found": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "misses": [
+        {
+          "case_id": "subtraction_02:parent",
+          "repeats": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "case_id": "subtraction_07:parent",
+          "repeats": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "case_id": "subtraction_13:parent",
+          "repeats": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "intended_control_task_denominator": 28,
+      "intended_control_tasks_with_mismatch": [],
+      "trial_counts": {
+        "mismatch": 3870,
+        "agreement": 10210
+      },
+      "trial_counts_by_role": {
+        "detection": {
+          "mismatch": 3870,
+          "agreement": 3042
+        },
+        "intended_control": {
+          "agreement": 7168
+        }
+      },
+      "both_empty_trials": 2310,
+      "generated_rows": 68530,
+      "stage_seconds": {
+        "candidate_seconds": 5.470261023663625,
+        "comparison_seconds": 0.2921309165103594,
+        "generation_seconds": 0.5349996977238334,
+        "product_trial_seconds": 12.96740684897668,
+        "reference_seconds": 6.296788968989858,
+        "validation_seconds": 0.09094729994831141
+      },
+      "conditional_first_hit_trial_zero_based": {
+        "n_detected_task_repeats": 96,
+        "median": 0.0,
+        "max": 5,
+        "warning": "Conditional on detection; excludes misses, not a time-to-detection comparison."
+      },
+      "cluster_coverage": [
+        {
+          "cluster": "coalesce_operand_order",
+          "known_different_tasks": 6,
+          "tasks_found_any_seed": 6,
+          "per_repeat_tasks_found": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "any_task_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_tasks_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "cluster": "conditional_precedence",
+          "known_different_tasks": 8,
+          "tasks_found_any_seed": 8,
+          "per_repeat_tasks_found": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "any_task_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_tasks_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "cluster": "subtraction",
+          "known_different_tasks": 13,
+          "tasks_found_any_seed": 10,
+          "per_repeat_tasks_found": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "any_task_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_tasks_found_each_repeat": [
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    "query_aware": {
+      "planned_trials": 14080,
+      "known_different_task_denominator": 27,
+      "tasks_found_any_seed": 27,
+      "known_different_task_repeat_denominator": 108,
+      "task_repeats_with_witness": 108,
+      "per_repeat_known_different_tasks_found": [
+        27,
+        27,
+        27,
+        27
+      ],
+      "misses": [],
+      "intended_control_task_denominator": 28,
+      "intended_control_tasks_with_mismatch": [],
+      "trial_counts": {
+        "mismatch": 3330,
+        "agreement": 10750
+      },
+      "trial_counts_by_role": {
+        "detection": {
+          "mismatch": 3330,
+          "agreement": 3582
+        },
+        "intended_control": {
+          "agreement": 7168
+        }
+      },
+      "both_empty_trials": 2377,
+      "generated_rows": 72999,
+      "stage_seconds": {
+        "candidate_seconds": 5.618212895649776,
+        "comparison_seconds": 0.3018673156038858,
+        "generation_seconds": 1.708661058000871,
+        "product_trial_seconds": 14.485635297147383,
+        "reference_seconds": 6.5103275798101095,
+        "validation_seconds": 0.09310721019573975
+      },
+      "conditional_first_hit_trial_zero_based": {
+        "n_detected_task_repeats": 108,
+        "median": 1.0,
+        "max": 13,
+        "warning": "Conditional on detection; excludes misses, not a time-to-detection comparison."
+      },
+      "cluster_coverage": [
+        {
+          "cluster": "coalesce_operand_order",
+          "known_different_tasks": 6,
+          "tasks_found_any_seed": 6,
+          "per_repeat_tasks_found": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "any_task_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_tasks_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "cluster": "conditional_precedence",
+          "known_different_tasks": 8,
+          "tasks_found_any_seed": 8,
+          "per_repeat_tasks_found": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "any_task_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_tasks_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "cluster": "subtraction",
+          "known_different_tasks": 13,
+          "tasks_found_any_seed": 13,
+          "per_repeat_tasks_found": [
+            13,
+            13,
+            13,
+            13
+          ],
+          "any_task_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "all_tasks_found_each_repeat": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      ]
+    }
+  },
+  "paired_results": [
+    {
+      "a": "random",
+      "b": "boundary",
+      "unit": "same known-different task and repeat seed; correlated repetitions, not independent bugs",
+      "denominator": 108,
+      "counts": {
+        "both_hit": 96,
+        "a_only": 0,
+        "b_only": 0,
+        "both_miss": 12
+      },
+      "b_gains": [],
+      "b_losses": []
+    },
+    {
+      "a": "random",
+      "b": "query_aware",
+      "unit": "same known-different task and repeat seed; correlated repetitions, not independent bugs",
+      "denominator": 108,
+      "counts": {
+        "both_hit": 96,
+        "a_only": 0,
+        "b_only": 12,
+        "both_miss": 0
+      },
+      "b_gains": [
+        {
+          "case_id": "subtraction_02:parent",
+          "cluster": "subtraction",
+          "repeat": 0
+        },
+        {
+          "case_id": "subtraction_02:parent",
+          "cluster": "subtraction",
+          "repeat": 1
+        },
+        {
+          "case_id": "subtraction_02:parent",
+          "cluster": "subtraction",
+          "repeat": 2
+        },
+        {
+          "case_id": "subtraction_02:parent",
+          "cluster": "subtraction",
+          "repeat": 3
+        },
+        {
+          "case_id": "subtraction_07:parent",
+          "cluster": "subtraction",
+          "repeat": 0
+        },
+        {
+          "case_id": "subtraction_07:parent",
+          "cluster": "subtraction",
+          "repeat": 1
+        },
+        {
+          "case_id": "subtraction_07:parent",
+          "cluster": "subtraction",
+          "repeat": 2
+        },
+        {
+          "case_id": "subtraction_07:parent",
+          "cluster": "subtraction",
+          "repeat": 3
+        },
+        {
+          "case_id": "subtraction_13:parent",
+          "cluster": "subtraction",
+          "repeat": 0
+        },
+        {
+          "case_id": "subtraction_13:parent",
+          "cluster": "subtraction",
+          "repeat": 1
+        },
+        {
+          "case_id": "subtraction_13:parent",
+          "cluster": "subtraction",
+          "repeat": 2
+        },
+        {
+          "case_id": "subtraction_13:parent",
+          "cluster": "subtraction",
+          "repeat": 3
+        }
+      ],
+      "b_losses": []
+    },
+    {
+      "a": "boundary",
+      "b": "query_aware",
+      "unit": "same known-different task and repeat seed; correlated repetitions, not independent bugs",
+      "denominator": 108,
+      "counts": {
+        "both_hit": 96,
+        "a_only": 0,
+        "b_only": 12,
+        "both_miss": 0
+      },
+      "b_gains": [
+        {
+          "case_id": "subtraction_02:parent",
+          "cluster": "subtraction",
+          "repeat": 0
+        },
+        {
+          "case_id": "subtraction_02:parent",
+          "cluster": "subtraction",
+          "repeat": 1
+        },
+        {
+          "case_id": "subtraction_02:parent",
+          "cluster": "subtraction",
+          "repeat": 2
+        },
+        {
+          "case_id": "subtraction_02:parent",
+          "cluster": "subtraction",
+          "repeat": 3
+        },
+        {
+          "case_id": "subtraction_07:parent",
+          "cluster": "subtraction",
+          "repeat": 0
+        },
+        {
+          "case_id": "subtraction_07:parent",
+          "cluster": "subtraction",
+          "repeat": 1
+        },
+        {
+          "case_id": "subtraction_07:parent",
+          "cluster": "subtraction",
+          "repeat": 2
+        },
+        {
+          "case_id": "subtraction_07:parent",
+          "cluster": "subtraction",
+          "repeat": 3
+        },
+        {
+          "case_id": "subtraction_13:parent",
+          "cluster": "subtraction",
+          "repeat": 0
+        },
+        {
+          "case_id": "subtraction_13:parent",
+          "cluster": "subtraction",
+          "repeat": 1
+        },
+        {
+          "case_id": "subtraction_13:parent",
+          "cluster": "subtraction",
+          "repeat": 2
+        },
+        {
+          "case_id": "subtraction_13:parent",
+          "cluster": "subtraction",
+          "repeat": 3
+        }
+      ],
+      "b_losses": []
+    }
+  ],
+  "execution_errors": [],
+  "planning_errors": [],
+  "total_plan_compile_seconds": 0.06877171500673285,
+  "product_run_wall_seconds_including_logging": 45.85796380399552,
+  "interpretation": "Query-aware found three additional related subtraction pairs; all methods found at least one task in each of three upstream bug clusters. No generator tuning, general superiority, independent-bug count inflation or population-recall conclusion."
+}

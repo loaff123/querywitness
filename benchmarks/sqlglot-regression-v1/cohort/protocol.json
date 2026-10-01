@@ -1,0 +1,34 @@
+{
+  "format_version": 1,
+  "phase": "admission_and_independent_oracle_only",
+  "querywitness_commit": "4a9bfc55e9e6d2b0e02257a0c01fe0131317d8d9",
+  "sqlglot_license_pin": "64d6f59a4981d35f362fecc615a4e3ce764bebb7",
+  "clusters": [
+    {"id":"subtraction", "fix":"e16a179a4226e7049e050f5cc86d63ace9c60b40", "parent":"eba0b304f179484ad7b5e0ae3467128abadae2f9"},
+    {"id":"coalesce_operand_order", "fix":"c9ad903e7553543686472e5babf3c18e4e7dbc7b", "parent":"1d753d72c6e81e39cfc7160af33673314d4d600e"},
+    {"id":"conditional_precedence", "fix":"06c7b3dd7b656ff5ed80337ee668cf58318e002b", "parent":"a070393d34aae2fda84f70896a3c3d90820720b5"}
+  ],
+  "selection": "All newly added source/expected fixture pairs in tests/fixtures/optimizer/simplify.sql at each fix relative to its exact parent. No filtering on generator outcomes.",
+  "adapter": "Text-only SELECT (<unchanged expression>) AS result FROM regression_input, with alphabetical union of original/fixed/parent identifiers as nullable INTEGER columns, no domain/key/FK constraints. Preserve all internal operators, literals, and parentheses. No SQLite transpilation or function rewriting.",
+  "exclusions": "Unsupported SQLite functions/syntax, non-INTEGER variable type ambiguity, and duplicate unordered normalized pairs are retained in the complete pool and ledger. No easy-case rewriting. Detection and control admission are separate.",
+  "oracle": {
+    "implementation": "Python standard-library sqlite3, independent of all QueryWitness imports and of SQLGlot SQL generation",
+    "diagnostic_domain": [null,-8,-3,-2,-1,0,1,2,3,4,5,8],
+    "domain_freeze": "This protocol is hashed before any cohort SQLite diagnostic execution. Same domain for every INTEGER input column.",
+    "instances": "Empty table, exhaustive singleton Cartesian product of the diagnostic domain over every declared column; first discrepancy repeated twice and as an eight-row duplicate bag; reverse insertion replay. Scan every singleton even after a witness.",
+    "row_bound": 8,
+    "result_policy": "bag; exact numeric rational comparison, NULL observation equality, distinct TEXT/BLOB tags; column count also compared",
+    "nonfinite_or_execution_error": "inconclusive; retain errors and never count as a mismatch",
+    "interpretation": "One successful singleton mismatch is a row8 witness. No mismatch on the diagnostic domain is unresolved, not equivalence. Source/fixed pairs are intended controls, not assumed true controls. Contradicted controls are retained and labeled."
+  },
+  "later_evaluation": {
+    "authorized_now": false,
+    "methods":["random","boundary","query_aware"],
+    "method_order":"random,boundary,query_aware",
+    "repeat_seeds":[20260930,20261930,20262930,20263930],
+    "trials":64,"max_rows":8,"policy":"bag",
+    "limits":{"rows":10000,"bytes":2000000,"vm_steps":1000000,"seconds":2.0,"sql_bytes":32768},
+    "requirements":["Same pinned QueryWitness 0.2 implementation, parser and complete existing guard/limits","No generator tuning or supplied diagnostic domains","Retain every scheduled trial, including post-first-witness trials","Record effective pools, generated rows, execution errors, both-empty outcomes and elapsed times","Independently replay each reported witness and reverse insertion order using this checker","Report denominators at fixture/pair and three upstream bug-cluster levels; permutations and repeat seeds are not independent bugs","Report unresolved/unsupported/control-contradicted pairs separately without pruning the frozen pool"]
+  },
+  "limitations":["Regression-derived bounded cohort, not blinded or organizationally independent","SQLGlot also supplies QueryWitness's parser (version 27.29.0), creating shared-parser coupling","Selection motivated by source-visible fixed bugs; no population recall or generalization estimate","Three upstream bug clusters, not one independent bug per fixture","Restricted INTEGER interpretation, SQLite version and finite diagnostic domain limit conclusions","No QueryWitness generator, search, execution or comparison code is run during this phase"]
+}

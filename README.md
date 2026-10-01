@@ -81,6 +81,10 @@ See the [dataset and evaluation card](docs/DATASET_CARD.md), [reproduction proto
 
 The optional strategy detected 18/45 already-inspected external development tasks versus 14/45 per unchanged sampler, gaining five and losing one previously detected task. It is not uniformly better. On 16 newly authored frozen pairs, it detected all 11 known distinguishable cases within row8 versus six per baseline, with zero control mismatches. The [full methods, negatives and licensing limits](docs/QUERY_AWARE_EVALUATION.md) distinguish external aggregate findings from the public reproducible original-only study. No held-out, recall or equivalence claim is made.
 
+### SQLGlot regression-derived validation
+
+On a frozen source-informed cohort, unchanged random/boundary/query-aware strategies found **24/27, 24/27 and 27/27** known-different pairs. Every method covered all three upstream bug clusters; 28 intended controls had no observed mismatch. The three extra pairs are related, query-aware produced fewer mismatch trials and took longer in generation, and the study is not blind or a population-recall estimate. See the [source-backed report and public reproduction package](docs/SQLGLOT_REGRESSION_VALIDATION.md).
+
 ## Documentation
 
 - [Command line](docs/CLI.md) and [Python API](docs/API.md)

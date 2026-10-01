@@ -1,0 +1,31 @@
+{
+  "format_version": 1,
+  "files": {
+    "LICENSE.SQLGLOT": "b0bf909b472ddf9bd4eab30f6e6fd8b33bf3997ce038b882fe0663f291958d2d",
+    "NOTICE.md": "61067ccd3245e6924fdd407dfd9694056e571cbf0dc0541f7486fef774638bc3",
+    "README.md": "000e2687f0c555143a7214aed0e6ad279b3397611a5bd822d540eef97d37b341",
+    "cohort/adapted-pool.json": "d163310aba1cad47f9d25571206fa581b8623fff83c18e7409150b12ef756b3b",
+    "cohort/admission-ledger.json": "4c162a74e2e9478cd11fc730a40a181927c6d85da1619e4c1ba53d3becce88a3",
+    "cohort/evaluation-cases.json": "62cfe3e128f3437c2a1fbf3f3388b4e2257a56a2ba2f42a4011dd4092cf5cc8f",
+    "cohort/protocol.json": "4d9c65d7e20d791cca0d6ba8cabfc3b8a9ce6a21a8064d7216190bed755eb9da",
+    "cohort/source-pool.json": "a113f67c86341c4120fd03655672abb01def3be37847600396b2c286f052c9da",
+    "evaluation-protocol.json": "7a376e11ae2dfe64f9b95548b34552ad94a8e190d558f5ad426f0ee3d1fc2df3",
+    "evidence.json": "0cf7fab46e8add4cb3ce9dbe49b3b7360b4d2ebd2c8f72d0cf2b504d1e42d132",
+    "harness/evaluate.py": "f5b75853f786b5ecaef26594c264a740f50d0cf56a190f48c8237949188a3ad8",
+    "harness/replay_all.py": "0e8edec4bdb81e597044c0d017d2f5004ed854aa499c8c353409d67a841f6920",
+    "harness/sqlite_checker.py": "f1497eeaf2af52c2623018a6280323502c418d49e795588ea55e21eab2fbe4e4",
+    "harness/summarize.py": "e0de51beac52e2f2b294f3a1f3cda6f93e1cf4bf3d393acac1ad71cd0d0de364",
+    "harness/test_evaluator.py": "ff0eb4fb99b3803ae71f30e5e0c0e9f6bc67ed831f15fa7dceda2b3fcc904f23",
+    "harness/test_replay.py": "74e4df04f5284df2b68b1315db83e5ba1c806aa61b5f73abbc81860e166ee715",
+    "product-source-hashes.json": "4d7484a55364a9b8f7d0a414bc1594b6ecb43bf612f5b90b402c01cde4df3a21",
+    "provenance.json": "0f656fdabb240840f606aed2f260a13df5c27952e59268047b2d60162bb548b0",
+    "reproduce.py": "9968054e7cc1aeea245de401003ff84530b00f4faba5db7fde029e4f23eedd78",
+    "reproduce_sources.py": "99b221ce6b2664e2397713f4ed7431037a243c13f719f2b8b741cf437f17b359",
+    "results/example-witness.json": "869b2ca52e205d201e55000b38d629ab102edf4a707a9640107ffe5d1eb96a7c",
+    "results/independent-replay-summary.json": "4e5dbffad222fef091f4f2428e47b7b966d44f3988201f70b888a244a61cbf23",
+    "results/observed-values.json": "4a8e01a1a55f10c439adf00eee433b737ac68695039b161ff43a053d121af574",
+    "results/summary.json": "6a878e6d07df70ee7138d4c5b7383a4d40e6335a4005cb20d1cd6e5615c4b9c4",
+    "upstream/prepare_sources.py": "566f76b6012eee2be6ca6132f8d7cf46ca9b7371344225d6f989b2206acd9a6c",
+    "upstream/upstream_helper.py": "dca5fda529abfb20644f3057a86bd1f6741f6c1e6d3dd73edfaeb5d1e7e0a862"
+  }
+}

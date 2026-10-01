@@ -1,0 +1,1101 @@
+{
+  "format_version": 1,
+  "fixtures": [
+    {
+      "id": "subtraction_01",
+      "cluster": "subtraction",
+      "columns": [
+        "a"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (0 - a = 1) AS result FROM regression_input",
+      "parent_sql": "SELECT (a = 1) AS result FROM regression_input",
+      "fixed_sql": "SELECT (a = -1) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1206"
+    },
+    {
+      "id": "subtraction_02",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (5 - x = 2) AS result FROM regression_input",
+      "parent_sql": "SELECT (x = 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x = 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1209"
+    },
+    {
+      "id": "subtraction_03",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (5 - x > 2) AS result FROM regression_input",
+      "parent_sql": "SELECT (x > 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x < 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1212"
+    },
+    {
+      "id": "subtraction_04",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (5 - x >= 2) AS result FROM regression_input",
+      "parent_sql": "SELECT (x >= 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x <= 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1215"
+    },
+    {
+      "id": "subtraction_05",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (5 - x < 2) AS result FROM regression_input",
+      "parent_sql": "SELECT (x < 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x > 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1218"
+    },
+    {
+      "id": "subtraction_06",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (5 - x <= 2) AS result FROM regression_input",
+      "parent_sql": "SELECT (x <= 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x >= 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1221"
+    },
+    {
+      "id": "subtraction_07",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (5 - x <> 2) AS result FROM regression_input",
+      "parent_sql": "SELECT (x <> 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x <> 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1224"
+    },
+    {
+      "id": "subtraction_08",
+      "cluster": "subtraction",
+      "columns": [
+        "a"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (1 = 0 - a) AS result FROM regression_input",
+      "parent_sql": "SELECT (a = 1) AS result FROM regression_input",
+      "fixed_sql": "SELECT (a = -1) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1227"
+    },
+    {
+      "id": "subtraction_09",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (2 > 5 - x) AS result FROM regression_input",
+      "parent_sql": "SELECT (x < 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x > 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1230"
+    },
+    {
+      "id": "subtraction_10",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (2 >= 5 - x) AS result FROM regression_input",
+      "parent_sql": "SELECT (x <= 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x >= 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1233"
+    },
+    {
+      "id": "subtraction_11",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (2 < 5 - x) AS result FROM regression_input",
+      "parent_sql": "SELECT (x > 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x < 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1236"
+    },
+    {
+      "id": "subtraction_12",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (2 <= 5 - x) AS result FROM regression_input",
+      "parent_sql": "SELECT (x >= 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x <= 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1239"
+    },
+    {
+      "id": "subtraction_13",
+      "cluster": "subtraction",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (2 <> 5 - x) AS result FROM regression_input",
+      "parent_sql": "SELECT (x <> 7) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x <> 3) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1242"
+    },
+    {
+      "id": "coalesce_operand_order_01",
+      "cluster": "coalesce_operand_order",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (1 < COALESCE(x, 0)) AS result FROM regression_input",
+      "parent_sql": "SELECT (x > 1 OR x IS NULL) AS result FROM regression_input",
+      "fixed_sql": "SELECT (NOT x IS NULL AND x > 1) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1075"
+    },
+    {
+      "id": "coalesce_operand_order_02",
+      "cluster": "coalesce_operand_order",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (0 >= COALESCE(x, 1)) AS result FROM regression_input",
+      "parent_sql": "SELECT (x <= 0 OR x IS NULL) AS result FROM regression_input",
+      "fixed_sql": "SELECT (NOT x IS NULL AND x <= 0) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1078"
+    },
+    {
+      "id": "coalesce_operand_order_03",
+      "cluster": "coalesce_operand_order",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (-1 < COALESCE(x, 0)) AS result FROM regression_input",
+      "parent_sql": "SELECT (NOT x IS NULL AND x > -1) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x > -1 OR x IS NULL) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1081"
+    },
+    {
+      "id": "coalesce_operand_order_04",
+      "cluster": "coalesce_operand_order",
+      "columns": [
+        "x",
+        "y"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "y",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (1 < COALESCE(x, y, 0)) AS result FROM regression_input",
+      "parent_sql": "SELECT (COALESCE(x, y) > 1 OR COALESCE(x, y) IS NULL) AS result FROM regression_input",
+      "fixed_sql": "SELECT (COALESCE(x, y) > 1 AND NOT COALESCE(x, y) IS NULL) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1084"
+    },
+    {
+      "id": "coalesce_operand_order_05",
+      "cluster": "coalesce_operand_order",
+      "columns": [
+        "x",
+        "y"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "y",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (0 >= COALESCE(x, y, 1)) AS result FROM regression_input",
+      "parent_sql": "SELECT (COALESCE(x, y) <= 0 OR COALESCE(x, y) IS NULL) AS result FROM regression_input",
+      "fixed_sql": "SELECT (COALESCE(x, y) <= 0 AND NOT COALESCE(x, y) IS NULL) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1087"
+    },
+    {
+      "id": "coalesce_operand_order_06",
+      "cluster": "coalesce_operand_order",
+      "columns": [
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (1 < COALESCE(x, 0, 5)) AS result FROM regression_input",
+      "parent_sql": "SELECT (x > 1 OR x IS NULL) AS result FROM regression_input",
+      "fixed_sql": "SELECT (NOT x IS NULL AND x > 1) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1090"
+    },
+    {
+      "id": "conditional_precedence_01",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "a",
+        "b",
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (x * CASE WHEN FALSE THEN NULL ELSE a - b END) AS result FROM regression_input",
+      "parent_sql": "SELECT (x * a - b) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x * (a - b)) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1738"
+    },
+    {
+      "id": "conditional_precedence_02",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "b",
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (x * (CASE WHEN 1 IS NULL THEN NULL ELSE 1 - b END)) AS result FROM regression_input",
+      "parent_sql": "SELECT (x * 1 - b) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x * (1 - b)) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1741"
+    },
+    {
+      "id": "conditional_precedence_03",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "a",
+        "b",
+        "c",
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "c",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (x - CASE WHEN TRUE THEN a + b ELSE c END) AS result FROM regression_input",
+      "parent_sql": "SELECT (x - a + b) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x - (a + b)) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1744"
+    },
+    {
+      "id": "conditional_precedence_04",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "a",
+        "b",
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (CASE WHEN FALSE THEN NULL ELSE a - b END * x) AS result FROM regression_input",
+      "parent_sql": "SELECT (a - b * x) AS result FROM regression_input",
+      "fixed_sql": "SELECT ((a - b) * x) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1747"
+    },
+    {
+      "id": "conditional_precedence_05",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "a",
+        "b",
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (x / CASE WHEN FALSE THEN 1 ELSE a * b END) AS result FROM regression_input",
+      "parent_sql": "SELECT (x / a * b) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x / (a * b)) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1750"
+    },
+    {
+      "id": "conditional_precedence_06",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "a",
+        "b",
+        "c",
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "c",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (x + CASE WHEN TRUE THEN a * b ELSE c END) AS result FROM regression_input",
+      "parent_sql": "SELECT (x + a * b) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x + a * b) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1753"
+    },
+    {
+      "id": "conditional_precedence_07",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "a",
+        "b",
+        "c",
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "c",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (x * IF(TRUE, a - b, c)) AS result FROM regression_input",
+      "parent_sql": "SELECT (x * a - b) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x * (a - b)) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1756"
+    },
+    {
+      "id": "conditional_precedence_08",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "a",
+        "b",
+        "c",
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "c",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (x * IF(FALSE, c, a - b)) AS result FROM regression_input",
+      "parent_sql": "SELECT (x * a - b) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x * (a - b)) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1759"
+    },
+    {
+      "id": "conditional_precedence_09",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "a",
+        "b",
+        "c",
+        "x"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "c",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "x",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (x * CASE WHEN TRUE THEN IF(FALSE, c, a - b) ELSE c END) AS result FROM regression_input",
+      "parent_sql": "SELECT (x * a - b) AS result FROM regression_input",
+      "fixed_sql": "SELECT (x * (a - b)) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1762"
+    },
+    {
+      "id": "conditional_precedence_10",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "p"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "p",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (CASE WHEN TRUE THEN NOT p ELSE FALSE END || 'x') AS result FROM regression_input",
+      "parent_sql": "SELECT (NOT p || 'x') AS result FROM regression_input",
+      "fixed_sql": "SELECT ((NOT p) || 'x') AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1765"
+    },
+    {
+      "id": "conditional_precedence_11",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "p"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "p",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (IF(FALSE, FALSE, NOT p) || 'x') AS result FROM regression_input",
+      "parent_sql": "SELECT (NOT p || 'x') AS result FROM regression_input",
+      "fixed_sql": "SELECT ((NOT p) || 'x') AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1768"
+    },
+    {
+      "id": "conditional_precedence_12",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "a",
+        "b",
+        "c"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "c",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (NOT CASE WHEN TRUE THEN a AND b ELSE c END) AS result FROM regression_input",
+      "parent_sql": "SELECT (NOT a AND b) AS result FROM regression_input",
+      "fixed_sql": "SELECT (NOT a OR NOT b) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1771"
+    },
+    {
+      "id": "conditional_precedence_13",
+      "cluster": "conditional_precedence",
+      "columns": [
+        "a",
+        "b",
+        "c"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "regression_input",
+            "columns": [
+              {
+                "name": "a",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "b",
+                "type": "INTEGER",
+                "nullable": true
+              },
+              {
+                "name": "c",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "source_sql": "SELECT (-CASE WHEN TRUE THEN a + b ELSE c END) AS result FROM regression_input",
+      "parent_sql": "SELECT (-a + b) AS result FROM regression_input",
+      "fixed_sql": "SELECT (-(a + b)) AS result FROM regression_input",
+      "type_interpretation": "All free variables are nullable SQLite signed-64 INTEGER; no schema domains supplied to generators.",
+      "source_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1774"
+    }
+  ]
+}

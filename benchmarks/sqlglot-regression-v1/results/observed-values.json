@@ -1,0 +1,4107 @@
+[
+  {
+    "case_id": "coalesce_operand_order_01:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_01:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_01:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_01:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_01:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_01:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_02:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_02:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_02:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_02:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_02:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_02:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_03:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_03:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_03:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_03:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_03:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_03:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:fixed",
+    "method": "boundary",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:fixed",
+    "method": "query_aware",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:fixed",
+    "method": "random",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:parent",
+    "method": "boundary",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:parent",
+    "method": "query_aware",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_04:parent",
+    "method": "random",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:fixed",
+    "method": "boundary",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:fixed",
+    "method": "query_aware",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:fixed",
+    "method": "random",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:parent",
+    "method": "boundary",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:parent",
+    "method": "query_aware",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_05:parent",
+    "method": "random",
+    "column": "y",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_06:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_06:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_06:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_06:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_06:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "coalesce_operand_order_06:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:fixed",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:fixed",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:fixed",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:fixed",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:fixed",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:fixed",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:parent",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:parent",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:parent",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:parent",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:parent",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:parent",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_01:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:fixed",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:fixed",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:fixed",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:parent",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:parent",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:parent",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_02:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "boundary",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "query_aware",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "random",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "boundary",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "query_aware",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "random",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_03:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:fixed",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:fixed",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:fixed",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:fixed",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:fixed",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:fixed",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:parent",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:parent",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:parent",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:parent",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:parent",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:parent",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_04:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:fixed",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:fixed",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:fixed",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:fixed",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:fixed",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:fixed",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:parent",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:parent",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:parent",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:parent",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:parent",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:parent",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_05:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "boundary",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "query_aware",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "random",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_06:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_10:fixed",
+    "method": "boundary",
+    "column": "p",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_10:fixed",
+    "method": "query_aware",
+    "column": "p",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_10:fixed",
+    "method": "random",
+    "column": "p",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_10:parent",
+    "method": "boundary",
+    "column": "p",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_10:parent",
+    "method": "query_aware",
+    "column": "p",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_10:parent",
+    "method": "random",
+    "column": "p",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:fixed",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:fixed",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:fixed",
+    "method": "boundary",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:fixed",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:fixed",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:fixed",
+    "method": "query_aware",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:fixed",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:fixed",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:fixed",
+    "method": "random",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:parent",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:parent",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:parent",
+    "method": "boundary",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:parent",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:parent",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:parent",
+    "method": "query_aware",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:parent",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:parent",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_12:parent",
+    "method": "random",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:fixed",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:fixed",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:fixed",
+    "method": "boundary",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:fixed",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:fixed",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:fixed",
+    "method": "query_aware",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:fixed",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:fixed",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:fixed",
+    "method": "random",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:parent",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:parent",
+    "method": "boundary",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:parent",
+    "method": "boundary",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:parent",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:parent",
+    "method": "query_aware",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:parent",
+    "method": "query_aware",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:parent",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:parent",
+    "method": "random",
+    "column": "b",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "conditional_precedence_13:parent",
+    "method": "random",
+    "column": "c",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_01:fixed",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_01:fixed",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_01:fixed",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_01:parent",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_01:parent",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_01:parent",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_02:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_02:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_02:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_02:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_02:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_02:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_03:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_03:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_03:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_03:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_03:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_03:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_04:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_04:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_04:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_04:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_04:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_04:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_05:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_05:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_05:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_05:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_05:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_05:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_06:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_06:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_06:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_06:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_06:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_06:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_07:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_07:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_07:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_07:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_07:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_07:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_08:fixed",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_08:fixed",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_08:fixed",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_08:parent",
+    "method": "boundary",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_08:parent",
+    "method": "query_aware",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_08:parent",
+    "method": "random",
+    "column": "a",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_09:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_09:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_09:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_09:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_09:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_09:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_10:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_10:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_10:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_10:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_10:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_10:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_11:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_11:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_11:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_11:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_11:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_11:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_12:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_12:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_12:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_12:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_12:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_12:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_13:fixed",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_13:fixed",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_13:fixed",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_13:parent",
+    "method": "boundary",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_13:parent",
+    "method": "query_aware",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      6,
+      7,
+      8,
+      10,
+      100
+    ]
+  },
+  {
+    "case_id": "subtraction_13:parent",
+    "method": "random",
+    "column": "x",
+    "observed_values": [
+      null,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10,
+      100
+    ]
+  }
+]

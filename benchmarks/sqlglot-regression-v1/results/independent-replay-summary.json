@@ -1,0 +1,21 @@
+{
+  "format_version": 1,
+  "checker_sha256": "f1497eeaf2af52c2623018a6280323502c418d49e795588ea55e21eab2fbe4e4",
+  "all_generated_trials_replayed_not_only_witnesses": true,
+  "counts": {
+    "trial_records": 42240,
+    "verified": 42240,
+    "forward_same": 31050,
+    "reverse_same": 31050,
+    "forward_mismatch": 11190,
+    "reverse_mismatch": 11190,
+    "product_witness_trials": 11190,
+    "witness_reversals_changing_sequence": 9597,
+    "witness_instances_with_distinct_rows": 9665,
+    "independently_verified_witnesses": 11190
+  },
+  "contradicted_intended_control_ids": [],
+  "issues": [],
+  "elapsed_seconds": 19.010898461005127,
+  "verified_without_discrepancy": true
+}

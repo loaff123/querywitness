@@ -1,0 +1,856 @@
+{
+  "format_version": 1,
+  "summary": {
+    "raw_source_fixtures": 32,
+    "raw_intended_pairs": 64,
+    "unique_normalized_pairs_before_compatibility": 63,
+    "admitted_unique_pairs": 55,
+    "excluded_unsupported_raw_pairs": 8,
+    "duplicate_alias_rows": 1,
+    "admitted_witnessed_different_pairs": 27,
+    "admitted_intended_control_pairs": 28,
+    "upstream_bug_clusters": 3,
+    "later_scheduled_trials_if_approved": 42240
+  },
+  "ledger": [
+    {
+      "pair_id": "subtraction_01:parent",
+      "fixture_id": "subtraction_01",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_01:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "428a8efe940bb80066e08269a26a6908533a91070cadd3df0ae2fe4269d8432c"
+    },
+    {
+      "pair_id": "subtraction_01:fixed",
+      "fixture_id": "subtraction_01",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_01:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "abcb1964c1af6b3c71868057fd45b76cdf53d0a409130d7a67daaf2d1a98a008"
+    },
+    {
+      "pair_id": "subtraction_02:parent",
+      "fixture_id": "subtraction_02",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_02:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "bb29c98b22bd755429d56bd0819d1c859eac8d7214556771f6012bcc0751095f"
+    },
+    {
+      "pair_id": "subtraction_02:fixed",
+      "fixture_id": "subtraction_02",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_02:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "140f26d658fb85d78aada9c899f111bb7fa38f442db713c08a9345d33a7556b0"
+    },
+    {
+      "pair_id": "subtraction_03:parent",
+      "fixture_id": "subtraction_03",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_03:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "352df7ce98a264f4547ae99e624242ab521ca808707699c3c598d4c2b90b12a5"
+    },
+    {
+      "pair_id": "subtraction_03:fixed",
+      "fixture_id": "subtraction_03",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_03:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "a31ec0897fcfd8e365b628f69f51bf0b68379134aabc9a85f321f03acf0aa843"
+    },
+    {
+      "pair_id": "subtraction_04:parent",
+      "fixture_id": "subtraction_04",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_04:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "d3b47d1af1b08a3417fde7e24a9560ab535b3a442a832ff95d3364242245e4a3"
+    },
+    {
+      "pair_id": "subtraction_04:fixed",
+      "fixture_id": "subtraction_04",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_04:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "675085257f542e843392f2383fbccbbbf4a8ec9024f3516d08563eeb41d00f80"
+    },
+    {
+      "pair_id": "subtraction_05:parent",
+      "fixture_id": "subtraction_05",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_05:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "decb3c9d8ca7485bb1d4033fbb40f381181ed99ed5d1e69601d08e3af37eb099"
+    },
+    {
+      "pair_id": "subtraction_05:fixed",
+      "fixture_id": "subtraction_05",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_05:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "b25787732e15f242bc773e0ed997c4cd5d3c4d8997f5577ce1b4ffe5cbe73585"
+    },
+    {
+      "pair_id": "subtraction_06:parent",
+      "fixture_id": "subtraction_06",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_06:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "dc5ce9e895080d14872bfbb9c521b1b5865ce89470589140d69c1140ec7301ba"
+    },
+    {
+      "pair_id": "subtraction_06:fixed",
+      "fixture_id": "subtraction_06",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_06:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "345de79788ddf6b5721cdd2da157de129f21355fd09fe3f60db185664f4fdea6"
+    },
+    {
+      "pair_id": "subtraction_07:parent",
+      "fixture_id": "subtraction_07",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_07:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "97914f6d7e5c3325f773a4e57e0573c5c5725577bc6be530457fcb9e16bcfaee"
+    },
+    {
+      "pair_id": "subtraction_07:fixed",
+      "fixture_id": "subtraction_07",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_07:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "8da0c97206aca9798f1f6547bf8fef29d3eb0cadef62229aaa4a4208ff18d00b"
+    },
+    {
+      "pair_id": "subtraction_08:parent",
+      "fixture_id": "subtraction_08",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_08:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "b5f6f04191b09932ee39519d893da5b99d701132d0f15edb4971f77552cdb2e0"
+    },
+    {
+      "pair_id": "subtraction_08:fixed",
+      "fixture_id": "subtraction_08",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_08:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "0e86cc34eb6f480f8a133eb62cabf453e2b339dde63a233b77f3fff41926c1ce"
+    },
+    {
+      "pair_id": "subtraction_09:parent",
+      "fixture_id": "subtraction_09",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_09:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "2d335cdf27f214c8287b0bf9332cacf0f1e946eafd09b8fb6b94250aa43ff047"
+    },
+    {
+      "pair_id": "subtraction_09:fixed",
+      "fixture_id": "subtraction_09",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_09:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "b98edfe36bd9996e25422b7d477778ffc704473f2f83c6928d94b186230845d9"
+    },
+    {
+      "pair_id": "subtraction_10:parent",
+      "fixture_id": "subtraction_10",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_10:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "59c10e8ca2bbd7531c92d98f2451a63a0ba14ae238bdec204ddbc7f0300da16f"
+    },
+    {
+      "pair_id": "subtraction_10:fixed",
+      "fixture_id": "subtraction_10",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_10:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "a058db5d1a1152d12289181dddfc9c9e54011ca2dcdd6677f67f89fe56e50fb5"
+    },
+    {
+      "pair_id": "subtraction_11:parent",
+      "fixture_id": "subtraction_11",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_11:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "fd956e44dc5154b78f1213d8479f3b11d8706a3434d8677f01ec3d4be486416d"
+    },
+    {
+      "pair_id": "subtraction_11:fixed",
+      "fixture_id": "subtraction_11",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_11:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "0601c95107e05ca72e547e76d2fa4252832087778e9bd563fa6ec8c2f7a6c583"
+    },
+    {
+      "pair_id": "subtraction_12:parent",
+      "fixture_id": "subtraction_12",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_12:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "88593526d2e166fb718c51fd105ac54cd717b2ef28014c3747ffc2e3e698d9f8"
+    },
+    {
+      "pair_id": "subtraction_12:fixed",
+      "fixture_id": "subtraction_12",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_12:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "8f9d9fdfc78ca1ab4f0056b9897bd5404691bfc07f329604023b4c47addb38f5"
+    },
+    {
+      "pair_id": "subtraction_13:parent",
+      "fixture_id": "subtraction_13",
+      "cluster": "subtraction",
+      "role": "detection",
+      "canonical_pair_id": "subtraction_13:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "0305ffa25fb760b97047fa1a83506fa3ae26bf2d6e0ab99e88686005501caabe"
+    },
+    {
+      "pair_id": "subtraction_13:fixed",
+      "fixture_id": "subtraction_13",
+      "cluster": "subtraction",
+      "role": "intended_control",
+      "canonical_pair_id": "subtraction_13:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "0a579b3fc290b228319bf32e20a668dd097bfa8ad1a401bc37cd30c098a41822"
+    },
+    {
+      "pair_id": "coalesce_operand_order_01:parent",
+      "fixture_id": "coalesce_operand_order_01",
+      "cluster": "coalesce_operand_order",
+      "role": "detection",
+      "canonical_pair_id": "coalesce_operand_order_01:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "b9de629a7f1a72b682a070d652e4027edafa3ea0bf96ec184dc19c838ec01447"
+    },
+    {
+      "pair_id": "coalesce_operand_order_01:fixed",
+      "fixture_id": "coalesce_operand_order_01",
+      "cluster": "coalesce_operand_order",
+      "role": "intended_control",
+      "canonical_pair_id": "coalesce_operand_order_01:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "aa242a7865901be839bd0a9a937744c9159db0f449a7510a68e760ad78293a92"
+    },
+    {
+      "pair_id": "coalesce_operand_order_02:parent",
+      "fixture_id": "coalesce_operand_order_02",
+      "cluster": "coalesce_operand_order",
+      "role": "detection",
+      "canonical_pair_id": "coalesce_operand_order_02:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "f5b43b66764ae79f65c882893541b6490a5219e9086934fd855b47c5cf6bb7f6"
+    },
+    {
+      "pair_id": "coalesce_operand_order_02:fixed",
+      "fixture_id": "coalesce_operand_order_02",
+      "cluster": "coalesce_operand_order",
+      "role": "intended_control",
+      "canonical_pair_id": "coalesce_operand_order_02:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "ca9f0744d31b058a91fe95d9e130030867f400ce58d74023513ec79c56972f2d"
+    },
+    {
+      "pair_id": "coalesce_operand_order_03:parent",
+      "fixture_id": "coalesce_operand_order_03",
+      "cluster": "coalesce_operand_order",
+      "role": "detection",
+      "canonical_pair_id": "coalesce_operand_order_03:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "13b1694ba8037074bf04eb57c6908f3f7703439ab48628e972dbfeca8cee3ea5"
+    },
+    {
+      "pair_id": "coalesce_operand_order_03:fixed",
+      "fixture_id": "coalesce_operand_order_03",
+      "cluster": "coalesce_operand_order",
+      "role": "intended_control",
+      "canonical_pair_id": "coalesce_operand_order_03:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "03e84721200397c133f5c17753d7eae7fa3586df84d2170f4ed39d5f804bed6c"
+    },
+    {
+      "pair_id": "coalesce_operand_order_04:parent",
+      "fixture_id": "coalesce_operand_order_04",
+      "cluster": "coalesce_operand_order",
+      "role": "detection",
+      "canonical_pair_id": "coalesce_operand_order_04:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "9210e8d6ba20defb430b3ae097f4ef2a8f3f941ba2c2f056921df2692dbe430f"
+    },
+    {
+      "pair_id": "coalesce_operand_order_04:fixed",
+      "fixture_id": "coalesce_operand_order_04",
+      "cluster": "coalesce_operand_order",
+      "role": "intended_control",
+      "canonical_pair_id": "coalesce_operand_order_04:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "90e4e9b9d6e5b96ed08aaf982860fb5f5e7a784a8901c788c4c328dbdff6dabc"
+    },
+    {
+      "pair_id": "coalesce_operand_order_05:parent",
+      "fixture_id": "coalesce_operand_order_05",
+      "cluster": "coalesce_operand_order",
+      "role": "detection",
+      "canonical_pair_id": "coalesce_operand_order_05:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "ffff93b51a5b7b068002eca2bbf27bf50ad9d9d9a184b081e85de65a1df4cc27"
+    },
+    {
+      "pair_id": "coalesce_operand_order_05:fixed",
+      "fixture_id": "coalesce_operand_order_05",
+      "cluster": "coalesce_operand_order",
+      "role": "intended_control",
+      "canonical_pair_id": "coalesce_operand_order_05:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "8dfad6713e0ea2d236392c603e85cde04a608d25c0969f75e4b295826e81c753"
+    },
+    {
+      "pair_id": "coalesce_operand_order_06:parent",
+      "fixture_id": "coalesce_operand_order_06",
+      "cluster": "coalesce_operand_order",
+      "role": "detection",
+      "canonical_pair_id": "coalesce_operand_order_06:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "e2701d551b26450673808557b1c70c78cec75f445771435c27456f4fcff35843"
+    },
+    {
+      "pair_id": "coalesce_operand_order_06:fixed",
+      "fixture_id": "coalesce_operand_order_06",
+      "cluster": "coalesce_operand_order",
+      "role": "intended_control",
+      "canonical_pair_id": "coalesce_operand_order_06:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "aae428f26020f40ada28ec5c7a334545248bcb5679f58c55a60ba90ac1b8d35b"
+    },
+    {
+      "pair_id": "conditional_precedence_01:parent",
+      "fixture_id": "conditional_precedence_01",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_01:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "92f4570584e6a92581a11f3b1ba00047e8268bc5e75f18a53081d9fae41711b9"
+    },
+    {
+      "pair_id": "conditional_precedence_01:fixed",
+      "fixture_id": "conditional_precedence_01",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_01:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "3e7fc8bf52cd3560e4543acb5a940e149dfca76aeb7ced2f08329110af7f25f0"
+    },
+    {
+      "pair_id": "conditional_precedence_02:parent",
+      "fixture_id": "conditional_precedence_02",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_02:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "78b64f98ec403a2799c50e3f7190bd5b90c00c337304236e5476d015d1af08c1"
+    },
+    {
+      "pair_id": "conditional_precedence_02:fixed",
+      "fixture_id": "conditional_precedence_02",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_02:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "f505ac669f70bd05110cf496b575a7de20e2b15adbee23e8090669e32fcd10fc"
+    },
+    {
+      "pair_id": "conditional_precedence_03:parent",
+      "fixture_id": "conditional_precedence_03",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_03:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "2fde4ba80bf24c862dad0e3a87b4eab05c08faa45d3bc7b3eac08d1293e0485f"
+    },
+    {
+      "pair_id": "conditional_precedence_03:fixed",
+      "fixture_id": "conditional_precedence_03",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_03:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "afc5cf6b113792bc2959807bd297fe967d784c35d825819a57daa9bc171145d1"
+    },
+    {
+      "pair_id": "conditional_precedence_04:parent",
+      "fixture_id": "conditional_precedence_04",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_04:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "5293b165f7f4c2ab50155a8e88680e8d5913699ba37944379d990b3f8100f91a"
+    },
+    {
+      "pair_id": "conditional_precedence_04:fixed",
+      "fixture_id": "conditional_precedence_04",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_04:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "14b791ef171eace6b1ec63c53475a4f5fedd550d1936d5ebda35638ffa19dbf9"
+    },
+    {
+      "pair_id": "conditional_precedence_05:parent",
+      "fixture_id": "conditional_precedence_05",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_05:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "4f452e7a9e950cc8b03ea53ac7d57efd43a8a4acfeb89f3f0885674ec92e4a52"
+    },
+    {
+      "pair_id": "conditional_precedence_05:fixed",
+      "fixture_id": "conditional_precedence_05",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_05:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "6411cca42200de7cf41734aa7ad97d95d4a01e84fb7770e852967d467fb032a5"
+    },
+    {
+      "pair_id": "conditional_precedence_06:parent",
+      "fixture_id": "conditional_precedence_06",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_06:fixed",
+      "admission": "excluded",
+      "exclusion_reasons": [
+        {
+          "code": "duplicate_unordered_normalized_pair",
+          "canonical_pair_id": "conditional_precedence_06:fixed"
+        }
+      ],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "5df38c337f09ee5f9d5b8f07d0e3e40a8648ac24ba743f0e8233ae88b2748048"
+    },
+    {
+      "pair_id": "conditional_precedence_06:fixed",
+      "fixture_id": "conditional_precedence_06",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_06:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "5df38c337f09ee5f9d5b8f07d0e3e40a8648ac24ba743f0e8233ae88b2748048"
+    },
+    {
+      "pair_id": "conditional_precedence_07:parent",
+      "fixture_id": "conditional_precedence_07",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_07:parent",
+      "admission": "excluded",
+      "exclusion_reasons": [
+        {
+          "code": "unsupported_by_frozen_querywitness_function_allowlist",
+          "functions": [
+            "if"
+          ],
+          "note": "Supported by SQLite 3.53.1 but excluded by unchanged QueryWitness. No rewriting."
+        }
+      ],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "d73f45716c3c8ffc17e8d52c6da639db8206ecf1ff1bf914ad5840ce4ecd9170"
+    },
+    {
+      "pair_id": "conditional_precedence_07:fixed",
+      "fixture_id": "conditional_precedence_07",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_07:fixed",
+      "admission": "excluded",
+      "exclusion_reasons": [
+        {
+          "code": "unsupported_by_frozen_querywitness_function_allowlist",
+          "functions": [
+            "if"
+          ],
+          "note": "Supported by SQLite 3.53.1 but excluded by unchanged QueryWitness. No rewriting."
+        }
+      ],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "f55dbd3ff6fdcf6711bba7f3de1160cf9f47e20749f30a3ec74c10b91f8d8e4b"
+    },
+    {
+      "pair_id": "conditional_precedence_08:parent",
+      "fixture_id": "conditional_precedence_08",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_08:parent",
+      "admission": "excluded",
+      "exclusion_reasons": [
+        {
+          "code": "unsupported_by_frozen_querywitness_function_allowlist",
+          "functions": [
+            "if"
+          ],
+          "note": "Supported by SQLite 3.53.1 but excluded by unchanged QueryWitness. No rewriting."
+        }
+      ],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "77ba8aebab67c9d406a25790f2e8db85df5a208fcf5b2acd85017347cc062669"
+    },
+    {
+      "pair_id": "conditional_precedence_08:fixed",
+      "fixture_id": "conditional_precedence_08",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_08:fixed",
+      "admission": "excluded",
+      "exclusion_reasons": [
+        {
+          "code": "unsupported_by_frozen_querywitness_function_allowlist",
+          "functions": [
+            "if"
+          ],
+          "note": "Supported by SQLite 3.53.1 but excluded by unchanged QueryWitness. No rewriting."
+        }
+      ],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "2b7aad5f29775dbac2ed759efbef6ed0632273636ed9a4a094dc4d161ee08690"
+    },
+    {
+      "pair_id": "conditional_precedence_09:parent",
+      "fixture_id": "conditional_precedence_09",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_09:parent",
+      "admission": "excluded",
+      "exclusion_reasons": [
+        {
+          "code": "unsupported_by_frozen_querywitness_function_allowlist",
+          "functions": [
+            "if"
+          ],
+          "note": "Supported by SQLite 3.53.1 but excluded by unchanged QueryWitness. No rewriting."
+        }
+      ],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "20c266d31a87c51eb1527c677cb28a2e941984518e85088de000a92b640b6ba1"
+    },
+    {
+      "pair_id": "conditional_precedence_09:fixed",
+      "fixture_id": "conditional_precedence_09",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_09:fixed",
+      "admission": "excluded",
+      "exclusion_reasons": [
+        {
+          "code": "unsupported_by_frozen_querywitness_function_allowlist",
+          "functions": [
+            "if"
+          ],
+          "note": "Supported by SQLite 3.53.1 but excluded by unchanged QueryWitness. No rewriting."
+        }
+      ],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "939df8887ba6a1893a64e854f443b6c42a03add26040239f40d35784fc553e0d"
+    },
+    {
+      "pair_id": "conditional_precedence_10:parent",
+      "fixture_id": "conditional_precedence_10",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_10:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "6d008e770c1b7f07faefdb3f89ea5ee3f759fee69680102fb9d378075b6d25a6"
+    },
+    {
+      "pair_id": "conditional_precedence_10:fixed",
+      "fixture_id": "conditional_precedence_10",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_10:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "da85ef75cecbb71b1a9131c80f10b0edd5e3707d39d68f406427d5df4d1a9184"
+    },
+    {
+      "pair_id": "conditional_precedence_11:parent",
+      "fixture_id": "conditional_precedence_11",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_11:parent",
+      "admission": "excluded",
+      "exclusion_reasons": [
+        {
+          "code": "unsupported_by_frozen_querywitness_function_allowlist",
+          "functions": [
+            "if"
+          ],
+          "note": "Supported by SQLite 3.53.1 but excluded by unchanged QueryWitness. No rewriting."
+        }
+      ],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "6ad2e775c55835d769c94d15e78707c2d9b2e8c93b9f9c3186dbd805566f1235"
+    },
+    {
+      "pair_id": "conditional_precedence_11:fixed",
+      "fixture_id": "conditional_precedence_11",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_11:fixed",
+      "admission": "excluded",
+      "exclusion_reasons": [
+        {
+          "code": "unsupported_by_frozen_querywitness_function_allowlist",
+          "functions": [
+            "if"
+          ],
+          "note": "Supported by SQLite 3.53.1 but excluded by unchanged QueryWitness. No rewriting."
+        }
+      ],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "292b6cfa60f8fa81c627a4b3b3fa30f510843fdf24c12da626f716ac2938c803"
+    },
+    {
+      "pair_id": "conditional_precedence_12:parent",
+      "fixture_id": "conditional_precedence_12",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_12:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "a44e42193391c3cb40eb651392f73503043c0fe337557679557d580906c741fd"
+    },
+    {
+      "pair_id": "conditional_precedence_12:fixed",
+      "fixture_id": "conditional_precedence_12",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_12:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "572ffe3d6f4c7e9c9e17d6fcb05783d59fc7ef0c9fe6d7f1df85970526b9c408"
+    },
+    {
+      "pair_id": "conditional_precedence_13:parent",
+      "fixture_id": "conditional_precedence_13",
+      "cluster": "conditional_precedence",
+      "role": "detection",
+      "canonical_pair_id": "conditional_precedence_13:parent",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "witnessed_different",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "9bb887b39086b02cb79b711fcc4da149829b19ada68ae8ed75859f613d393376"
+    },
+    {
+      "pair_id": "conditional_precedence_13:fixed",
+      "fixture_id": "conditional_precedence_13",
+      "cluster": "conditional_precedence",
+      "role": "intended_control",
+      "canonical_pair_id": "conditional_precedence_13:fixed",
+      "admission": "admitted",
+      "exclusion_reasons": [],
+      "oracle_status": "unresolved_no_mismatch_in_frozen_domain",
+      "prior_overlap": "none_found; three prior AST failures separately manually reviewed",
+      "normalization_signature": "b8ab2e87724eb4dd09ab3e78789f00934ee17bc6e1b50ead3b624f09e131ac1c"
+    }
+  ],
+  "status": "admission_only; evaluation not run",
+  "limitations": "Normalization is syntactic global textual alpha mapping, not scope resolution or semantic-equivalence proof. Outcomes remain finite-domain diagnostics."
+}

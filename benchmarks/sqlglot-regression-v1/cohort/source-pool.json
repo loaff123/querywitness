@@ -1,0 +1,878 @@
+{
+  "format_version": 1,
+  "provenance": "Exact upstream test-helper outputs, not invented mutants; helpers compiled unchanged from archived source AST.",
+  "clusters": [
+    {
+      "id": "subtraction",
+      "fix": "e16a179a4226e7049e050f5cc86d63ace9c60b40",
+      "parent": "eba0b304f179484ad7b5e0ae3467128abadae2f9",
+      "parent_fixture_count": 452,
+      "fixed_fixture_count": 465,
+      "removed_pair_count": 0,
+      "fixtures": [
+        {
+          "id": "subtraction_01",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 380,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1206,
+          "source_line_end": 1206,
+          "meta": {},
+          "source": "0 - a = 1",
+          "expected": "a = -1",
+          "parent_output": "a = 1",
+          "fixed_output": "a = -1",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1206"
+        },
+        {
+          "id": "subtraction_02",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 381,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1209,
+          "source_line_end": 1209,
+          "meta": {},
+          "source": "5 - x = 2",
+          "expected": "x = 3",
+          "parent_output": "x = 7",
+          "fixed_output": "x = 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1209"
+        },
+        {
+          "id": "subtraction_03",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 382,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1212,
+          "source_line_end": 1212,
+          "meta": {},
+          "source": "5 - x > 2",
+          "expected": "x < 3",
+          "parent_output": "x > 7",
+          "fixed_output": "x < 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1212"
+        },
+        {
+          "id": "subtraction_04",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 383,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1215,
+          "source_line_end": 1215,
+          "meta": {},
+          "source": "5 - x >= 2",
+          "expected": "x <= 3",
+          "parent_output": "x >= 7",
+          "fixed_output": "x <= 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1215"
+        },
+        {
+          "id": "subtraction_05",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 384,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1218,
+          "source_line_end": 1218,
+          "meta": {},
+          "source": "5 - x < 2",
+          "expected": "x > 3",
+          "parent_output": "x < 7",
+          "fixed_output": "x > 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1218"
+        },
+        {
+          "id": "subtraction_06",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 385,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1221,
+          "source_line_end": 1221,
+          "meta": {},
+          "source": "5 - x <= 2",
+          "expected": "x >= 3",
+          "parent_output": "x <= 7",
+          "fixed_output": "x >= 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1221"
+        },
+        {
+          "id": "subtraction_07",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 386,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1224,
+          "source_line_end": 1224,
+          "meta": {},
+          "source": "5 - x <> 2",
+          "expected": "x <> 3",
+          "parent_output": "x <> 7",
+          "fixed_output": "x <> 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1224"
+        },
+        {
+          "id": "subtraction_08",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 387,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1227,
+          "source_line_end": 1227,
+          "meta": {},
+          "source": "1 = 0 - a",
+          "expected": "a = -1",
+          "parent_output": "a = 1",
+          "fixed_output": "a = -1",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1227"
+        },
+        {
+          "id": "subtraction_09",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 388,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1230,
+          "source_line_end": 1230,
+          "meta": {},
+          "source": "2 > 5 - x",
+          "expected": "x > 3",
+          "parent_output": "x < 7",
+          "fixed_output": "x > 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1230"
+        },
+        {
+          "id": "subtraction_10",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 389,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1233,
+          "source_line_end": 1233,
+          "meta": {},
+          "source": "2 >= 5 - x",
+          "expected": "x >= 3",
+          "parent_output": "x <= 7",
+          "fixed_output": "x >= 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1233"
+        },
+        {
+          "id": "subtraction_11",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 390,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1236,
+          "source_line_end": 1236,
+          "meta": {},
+          "source": "2 < 5 - x",
+          "expected": "x < 3",
+          "parent_output": "x > 7",
+          "fixed_output": "x < 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1236"
+        },
+        {
+          "id": "subtraction_12",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 391,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1239,
+          "source_line_end": 1239,
+          "meta": {},
+          "source": "2 <= 5 - x",
+          "expected": "x <= 3",
+          "parent_output": "x >= 7",
+          "fixed_output": "x <= 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1239"
+        },
+        {
+          "id": "subtraction_13",
+          "cluster": "subtraction",
+          "upstream_fixture_index": 392,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1242,
+          "source_line_end": 1242,
+          "meta": {},
+          "source": "2 <> 5 - x",
+          "expected": "x <> 3",
+          "parent_output": "x <> 7",
+          "fixed_output": "x <> 3",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/e16a179a4226e7049e050f5cc86d63ace9c60b40/tests/fixtures/optimizer/simplify.sql#L1242"
+        }
+      ],
+      "upstream_helper": {
+        "parent": [
+          {
+            "name": "parse_and_optimize",
+            "line_start": 28,
+            "line_end": 29,
+            "source_sha256": "2354d9b25aa173dffeb986876cdfe488198e5bc7c73ad40f43b45632202b55ed"
+          },
+          {
+            "name": "simplify",
+            "line_start": 62,
+            "line_end": 69,
+            "source_sha256": "6dfbf2478781e4e3f9226df87c6aa00ffe42f8d9021d66453361943acabf0b00"
+          }
+        ],
+        "fix": [
+          {
+            "name": "parse_and_optimize",
+            "line_start": 28,
+            "line_end": 29,
+            "source_sha256": "2354d9b25aa173dffeb986876cdfe488198e5bc7c73ad40f43b45632202b55ed"
+          },
+          {
+            "name": "simplify",
+            "line_start": 62,
+            "line_end": 69,
+            "source_sha256": "6dfbf2478781e4e3f9226df87c6aa00ffe42f8d9021d66453361943acabf0b00"
+          }
+        ],
+        "parent_schema": {
+          "x": {
+            "a": "INT",
+            "b": "INT"
+          },
+          "y": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "z": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "w": {
+            "d": "TEXT",
+            "e": "TEXT"
+          },
+          "temporal": {
+            "d": "DATE",
+            "t": "DATETIME"
+          },
+          "structs": {
+            "one": "STRUCT<a_1 INT, b_1 VARCHAR>",
+            "nested_0": "STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>",
+            "quoted": "STRUCT<\"foo bar\" INT>"
+          },
+          "t_bool": {
+            "a": "BOOLEAN"
+          }
+        },
+        "fix_schema": {
+          "x": {
+            "a": "INT",
+            "b": "INT"
+          },
+          "y": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "z": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "w": {
+            "d": "TEXT",
+            "e": "TEXT"
+          },
+          "temporal": {
+            "d": "DATE",
+            "t": "DATETIME"
+          },
+          "structs": {
+            "one": "STRUCT<a_1 INT, b_1 VARCHAR>",
+            "nested_0": "STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>",
+            "quoted": "STRUCT<\"foo bar\" INT>"
+          },
+          "t_bool": {
+            "a": "BOOLEAN"
+          }
+        },
+        "parent_schema_source": "self.schema = {\n            \"x\": {\n                \"a\": \"INT\",\n                \"b\": \"INT\",\n            },\n            \"y\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"z\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"w\": {\n                \"d\": \"TEXT\",\n                \"e\": \"TEXT\",\n            },\n            \"temporal\": {\n                \"d\": \"DATE\",\n                \"t\": \"DATETIME\",\n            },\n            \"structs\": {\n                \"one\": \"STRUCT<a_1 INT, b_1 VARCHAR>\",\n                \"nested_0\": \"STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>\",\n                \"quoted\": 'STRUCT<\"foo bar\" INT>',\n            },\n            \"t_bool\": {\n                \"a\": \"BOOLEAN\",\n            },\n        }",
+        "fix_schema_source": "self.schema = {\n            \"x\": {\n                \"a\": \"INT\",\n                \"b\": \"INT\",\n            },\n            \"y\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"z\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"w\": {\n                \"d\": \"TEXT\",\n                \"e\": \"TEXT\",\n            },\n            \"temporal\": {\n                \"d\": \"DATE\",\n                \"t\": \"DATETIME\",\n            },\n            \"structs\": {\n                \"one\": \"STRUCT<a_1 INT, b_1 VARCHAR>\",\n                \"nested_0\": \"STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>\",\n                \"quoted\": 'STRUCT<\"foo bar\" INT>',\n            },\n            \"t_bool\": {\n                \"a\": \"BOOLEAN\",\n            },\n        }",
+        "parent_stderr": "Unable to set __version__, run `pip install -e .` or `python setup.py develop` first.\n",
+        "fix_stderr": "Unable to set __version__, run `pip install -e .` or `python setup.py develop` first.\n"
+      }
+    },
+    {
+      "id": "coalesce_operand_order",
+      "fix": "c9ad903e7553543686472e5babf3c18e4e7dbc7b",
+      "parent": "1d753d72c6e81e39cfc7160af33673314d4d600e",
+      "parent_fixture_count": 521,
+      "fixed_fixture_count": 527,
+      "removed_pair_count": 0,
+      "fixtures": [
+        {
+          "id": "coalesce_operand_order_01",
+          "cluster": "coalesce_operand_order",
+          "upstream_fixture_index": 334,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1075,
+          "source_line_end": 1075,
+          "meta": {},
+          "source": "1 < COALESCE(x, 0)",
+          "expected": "NOT x IS NULL AND x > 1",
+          "parent_output": "x > 1 OR x IS NULL",
+          "fixed_output": "NOT x IS NULL AND x > 1",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1075"
+        },
+        {
+          "id": "coalesce_operand_order_02",
+          "cluster": "coalesce_operand_order",
+          "upstream_fixture_index": 335,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1078,
+          "source_line_end": 1078,
+          "meta": {},
+          "source": "0 >= COALESCE(x, 1)",
+          "expected": "NOT x IS NULL AND x <= 0",
+          "parent_output": "x <= 0 OR x IS NULL",
+          "fixed_output": "NOT x IS NULL AND x <= 0",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1078"
+        },
+        {
+          "id": "coalesce_operand_order_03",
+          "cluster": "coalesce_operand_order",
+          "upstream_fixture_index": 336,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1081,
+          "source_line_end": 1081,
+          "meta": {},
+          "source": "-1 < COALESCE(x, 0)",
+          "expected": "x > -1 OR x IS NULL",
+          "parent_output": "NOT x IS NULL AND x > -1",
+          "fixed_output": "x > -1 OR x IS NULL",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1081"
+        },
+        {
+          "id": "coalesce_operand_order_04",
+          "cluster": "coalesce_operand_order",
+          "upstream_fixture_index": 337,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1084,
+          "source_line_end": 1084,
+          "meta": {},
+          "source": "1 < COALESCE(x, y, 0)",
+          "expected": "COALESCE(x, y) > 1 AND NOT COALESCE(x, y) IS NULL",
+          "parent_output": "COALESCE(x, y) > 1 OR COALESCE(x, y) IS NULL",
+          "fixed_output": "COALESCE(x, y) > 1 AND NOT COALESCE(x, y) IS NULL",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1084"
+        },
+        {
+          "id": "coalesce_operand_order_05",
+          "cluster": "coalesce_operand_order",
+          "upstream_fixture_index": 338,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1087,
+          "source_line_end": 1087,
+          "meta": {},
+          "source": "0 >= COALESCE(x, y, 1)",
+          "expected": "COALESCE(x, y) <= 0 AND NOT COALESCE(x, y) IS NULL",
+          "parent_output": "COALESCE(x, y) <= 0 OR COALESCE(x, y) IS NULL",
+          "fixed_output": "COALESCE(x, y) <= 0 AND NOT COALESCE(x, y) IS NULL",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1087"
+        },
+        {
+          "id": "coalesce_operand_order_06",
+          "cluster": "coalesce_operand_order",
+          "upstream_fixture_index": 339,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1090,
+          "source_line_end": 1090,
+          "meta": {},
+          "source": "1 < COALESCE(x, 0, 5)",
+          "expected": "NOT x IS NULL AND x > 1",
+          "parent_output": "x > 1 OR x IS NULL",
+          "fixed_output": "NOT x IS NULL AND x > 1",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/c9ad903e7553543686472e5babf3c18e4e7dbc7b/tests/fixtures/optimizer/simplify.sql#L1090"
+        }
+      ],
+      "upstream_helper": {
+        "parent": [
+          {
+            "name": "parse_and_optimize",
+            "line_start": 29,
+            "line_end": 30,
+            "source_sha256": "2354d9b25aa173dffeb986876cdfe488198e5bc7c73ad40f43b45632202b55ed"
+          },
+          {
+            "name": "simplify",
+            "line_start": 63,
+            "line_end": 70,
+            "source_sha256": "1dd4302e469b680e2ab1be9cafc49e8a09d0c4157d5b8b971fcd6b6fef06c6ee"
+          }
+        ],
+        "fix": [
+          {
+            "name": "parse_and_optimize",
+            "line_start": 29,
+            "line_end": 30,
+            "source_sha256": "2354d9b25aa173dffeb986876cdfe488198e5bc7c73ad40f43b45632202b55ed"
+          },
+          {
+            "name": "simplify",
+            "line_start": 63,
+            "line_end": 70,
+            "source_sha256": "1dd4302e469b680e2ab1be9cafc49e8a09d0c4157d5b8b971fcd6b6fef06c6ee"
+          }
+        ],
+        "parent_schema": {
+          "x": {
+            "a": "INT",
+            "b": "INT"
+          },
+          "y": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "z": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "w": {
+            "d": "TEXT",
+            "e": "TEXT"
+          },
+          "temporal": {
+            "d": "DATE",
+            "t": "DATETIME"
+          },
+          "structs": {
+            "one": "STRUCT<a_1 INT, b_1 VARCHAR>",
+            "nested_0": "STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>",
+            "quoted": "STRUCT<\"foo bar\" INT>"
+          },
+          "t_bool": {
+            "a": "BOOLEAN",
+            "b": "BOOLEAN"
+          },
+          "unpivotable": {
+            "id": "INT",
+            "jan": "INT",
+            "feb": "INT",
+            "north": "INT",
+            "south": "INT"
+          },
+          "pivotable": {
+            "id": "INT",
+            "cat": "TEXT",
+            "val": "INT",
+            "kind": "TEXT",
+            "amt": "INT"
+          }
+        },
+        "fix_schema": {
+          "x": {
+            "a": "INT",
+            "b": "INT"
+          },
+          "y": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "z": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "w": {
+            "d": "TEXT",
+            "e": "TEXT"
+          },
+          "temporal": {
+            "d": "DATE",
+            "t": "DATETIME"
+          },
+          "structs": {
+            "one": "STRUCT<a_1 INT, b_1 VARCHAR>",
+            "nested_0": "STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>",
+            "quoted": "STRUCT<\"foo bar\" INT>"
+          },
+          "t_bool": {
+            "a": "BOOLEAN",
+            "b": "BOOLEAN"
+          },
+          "unpivotable": {
+            "id": "INT",
+            "jan": "INT",
+            "feb": "INT",
+            "north": "INT",
+            "south": "INT"
+          },
+          "pivotable": {
+            "id": "INT",
+            "cat": "TEXT",
+            "val": "INT",
+            "kind": "TEXT",
+            "amt": "INT"
+          }
+        },
+        "parent_schema_source": "self.schema = {\n            \"x\": {\n                \"a\": \"INT\",\n                \"b\": \"INT\",\n            },\n            \"y\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"z\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"w\": {\n                \"d\": \"TEXT\",\n                \"e\": \"TEXT\",\n            },\n            \"temporal\": {\n                \"d\": \"DATE\",\n                \"t\": \"DATETIME\",\n            },\n            \"structs\": {\n                \"one\": \"STRUCT<a_1 INT, b_1 VARCHAR>\",\n                \"nested_0\": \"STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>\",\n                \"quoted\": 'STRUCT<\"foo bar\" INT>',\n            },\n            \"t_bool\": {\n                \"a\": \"BOOLEAN\",\n                \"b\": \"BOOLEAN\",\n            },\n            \"unpivotable\": {\n                \"id\": \"INT\",\n                \"jan\": \"INT\",\n                \"feb\": \"INT\",\n                \"north\": \"INT\",\n                \"south\": \"INT\",\n            },\n            \"pivotable\": {\n                \"id\": \"INT\",\n                \"cat\": \"TEXT\",\n                \"val\": \"INT\",\n                \"kind\": \"TEXT\",\n                \"amt\": \"INT\",\n            },\n        }",
+        "fix_schema_source": "self.schema = {\n            \"x\": {\n                \"a\": \"INT\",\n                \"b\": \"INT\",\n            },\n            \"y\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"z\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"w\": {\n                \"d\": \"TEXT\",\n                \"e\": \"TEXT\",\n            },\n            \"temporal\": {\n                \"d\": \"DATE\",\n                \"t\": \"DATETIME\",\n            },\n            \"structs\": {\n                \"one\": \"STRUCT<a_1 INT, b_1 VARCHAR>\",\n                \"nested_0\": \"STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>\",\n                \"quoted\": 'STRUCT<\"foo bar\" INT>',\n            },\n            \"t_bool\": {\n                \"a\": \"BOOLEAN\",\n                \"b\": \"BOOLEAN\",\n            },\n            \"unpivotable\": {\n                \"id\": \"INT\",\n                \"jan\": \"INT\",\n                \"feb\": \"INT\",\n                \"north\": \"INT\",\n                \"south\": \"INT\",\n            },\n            \"pivotable\": {\n                \"id\": \"INT\",\n                \"cat\": \"TEXT\",\n                \"val\": \"INT\",\n                \"kind\": \"TEXT\",\n                \"amt\": \"INT\",\n            },\n        }",
+        "parent_stderr": "Unable to set __version__, run `pip install -e .` or `python setup.py develop` first.\n",
+        "fix_stderr": "Unable to set __version__, run `pip install -e .` or `python setup.py develop` first.\n"
+      }
+    },
+    {
+      "id": "conditional_precedence",
+      "fix": "06c7b3dd7b656ff5ed80337ee668cf58318e002b",
+      "parent": "a070393d34aae2fda84f70896a3c3d90820720b5",
+      "parent_fixture_count": 563,
+      "fixed_fixture_count": 576,
+      "removed_pair_count": 0,
+      "fixtures": [
+        {
+          "id": "conditional_precedence_01",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 538,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1738,
+          "source_line_end": 1738,
+          "meta": {},
+          "source": "x * CASE WHEN FALSE THEN NULL ELSE a - b END",
+          "expected": "x * (a - b)",
+          "parent_output": "x * a - b",
+          "fixed_output": "x * (a - b)",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1738"
+        },
+        {
+          "id": "conditional_precedence_02",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 539,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1741,
+          "source_line_end": 1741,
+          "meta": {},
+          "source": "x * (CASE WHEN 1 IS NULL THEN NULL ELSE 1 - b END)",
+          "expected": "x * (1 - b)",
+          "parent_output": "x * 1 - b",
+          "fixed_output": "x * (1 - b)",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1741"
+        },
+        {
+          "id": "conditional_precedence_03",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 540,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1744,
+          "source_line_end": 1744,
+          "meta": {},
+          "source": "x - CASE WHEN TRUE THEN a + b ELSE c END",
+          "expected": "x - (a + b)",
+          "parent_output": "x - a + b",
+          "fixed_output": "x - (a + b)",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1744"
+        },
+        {
+          "id": "conditional_precedence_04",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 541,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1747,
+          "source_line_end": 1747,
+          "meta": {},
+          "source": "CASE WHEN FALSE THEN NULL ELSE a - b END * x",
+          "expected": "(a - b) * x",
+          "parent_output": "a - b * x",
+          "fixed_output": "(a - b) * x",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1747"
+        },
+        {
+          "id": "conditional_precedence_05",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 542,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1750,
+          "source_line_end": 1750,
+          "meta": {},
+          "source": "x / CASE WHEN FALSE THEN 1 ELSE a * b END",
+          "expected": "x / (a * b)",
+          "parent_output": "x / a * b",
+          "fixed_output": "x / (a * b)",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1750"
+        },
+        {
+          "id": "conditional_precedence_06",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 543,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1753,
+          "source_line_end": 1753,
+          "meta": {},
+          "source": "x + CASE WHEN TRUE THEN a * b ELSE c END",
+          "expected": "x + a * b",
+          "parent_output": "x + a * b",
+          "fixed_output": "x + a * b",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1753"
+        },
+        {
+          "id": "conditional_precedence_07",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 544,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1756,
+          "source_line_end": 1756,
+          "meta": {},
+          "source": "x * IF(TRUE, a - b, c)",
+          "expected": "x * (a - b)",
+          "parent_output": "x * a - b",
+          "fixed_output": "x * (a - b)",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1756"
+        },
+        {
+          "id": "conditional_precedence_08",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 545,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1759,
+          "source_line_end": 1759,
+          "meta": {},
+          "source": "x * IF(FALSE, c, a - b)",
+          "expected": "x * (a - b)",
+          "parent_output": "x * a - b",
+          "fixed_output": "x * (a - b)",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1759"
+        },
+        {
+          "id": "conditional_precedence_09",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 546,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1762,
+          "source_line_end": 1762,
+          "meta": {},
+          "source": "x * CASE WHEN TRUE THEN IF(FALSE, c, a - b) ELSE c END",
+          "expected": "x * (a - b)",
+          "parent_output": "x * a - b",
+          "fixed_output": "x * (a - b)",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1762"
+        },
+        {
+          "id": "conditional_precedence_10",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 547,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1765,
+          "source_line_end": 1765,
+          "meta": {},
+          "source": "CASE WHEN TRUE THEN NOT p ELSE FALSE END || 'x'",
+          "expected": "(NOT p) || 'x'",
+          "parent_output": "NOT p || 'x'",
+          "fixed_output": "(NOT p) || 'x'",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1765"
+        },
+        {
+          "id": "conditional_precedence_11",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 548,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1768,
+          "source_line_end": 1768,
+          "meta": {},
+          "source": "IF(FALSE, FALSE, NOT p) || 'x'",
+          "expected": "(NOT p) || 'x'",
+          "parent_output": "NOT p || 'x'",
+          "fixed_output": "(NOT p) || 'x'",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1768"
+        },
+        {
+          "id": "conditional_precedence_12",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 549,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1771,
+          "source_line_end": 1771,
+          "meta": {},
+          "source": "NOT CASE WHEN TRUE THEN a AND b ELSE c END",
+          "expected": "NOT a OR NOT b",
+          "parent_output": "NOT a AND b",
+          "fixed_output": "NOT a OR NOT b",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1771"
+        },
+        {
+          "id": "conditional_precedence_13",
+          "cluster": "conditional_precedence",
+          "upstream_fixture_index": 550,
+          "source_path": "tests/fixtures/optimizer/simplify.sql",
+          "source_line_start": 1774,
+          "source_line_end": 1774,
+          "meta": {},
+          "source": "-CASE WHEN TRUE THEN a + b ELSE c END",
+          "expected": "-(a + b)",
+          "parent_output": "-a + b",
+          "fixed_output": "-(a + b)",
+          "fixed_matches_expected": true,
+          "upstream_url": "https://github.com/tobymao/sqlglot/blob/06c7b3dd7b656ff5ed80337ee668cf58318e002b/tests/fixtures/optimizer/simplify.sql#L1774"
+        }
+      ],
+      "upstream_helper": {
+        "parent": [
+          {
+            "name": "parse_and_optimize",
+            "line_start": 29,
+            "line_end": 30,
+            "source_sha256": "2354d9b25aa173dffeb986876cdfe488198e5bc7c73ad40f43b45632202b55ed"
+          },
+          {
+            "name": "simplify",
+            "line_start": 63,
+            "line_end": 70,
+            "source_sha256": "1dd4302e469b680e2ab1be9cafc49e8a09d0c4157d5b8b971fcd6b6fef06c6ee"
+          }
+        ],
+        "fix": [
+          {
+            "name": "parse_and_optimize",
+            "line_start": 29,
+            "line_end": 30,
+            "source_sha256": "2354d9b25aa173dffeb986876cdfe488198e5bc7c73ad40f43b45632202b55ed"
+          },
+          {
+            "name": "simplify",
+            "line_start": 63,
+            "line_end": 70,
+            "source_sha256": "1dd4302e469b680e2ab1be9cafc49e8a09d0c4157d5b8b971fcd6b6fef06c6ee"
+          }
+        ],
+        "parent_schema": {
+          "x": {
+            "a": "INT",
+            "b": "INT"
+          },
+          "nn": {
+            "a": {
+              "sqlglot_ast_sql": "INT",
+              "sqlglot_ast_repr": "DataType(this=DType.INT, nested=False, nullable=False)"
+            },
+            "b": {
+              "sqlglot_ast_sql": "INT",
+              "sqlglot_ast_repr": "DataType(this=DType.INT, nested=False, nullable=False)"
+            }
+          },
+          "y": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "z": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "w": {
+            "d": "TEXT",
+            "e": "TEXT"
+          },
+          "temporal": {
+            "d": "DATE",
+            "t": "DATETIME"
+          },
+          "structs": {
+            "one": "STRUCT<a_1 INT, b_1 VARCHAR>",
+            "nested_0": "STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>",
+            "quoted": "STRUCT<\"foo bar\" INT>"
+          },
+          "t_bool": {
+            "a": "BOOLEAN",
+            "b": "BOOLEAN"
+          },
+          "unpivotable": {
+            "id": "INT",
+            "jan": "INT",
+            "feb": "INT",
+            "north": "INT",
+            "south": "INT"
+          },
+          "pivotable": {
+            "id": "INT",
+            "cat": "TEXT",
+            "val": "INT",
+            "kind": "TEXT",
+            "amt": "INT"
+          }
+        },
+        "fix_schema": {
+          "x": {
+            "a": "INT",
+            "b": "INT"
+          },
+          "nn": {
+            "a": {
+              "sqlglot_ast_sql": "INT",
+              "sqlglot_ast_repr": "DataType(this=DType.INT, nested=False, nullable=False)"
+            },
+            "b": {
+              "sqlglot_ast_sql": "INT",
+              "sqlglot_ast_repr": "DataType(this=DType.INT, nested=False, nullable=False)"
+            }
+          },
+          "y": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "z": {
+            "b": "INT",
+            "c": "INT"
+          },
+          "w": {
+            "d": "TEXT",
+            "e": "TEXT"
+          },
+          "temporal": {
+            "d": "DATE",
+            "t": "DATETIME"
+          },
+          "structs": {
+            "one": "STRUCT<a_1 INT, b_1 VARCHAR>",
+            "nested_0": "STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>",
+            "quoted": "STRUCT<\"foo bar\" INT>"
+          },
+          "t_bool": {
+            "a": "BOOLEAN",
+            "b": "BOOLEAN"
+          },
+          "unpivotable": {
+            "id": "INT",
+            "jan": "INT",
+            "feb": "INT",
+            "north": "INT",
+            "south": "INT"
+          },
+          "pivotable": {
+            "id": "INT",
+            "cat": "TEXT",
+            "val": "INT",
+            "kind": "TEXT",
+            "amt": "INT"
+          }
+        },
+        "parent_schema_source": "self.schema = {\n            \"x\": {\n                \"a\": \"INT\",\n                \"b\": \"INT\",\n            },\n            # non-nullable columns, for rewrites that are only valid when a value can't be NULL\n            \"nn\": {\n                \"a\": exp.DataType.build(\"INT\", nullable=False),\n                \"b\": exp.DataType.build(\"INT\", nullable=False),\n            },\n            \"y\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"z\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"w\": {\n                \"d\": \"TEXT\",\n                \"e\": \"TEXT\",\n            },\n            \"temporal\": {\n                \"d\": \"DATE\",\n                \"t\": \"DATETIME\",\n            },\n            \"structs\": {\n                \"one\": \"STRUCT<a_1 INT, b_1 VARCHAR>\",\n                \"nested_0\": \"STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>\",\n                \"quoted\": 'STRUCT<\"foo bar\" INT>',\n            },\n            \"t_bool\": {\n                \"a\": \"BOOLEAN\",\n                \"b\": \"BOOLEAN\",\n            },\n            \"unpivotable\": {\n                \"id\": \"INT\",\n                \"jan\": \"INT\",\n                \"feb\": \"INT\",\n                \"north\": \"INT\",\n                \"south\": \"INT\",\n            },\n            \"pivotable\": {\n                \"id\": \"INT\",\n                \"cat\": \"TEXT\",\n                \"val\": \"INT\",\n                \"kind\": \"TEXT\",\n                \"amt\": \"INT\",\n            },\n        }",
+        "fix_schema_source": "self.schema = {\n            \"x\": {\n                \"a\": \"INT\",\n                \"b\": \"INT\",\n            },\n            # non-nullable columns, for rewrites that are only valid when a value can't be NULL\n            \"nn\": {\n                \"a\": exp.DataType.build(\"INT\", nullable=False),\n                \"b\": exp.DataType.build(\"INT\", nullable=False),\n            },\n            \"y\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"z\": {\n                \"b\": \"INT\",\n                \"c\": \"INT\",\n            },\n            \"w\": {\n                \"d\": \"TEXT\",\n                \"e\": \"TEXT\",\n            },\n            \"temporal\": {\n                \"d\": \"DATE\",\n                \"t\": \"DATETIME\",\n            },\n            \"structs\": {\n                \"one\": \"STRUCT<a_1 INT, b_1 VARCHAR>\",\n                \"nested_0\": \"STRUCT<a_1 INT, nested_1 STRUCT<a_2 INT, nested_2 STRUCT<a_3 INT>>>\",\n                \"quoted\": 'STRUCT<\"foo bar\" INT>',\n            },\n            \"t_bool\": {\n                \"a\": \"BOOLEAN\",\n                \"b\": \"BOOLEAN\",\n            },\n            \"unpivotable\": {\n                \"id\": \"INT\",\n                \"jan\": \"INT\",\n                \"feb\": \"INT\",\n                \"north\": \"INT\",\n                \"south\": \"INT\",\n            },\n            \"pivotable\": {\n                \"id\": \"INT\",\n                \"cat\": \"TEXT\",\n                \"val\": \"INT\",\n                \"kind\": \"TEXT\",\n                \"amt\": \"INT\",\n            },\n        }",
+        "parent_stderr": "Unable to set __version__, run `pip install -e .` or `python setup.py develop` first.\n",
+        "fix_stderr": "Unable to set __version__, run `pip install -e .` or `python setup.py develop` first.\n"
+      }
+    }
+  ]
+}

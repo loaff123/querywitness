@@ -9,3 +9,5 @@ recursive-include site *.html *.css *.js *.svg *.md *.py *.cjs
 prune site/.git
 prune site/.openai
 prune site/.sites-runtime
+
+include benchmarks/sqlglot-regression-v1/LICENSE.SQLGLOT

@@ -1,0 +1,16 @@
+{
+  "format_version": 1,
+  "url": "https://querywitness.lyczz.chatgpt.site/downloads/sqlglot-regression-v1-evidence.zip",
+  "sha256": "2a1b14be21a2868a03249fa47cf15d3c07c2bdd25d3e3269f871b8d37b81ba41",
+  "bytes": 11048390,
+  "files": 375,
+  "contents": "All 42,240 generated trials and independent replays, 55 plans, 300 first-hit native witnesses, compact results, complete source/admission/oracle pool and 113,012 diagnostic records. Data-only extraction; all selected source bytes unchanged.",
+  "trial_records": 42240,
+  "replay_records": 42240,
+  "native_witnesses": 300,
+  "source_files_sha256": {
+    "cohort/diagnostic-observations.jsonl.gz": "bf6df30aba6f20e6b38886160ce7ec16c2f4f8520682eb5b80da8d68c9398ce8",
+    "results/independent-replays.jsonl.gz": "697abcbf462045303499096ad9645d33be6f1e700f648ced32be2d4d96bccb15",
+    "results/trials.jsonl.gz": "4cce856cc9ec2e340321ab5f338003c894b798709905d2236de2b4b2f887cedd"
+  }
+}

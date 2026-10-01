@@ -1,0 +1,33 @@
+{
+  "format_version": 1,
+  "source_cohort_frozen_utc": "2026-10-01T17:02:07Z",
+  "execution_committed_utc": "2026-10-01T17:11:17Z",
+  "querywitness_commit": "4a9bfc55e9e6d2b0e02257a0c01fe0131317d8d9",
+  "original_execution_manifest_sha256": "221d435c1b572da076cf65047673e691c1dc739dbe5298f7ca751da67ba275e2",
+  "original_cohort_archive_sha256": "8e632734ee596baed3eb7af72f5abb3176d5dbe7951d6bc146d7b1dcda1bd703",
+  "original_evaluation_archive_sha256": "020938d9674769bd3b4688f874f3cd3d488c7d0f4d19140a6ab69cf574ed6fb1",
+  "original_protocol_sha256": "59305a282d829b4a991417f39d988c423363f697f490bcfa84a657d3bad92a83",
+  "runtime": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1",
+    "querywitness": "0.2.0",
+    "sqlglot": "27.29.0"
+  },
+  "note": "Local pre-execution commitments, not public preregistration. Full original archival bundles are retained separately; this is a privacy-reviewed public extraction. Public wrapper edits affect input paths and commitment metadata only. See PUBLIC_MANIFEST.json for this extraction, evidence.json for downloadable data hashes.",
+  "exact_copied_files": {
+    "cohort/protocol.json": "4d9c65d7e20d791cca0d6ba8cabfc3b8a9ce6a21a8064d7216190bed755eb9da",
+    "cohort/source-pool.json": "a113f67c86341c4120fd03655672abb01def3be37847600396b2c286f052c9da",
+    "cohort/adapted-pool.json": "d163310aba1cad47f9d25571206fa581b8623fff83c18e7409150b12ef756b3b",
+    "cohort/admission-ledger.json": "4c162a74e2e9478cd11fc730a40a181927c6d85da1619e4c1ba53d3becce88a3",
+    "cohort/evaluation-cases.json": "62cfe3e128f3437c2a1fbf3f3388b4e2257a56a2ba2f42a4011dd4092cf5cc8f",
+    "harness/replay_all.py": "0e8edec4bdb81e597044c0d017d2f5004ed854aa499c8c353409d67a841f6920",
+    "harness/sqlite_checker.py": "f1497eeaf2af52c2623018a6280323502c418d49e795588ea55e21eab2fbe4e4",
+    "results/summary.json": "6a878e6d07df70ee7138d4c5b7383a4d40e6335a4005cb20d1cd6e5615c4b9c4",
+    "results/independent-replay-summary.json": "4e5dbffad222fef091f4f2428e47b7b966d44f3988201f70b888a244a61cbf23",
+    "results/observed-values.json": "4a8e01a1a55f10c439adf00eee433b737ac68695039b161ff43a053d121af574"
+  },
+  "public_data_archive_files": {
+    "cohort/oracle-results.json": "ca78e0995c3cee310a97b3fed3efb7017ea444cd3a57cf2f3736cd73f0572be1",
+    "results/task-repeat-results.json": "a2b759b2d25b734786f8e77334d823aa423222ad7f0016c4f7f61e13d18bc33a"
+  }
+}
