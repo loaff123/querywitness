@@ -1,0 +1,167 @@
+{
+  "case_id": "original_04_exact_unicode",
+  "cohort": "original",
+  "source_index": null,
+  "source_row_sha256": null,
+  "fixture_case_sha256": "58e76c97d23d5e3374b3625057bb1db70ca0bfa11906826ed8bcf68b526e641c",
+  "pair_sha256": "9a6bc07957471af6723595fbb7b43cfcd458929dc287aa5e05eb51be10d66043",
+  "plan_sha256": "7b406beed92e0ec72f3389d7059ee94aa8a5c6297d288011e8a18c6e04fe54b0",
+  "policy": "bag",
+  "method": "query_aware",
+  "repeat": 3,
+  "trial": 0,
+  "seed": 20263930,
+  "instance": {
+    "label": [
+      [
+        "mañana/雪/🙂/é"
+      ],
+      [
+        "mañana/雪/🙂/é"
+      ],
+      [
+        "mañana/雪/🙂/é"
+      ],
+      [
+        "mañana/雪/🙂/é"
+      ],
+      [
+        "mañana/雪/🙂/é"
+      ],
+      [
+        "mañana/雪/🙂/é"
+      ],
+      [
+        "mañana/雪/🙂/é"
+      ],
+      [
+        "mañana/雪/🙂/é"
+      ]
+    ]
+  },
+  "instance_sha256": "6a693afcd3511a4af17e02769fb1d76a57ab86854ef7654bba8d208c5cc6c954",
+  "table_rows": {
+    "label": 8
+  },
+  "generator_stats": {
+    "schedule": "join_duplicates",
+    "attempted_rows": 8,
+    "accepted_rows": 8,
+    "rejected_rows": 0,
+    "requested_rows": {
+      "label": 8
+    },
+    "attempt_budget": 320
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "text"
+    ],
+    "rows": [],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "text"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "mañana/雪/🙂/é"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "mañana/雪/🙂/é"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "mañana/雪/🙂/é"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "mañana/雪/🙂/é"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "mañana/雪/🙂/é"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "mañana/雪/🙂/é"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "mañana/雪/🙂/é"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "mañana/雪/🙂/é"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "plain_observations": [
+    {
+      "rows": [],
+      "width": 1
+    },
+    {
+      "rows": [
+        [
+          "mañana/雪/🙂/é"
+        ],
+        [
+          "mañana/雪/🙂/é"
+        ],
+        [
+          "mañana/雪/🙂/é"
+        ],
+        [
+          "mañana/雪/🙂/é"
+        ],
+        [
+          "mañana/雪/🙂/é"
+        ],
+        [
+          "mañana/雪/🙂/é"
+        ],
+        [
+          "mañana/雪/🙂/é"
+        ],
+        [
+          "mañana/雪/🙂/é"
+        ]
+      ],
+      "width": 1
+    }
+  ],
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 0,
+    "candidate_rows": 8,
+    "reference_only_count": 0,
+    "candidate_only_count": 8
+  }
+}

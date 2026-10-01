@@ -1,0 +1,163 @@
+{
+  "case_id": "original_10_composite_key_fk",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "9ee28f24d69c1ae1df866c5a1e8f8d1fcdf82822341ee53fc6622296bece2110",
+      "reference": "20d9892a3aa7f6b28e63dbc08ccbeb077aaa23f04cb1dd46d8c0d7c2b3c3c318"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "code",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "child",
+        "type": "INTEGER"
+      },
+      {
+        "column": "note",
+        "explicit_domain": false,
+        "pool": [
+          "",
+          "0",
+          "01",
+          "A",
+          "B",
+          "x",
+          "é"
+        ],
+        "table": "child",
+        "type": "TEXT"
+      },
+      {
+        "column": "tenant",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "child",
+        "type": "INTEGER"
+      },
+      {
+        "column": "code",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "parent",
+        "type": "INTEGER"
+      },
+      {
+        "column": "label",
+        "explicit_domain": false,
+        "pool": [
+          "",
+          "0",
+          "01",
+          "A",
+          "B",
+          "x",
+          "é"
+        ],
+        "table": "parent",
+        "type": "TEXT"
+      },
+      {
+        "column": "tenant",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "parent",
+        "type": "INTEGER"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [
+      [
+        [
+          "child",
+          "code"
+        ],
+        [
+          "parent",
+          "code"
+        ]
+      ],
+      [
+        [
+          "child",
+          "tenant"
+        ],
+        [
+          "parent",
+          "tenant"
+        ]
+      ]
+    ],
+    "max_rows": 8,
+    "preferred": [],
+    "schema_sha256": "6fcb92493dc0c35c66d0688e9117ae467ac4377befeba1af638218119e54cc39",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "9ee28f24d69c1ae1df866c5a1e8f8d1fcdf82822341ee53fc6622296bece2110",
+      "reference": "20d9892a3aa7f6b28e63dbc08ccbeb077aaa23f04cb1dd46d8c0d7c2b3c3c318"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "9ab925c014326b1844e361004f1a10905e9c743bd7497f582774595b2b4f3969",
+  "compile_seconds": 0.002775771004962735
+}

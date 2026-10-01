@@ -1,0 +1,59 @@
+{
+  "case_id": "original_01_negative_literal",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "1c3ac9e57e23bb193fc2f3a775658804bf9f89fff44f137fc2ed197e6afcf8e1",
+      "reference": "f1f2aa6d7fc932e140bf7bb8e90283c4f7d1ac6a46864e30dd990da507addfb3"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "value",
+        "explicit_domain": false,
+        "pool": [
+          -734922,
+          -734921,
+          -734920,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          10,
+          100
+        ],
+        "table": "reading",
+        "type": "INTEGER"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [],
+    "max_rows": 8,
+    "preferred": [
+      [
+        "reading",
+        "value",
+        [
+          -734922,
+          -734921,
+          -734920,
+          -1,
+          0,
+          1
+        ]
+      ]
+    ],
+    "schema_sha256": "fe5048b492944df1a634e7853b131f8ffb32073bf0d59542193fbce3904b163d",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "1c3ac9e57e23bb193fc2f3a775658804bf9f89fff44f137fc2ed197e6afcf8e1",
+      "reference": "f1f2aa6d7fc932e140bf7bb8e90283c4f7d1ac6a46864e30dd990da507addfb3"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "1aab06dae4b93f73e38ccc03ce7a24b609f741bb31c5bee15bedf4321fd6ee06",
+  "compile_seconds": 0.004917805003060494
+}

@@ -1,0 +1,781 @@
+{
+  "classification": "DEVELOPMENT, not held-out generalization",
+  "cohorts": {
+    "original": {
+      "tasks": 16,
+      "planned_trials": 12288,
+      "methods": {
+        "random": {
+          "tasks": 16,
+          "raw_detected_tasks": 6,
+          "confirmed_detected_tasks": 6,
+          "detected_runs": 24,
+          "planned_runs": 64,
+          "counts": {
+            "mismatch": 647,
+            "agreement": 3449
+          },
+          "both_empty_trials": 2460,
+          "always_both_empty_tasks": 6,
+          "generation_errors": 0,
+          "invalid_instances": 0,
+          "method_seconds": 7.63779539801908
+        },
+        "boundary": {
+          "tasks": 16,
+          "raw_detected_tasks": 6,
+          "confirmed_detected_tasks": 6,
+          "detected_runs": 24,
+          "planned_runs": 64,
+          "counts": {
+            "agreement": 3428,
+            "mismatch": 668
+          },
+          "both_empty_trials": 2528,
+          "always_both_empty_tasks": 6,
+          "generation_errors": 0,
+          "invalid_instances": 0,
+          "method_seconds": 7.470812503983325
+        },
+        "query_aware": {
+          "tasks": 16,
+          "raw_detected_tasks": 11,
+          "confirmed_detected_tasks": 11,
+          "detected_runs": 44,
+          "planned_runs": 64,
+          "counts": {
+            "agreement": 3098,
+            "mismatch": 998
+          },
+          "both_empty_trials": 2122,
+          "always_both_empty_tasks": 2,
+          "generation_errors": 0,
+          "invalid_instances": 0,
+          "method_seconds": 8.971265364991268
+        }
+      },
+      "case_outcomes": [
+        {
+          "case_id": "original_01_negative_literal",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "case_id": "original_02_near_int64_max",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "case_id": "original_03_near_int64_min",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "case_id": "original_04_exact_unicode",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_05_domain_forbids_literal",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_06_qualified_alias",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_07_duplicate_sensitive_join",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            7,
+            5,
+            3,
+            1
+          ]
+        },
+        {
+          "case_id": "original_08_correlated_exists",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_09_multicolumn_natural_join",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "case_id": "original_10_composite_key_fk",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_11_null_predicate",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "case_id": "original_12_count_within_row8",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_13_count_beyond_row8",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_14_ordinary_equivalent",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_15_redundant_join_equivalent",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_16_redundant_count_equivalent",
+          "source_index": null,
+          "method": "random",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_01_negative_literal",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            5,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "case_id": "original_02_near_int64_max",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            5,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "case_id": "original_03_near_int64_min",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            5,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "case_id": "original_04_exact_unicode",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_05_domain_forbids_literal",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_06_qualified_alias",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_07_duplicate_sensitive_join",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "case_id": "original_08_correlated_exists",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_09_multicolumn_natural_join",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "case_id": "original_10_composite_key_fk",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_11_null_predicate",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "case_id": "original_12_count_within_row8",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_13_count_beyond_row8",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_14_ordinary_equivalent",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_15_redundant_join_equivalent",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_16_redundant_count_equivalent",
+          "source_index": null,
+          "method": "boundary",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_01_negative_literal",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "case_id": "original_02_near_int64_max",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "case_id": "original_03_near_int64_min",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "case_id": "original_04_exact_unicode",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "case_id": "original_05_domain_forbids_literal",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_06_qualified_alias",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            3,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "case_id": "original_07_duplicate_sensitive_join",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "case_id": "original_08_correlated_exists",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            2,
+            2,
+            0,
+            4
+          ]
+        },
+        {
+          "case_id": "original_09_multicolumn_natural_join",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            4,
+            5,
+            4,
+            5
+          ]
+        },
+        {
+          "case_id": "original_10_composite_key_fk",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "case_id": "original_11_null_predicate",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            4,
+            3,
+            7,
+            5
+          ]
+        },
+        {
+          "case_id": "original_12_count_within_row8",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": true,
+          "confirmed_detected": true,
+          "always_both_empty": false,
+          "bounded_relation": "different",
+          "first_hit_trials": [
+            0,
+            8,
+            16,
+            0
+          ]
+        },
+        {
+          "case_id": "original_13_count_beyond_row8",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": true,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_14_ordinary_equivalent",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_15_redundant_join_equivalent",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "case_id": "original_16_redundant_count_equivalent",
+          "source_index": null,
+          "method": "query_aware",
+          "raw_detected": false,
+          "confirmed_detected": false,
+          "always_both_empty": false,
+          "bounded_relation": "equivalent",
+          "first_hit_trials": [
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  }
+}

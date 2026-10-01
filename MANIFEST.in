@@ -4,7 +4,7 @@ recursive-include examples *.json *.sql
 recursive-include scripts *.py
 recursive-exclude * __pycache__ *.py[cod]
 prune .openai
-recursive-include benchmarks *.json *.jsonl *.md *.py *.sql *.html
+recursive-include benchmarks *.json *.jsonl *.md *.py *.sql *.html *.gz SHA256SUMS
 recursive-include site *.html *.css *.js *.svg *.md *.py *.cjs
 prune site/.git
 prune site/.openai

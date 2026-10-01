@@ -1,0 +1,43 @@
+{
+  "case_id": "original_05_domain_forbids_literal",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "7c38242c5f02c80e355ac643bf97cabe06927e65bcd0546b1e6d31833fd4506f",
+      "reference": "ca5e7cc3ddc1ed6243703b63adde714b4ff66047191d9ffd41fe6c3f12b79e48"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "value",
+        "explicit_domain": true,
+        "pool": [
+          3,
+          19
+        ],
+        "table": "restricted",
+        "type": "INTEGER"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [],
+    "max_rows": 8,
+    "preferred": [],
+    "schema_sha256": "03f0da50c436a506be65545f17345adfbe83d2a5e4032c454028be45b686faed",
+    "skips": [
+      "Comparison is not a direct column/literal hint: 0 = 1",
+      "Literal outside explicit domain for restricted.value"
+    ],
+    "source_sha256": {
+      "candidate": "7c38242c5f02c80e355ac643bf97cabe06927e65bcd0546b1e6d31833fd4506f",
+      "reference": "ca5e7cc3ddc1ed6243703b63adde714b4ff66047191d9ffd41fe6c3f12b79e48"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": [
+      "No query hints resolved; sampling uses finite default or explicit pools"
+    ]
+  },
+  "plan_sha256": "64264cc7bd1fe19bac521436d4f56140832d56f1ab2c87cc1ad15c7f2f85a2a0",
+  "compile_seconds": 0.0024235989985754713
+}

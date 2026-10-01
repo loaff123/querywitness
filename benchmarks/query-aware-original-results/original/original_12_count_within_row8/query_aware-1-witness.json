@@ -1,0 +1,108 @@
+{
+  "case_id": "original_12_count_within_row8",
+  "cohort": "original",
+  "source_index": null,
+  "source_row_sha256": null,
+  "fixture_case_sha256": "fb846875f49cf92e081e3aa52cc5df60cadadc24163bc3aae12b798b67de3cb5",
+  "pair_sha256": "6c7e21d466e14f3e963d1f7c7d28268a213533a7d1ba42e0383c5906274250fb",
+  "plan_sha256": "5e7ba0363b3466d617601dce2b7a1653a98686814eac758143ae1fb28c244709",
+  "policy": "bag",
+  "method": "query_aware",
+  "repeat": 1,
+  "trial": 8,
+  "seed": 20261938,
+  "instance": {
+    "ballot": [
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ]
+    ]
+  },
+  "instance_sha256": "09c858675042d11b1895dcdcdc88a764c424cdc5cd3db73455b6bebdd73a8445",
+  "table_rows": {
+    "ballot": 7
+  },
+  "generator_stats": {
+    "schedule": "join_duplicates",
+    "attempted_rows": 7,
+    "accepted_rows": 7,
+    "rejected_rows": 0,
+    "requested_rows": {
+      "ballot": 7
+    },
+    "attempt_budget": 280
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "category",
+      "COUNT(*)"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "0"
+        },
+        {
+          "type": "integer",
+          "value": "7"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "category",
+      "COUNT(*)"
+    ],
+    "rows": [],
+    "detail": null
+  },
+  "plain_observations": [
+    {
+      "rows": [
+        [
+          "0",
+          7
+        ]
+      ],
+      "width": 2
+    },
+    {
+      "rows": [],
+      "width": 2
+    }
+  ],
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 0,
+    "reference_only_count": 1,
+    "candidate_only_count": 0
+  }
+}

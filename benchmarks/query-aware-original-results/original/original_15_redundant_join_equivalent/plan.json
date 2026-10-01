@@ -1,0 +1,102 @@
+{
+  "case_id": "original_15_redundant_join_equivalent",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "664e4f50256fc7341a7bd939a947d5d526665de516dc49b7ed0b0b1fc04993a0",
+      "reference": "9d26ab4d268adae21f867cd6612ce29d5464581957bee240f996f2af2f7d3353"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "id",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "lookup",
+        "type": "INTEGER"
+      },
+      {
+        "column": "id",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "record",
+        "type": "INTEGER"
+      },
+      {
+        "column": "lookup_id",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "record",
+        "type": "INTEGER"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [
+      [
+        [
+          "lookup",
+          "id"
+        ],
+        [
+          "record",
+          "lookup_id"
+        ]
+      ]
+    ],
+    "max_rows": 8,
+    "preferred": [],
+    "schema_sha256": "71465b8d7ab84ba754e1a8156c8efb390185af3d2da5726bf58250935e90c925",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "664e4f50256fc7341a7bd939a947d5d526665de516dc49b7ed0b0b1fc04993a0",
+      "reference": "9d26ab4d268adae21f867cd6612ce29d5464581957bee240f996f2af2f7d3353"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "3b55686c7377f5887ad74a6c2f27dee36555287633162ef23c42f0ba622fc627",
+  "compile_seconds": 0.0031289850012399256
+}

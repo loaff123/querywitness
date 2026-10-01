@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>QueryWitness · Replayable counterexample</title><style>body{max-width:1000px;margin:3rem auto;padding:0 1.3rem;font:16px/1.55 system-ui;color:#183032;background:#f5f7f4}h1{font-size:2.8rem;letter-spacing:-.04em}pre,.table{padding:1rem;background:white;border:1px solid #d4ddd6;border-radius:12px;overflow:auto}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:.55rem;border-bottom:1px solid #d4ddd6}code{overflow-wrap:anywhere}.badge{color:#80551e}footer{padding:2rem 0;font-size:.85rem}</style><body><p class="badge">OBSERVED COUNTEREXAMPLE · BAG SEMANTICS</p><h1>One database. Two different answers.</h1><p>Both queries executed successfully. This fixture preserves the declared constraints. No-counterexample results never establish equivalence.</p><h2>Reference</h2><pre>SELECT text FROM label WHERE text = &#x27;mañana/雪/🙂/é&#x27;</pre><h2>Candidate</h2><pre>SELECT text FROM label WHERE text = &#x27;mañana/雪/🙂/é&#x27;</pre><h2>Witness tables</h2><h3>label</h3><div class="table"><table><thead><tr><th>text</th></tr></thead><tbody><tr><td>mañana/雪/🙂/é</td></tr></tbody></table></div><h2>Comparison</h2><pre>{
+  &quot;policy&quot;: &quot;bag&quot;,
+  &quot;reference_status&quot;: &quot;ok&quot;,
+  &quot;candidate_status&quot;: &quot;ok&quot;,
+  &quot;status&quot;: &quot;mismatch&quot;,
+  &quot;reason&quot;: &quot;observed_rows&quot;,
+  &quot;reference_rows&quot;: 0,
+  &quot;candidate_rows&quot;: 1,
+  &quot;reference_only_count&quot;: 0,
+  &quot;candidate_only_count&quot;: 1
+}</pre><h2>Reference output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;text&quot;
+  ],
+  &quot;rows&quot;: [],
+  &quot;detail&quot;: null
+}</pre><h2>Candidate output · exact typed values</h2><pre>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;columns&quot;: [
+    &quot;text&quot;
+  ],
+  &quot;rows&quot;: [
+    [
+      {
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;value&quot;: &quot;mañana/雪/🙂/é&quot;
+      }
+    ]
+  ],
+  &quot;detail&quot;: null
+}</pre><h2>Reduction</h2><pre>{
+  &quot;status&quot;: &quot;minimized&quot;,
+  &quot;checks&quot;: 6,
+  &quot;initial_rows&quot;: 8,
+  &quot;final_rows&quot;: 1,
+  &quot;row_1_minimal&quot;: true,
+  &quot;inconclusive_checks&quot;: 0,
+  &quot;guarantee&quot;: &quot;No schema-valid single-row deletion preserves a successful result mismatch&quot;
+}</pre><h2>Replay</h2><pre>querywitness replay witness.json</pre><h2>Provenance</h2><pre>{
+  &quot;sqlite_version&quot;: &quot;3.53.1&quot;,
+  &quot;sqlglot_version&quot;: &quot;27.29.0&quot;,
+  &quot;python_version&quot;: &quot;3.12.14&quot;,
+  &quot;schema_sha256&quot;: &quot;f5b8cdc780dd2eaa00fb0dbb43b43e52a53e0a5eb56a8f16d1aff51c61c9fa5b&quot;,
+  &quot;instance_sha256&quot;: &quot;ae43b603acdb287f97ab2cc9e370bdd3aa42bc7a96dd4ac0a5f1a8a4cc3169b6&quot;,
+  &quot;reference_sha256&quot;: &quot;f88b3a4436458d20e1f949d9a6190a8b3b2db6d8d7589b681d9b14b61adf2ead&quot;,
+  &quot;candidate_sha256&quot;: &quot;3478947f815a383eac092ce7c57bef4f0585fa0b9ea1e691ac39bdf4cf86c56a&quot;
+}</pre><footer>Checksum: <code>da78a84ba1ff72771c176c0dbe295ae317849189afce86b65282673ef59285fa</code><p>Contains the supplied SQL and database values. Review before sharing. Restricted local execution is not a multi-tenant security sandbox.</p></footer></body></html>

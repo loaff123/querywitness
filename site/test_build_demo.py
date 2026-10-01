@@ -125,6 +125,23 @@ class ExplorerTests(unittest.TestCase):
             elif not link.startswith('https://'):
                 self.assertTrue((out / link).is_file(), link)
 
+    def test_query_aware_update_preserves_recorded_baseline_scope(self):
+        out = self.root / 'query-aware-info'
+        builder.build_site(self.benchmark, self.catalog, out)
+        html = (out / 'index.html').read_text()
+        self.assertIn('Opt-in query-aware generation', html)
+        self.assertIn('explicit domains are never widened', html)
+        self.assertIn('recorded v1 baseline', html)
+        self.assertIn('/blob/main/docs/QUERY_AWARE.md', html)
+
+    def test_supplementary_query_aware_witness_is_exact_and_available(self):
+        out=self.root/'query-aware-example'
+        builder.build_site(self.benchmark,self.catalog,out)
+        original=ROOT/'benchmarks/query-aware-demo/witness.json'
+        self.assertTrue((out/'query-aware-example/witness.json').is_file())
+        self.assertEqual((out/'query-aware-example/witness.json').read_bytes(),original.read_bytes())
+        self.assertIn('query-aware-example/report.html',(out/'index.html').read_text())
+
     def test_escapes_catalog_and_typed_text(self):
         case = json.loads(self.catalog.read_text())['cases'][1]
         case['title'] = '<img src=x onerror=alert(1)>'

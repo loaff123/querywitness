@@ -1,0 +1,56 @@
+{
+  "case_id": "original_14_ordinary_equivalent",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "795f8929577ef9a2f3e2a1f16970232969d2700b991bfc2c73f0f6e80469226a",
+      "reference": "ff96447dbfff6659bb1b79ce1e6ea8ccd34cb11bbd56824e7caf7ae0c460ab65"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "value",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          10,
+          36,
+          37,
+          38,
+          100
+        ],
+        "table": "number",
+        "type": "INTEGER"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [],
+    "max_rows": 8,
+    "preferred": [
+      [
+        "number",
+        "value",
+        [
+          36,
+          37,
+          38
+        ]
+      ]
+    ],
+    "schema_sha256": "286c40f0b22a07b9ca4ad1e230689f80d295cb52419c70d0011f46051e633fac",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "795f8929577ef9a2f3e2a1f16970232969d2700b991bfc2c73f0f6e80469226a",
+      "reference": "ff96447dbfff6659bb1b79ce1e6ea8ccd34cb11bbd56824e7caf7ae0c460ab65"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "2c750ea0fb246cc48defed8126787489bb9ae8d2db156c2116d491f751cf9ead",
+  "compile_seconds": 0.0013000840044696815
+}

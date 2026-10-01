@@ -1,0 +1,3804 @@
+[
+  {
+    "path": "original/original_01_negative_literal/boundary-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "boundary",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/boundary-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "boundary",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/boundary-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "boundary",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/boundary-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "boundary",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              -734921
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/random-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "random",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/random-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "random",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/random-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "random",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_01_negative_literal/random-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_01_negative_literal",
+    "method": "random",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/boundary-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "boundary",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/boundary-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "boundary",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/boundary-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "boundary",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/boundary-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "boundary",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ],
+            [
+              9223372036854775799
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/random-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "random",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/random-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "random",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/random-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "random",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_02_near_int64_max/random-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_02_near_int64_max",
+    "method": "random",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/boundary-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "boundary",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/boundary-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "boundary",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/boundary-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "boundary",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/boundary-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "boundary",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              -9223372036854775799
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/random-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "random",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/random-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "random",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/random-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "random",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_03_near_int64_min/random-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_03_near_int64_min",
+    "method": "random",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              0
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_04_exact_unicode/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_04_exact_unicode",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_04_exact_unicode/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_04_exact_unicode",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_04_exact_unicode/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_04_exact_unicode",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_04_exact_unicode/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_04_exact_unicode",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ],
+            [
+              "mañana/雪/🙂/é"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_06_qualified_alias/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_06_qualified_alias",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              6
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_06_qualified_alias/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_06_qualified_alias",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              -1
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ],
+            [
+              6
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_06_qualified_alias/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_06_qualified_alias",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              -1
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ],
+            [
+              6
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_06_qualified_alias/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_06_qualified_alias",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              -1
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ],
+            [
+              6
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/boundary-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "boundary",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "01"
+            ],
+            [
+              "01"
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "01"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/boundary-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "boundary",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "A"
+            ],
+            [
+              "A"
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "A"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/boundary-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "boundary",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "é"
+            ],
+            [
+              "é"
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "é"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/boundary-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "boundary",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              ""
+            ],
+            [
+              "x"
+            ],
+            [
+              "x"
+            ],
+            [
+              ""
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              ""
+            ],
+            [
+              "x"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "x"
+            ],
+            [
+              "x"
+            ],
+            [
+              "x"
+            ],
+            [
+              "x"
+            ],
+            [
+              "x"
+            ],
+            [
+              "x"
+            ],
+            [
+              "x"
+            ],
+            [
+              "x"
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "x"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "A"
+            ],
+            [
+              "A"
+            ],
+            [
+              "A"
+            ],
+            [
+              "A"
+            ],
+            [
+              "A"
+            ],
+            [
+              "A"
+            ],
+            [
+              "A"
+            ],
+            [
+              "A"
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "A"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "01"
+            ],
+            [
+              "01"
+            ],
+            [
+              "01"
+            ],
+            [
+              "01"
+            ],
+            [
+              "01"
+            ],
+            [
+              "01"
+            ],
+            [
+              "01"
+            ],
+            [
+              "01"
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "01"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "0"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/random-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "random",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "A"
+            ],
+            [
+              "A"
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "A"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/random-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "random",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              ""
+            ],
+            [
+              ""
+            ],
+            [
+              ""
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              ""
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/random-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "random",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "é"
+            ],
+            [
+              "0"
+            ],
+            [
+              "é"
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "é"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_07_duplicate_sensitive_join/random-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_07_duplicate_sensitive_join",
+    "method": "random",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "01"
+            ],
+            [
+              "01"
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              "01"
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_08_correlated_exists/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_08_correlated_exists",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              2
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              -1
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ],
+            [
+              6
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_08_correlated_exists/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_08_correlated_exists",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              -1
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              -1
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ],
+            [
+              6
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_08_correlated_exists/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_08_correlated_exists",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              7
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              -1
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ],
+            [
+              7
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_08_correlated_exists/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_08_correlated_exists",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              6
+            ],
+            [
+              7
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              2
+            ],
+            [
+              4
+            ],
+            [
+              6
+            ],
+            [
+              7
+            ],
+            [
+              8
+            ],
+            [
+              10
+            ]
+          ],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/boundary-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "boundary",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "01",
+              -2
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "x",
+              0
+            ],
+            [
+              "x",
+              100
+            ],
+            [
+              "",
+              0
+            ],
+            [
+              "",
+              100
+            ],
+            [
+              "x",
+              2
+            ],
+            [
+              "x",
+              100
+            ],
+            [
+              "0",
+              -2
+            ],
+            [
+              "0",
+              -2
+            ],
+            [
+              "01",
+              -2
+            ],
+            [
+              "01",
+              -2
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/boundary-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "boundary",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "01",
+              -1
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "B",
+              10
+            ],
+            [
+              "",
+              -2
+            ],
+            [
+              "é",
+              -1
+            ],
+            [
+              "",
+              1
+            ],
+            [
+              "01",
+              -1
+            ],
+            [
+              "A",
+              -2
+            ],
+            [
+              "A",
+              0
+            ],
+            [
+              "A",
+              2
+            ],
+            [
+              "A",
+              100
+            ],
+            [
+              "B",
+              1
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/boundary-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "boundary",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "A",
+              -2
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "A",
+              -2
+            ],
+            [
+              "A",
+              1
+            ],
+            [
+              "B",
+              2
+            ],
+            [
+              "01",
+              1
+            ],
+            [
+              "01",
+              2
+            ],
+            [
+              "",
+              1
+            ],
+            [
+              "",
+              2
+            ],
+            [
+              "01",
+              -2
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/boundary-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "boundary",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "A",
+              0
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "0",
+              -1
+            ],
+            [
+              "0",
+              2
+            ],
+            [
+              "0",
+              10
+            ],
+            [
+              "0",
+              0
+            ],
+            [
+              "x",
+              -1
+            ],
+            [
+              "x",
+              0
+            ],
+            [
+              "é",
+              100
+            ],
+            [
+              "A",
+              0
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "01",
+              -2
+            ],
+            [
+              "01",
+              -1
+            ],
+            [
+              "01",
+              0
+            ],
+            [
+              "01",
+              2
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "B",
+              1
+            ],
+            [
+              "x",
+              -1
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "01",
+              0
+            ],
+            [
+              "B",
+              100
+            ],
+            [
+              "B",
+              100
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "0",
+              0
+            ],
+            [
+              "x",
+              -1
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/random-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "random",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "",
+              100
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "x",
+              -2
+            ],
+            [
+              "B",
+              2
+            ],
+            [
+              "x",
+              100
+            ],
+            [
+              "0",
+              100
+            ],
+            [
+              "",
+              100
+            ],
+            [
+              "é",
+              1
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/random-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "random",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "x",
+              1
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "x",
+              1
+            ],
+            [
+              "B",
+              1
+            ],
+            [
+              "A",
+              1
+            ],
+            [
+              "é",
+              2
+            ],
+            [
+              "0",
+              1
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/random-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "random",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "B",
+              1
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "B",
+              1
+            ],
+            [
+              "x",
+              -2
+            ],
+            [
+              "x",
+              2
+            ],
+            [
+              "",
+              -2
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_09_multicolumn_natural_join/random-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_09_multicolumn_natural_join",
+    "method": "random",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "0",
+              -1
+            ],
+            [
+              "x",
+              100
+            ],
+            [
+              "é",
+              2
+            ],
+            [
+              "é",
+              100
+            ],
+            [
+              "A",
+              -1
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_10_composite_key_fk/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_10_composite_key_fk",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "x",
+              "01"
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "x",
+              "01"
+            ],
+            [
+              "x",
+              "01"
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_10_composite_key_fk/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_10_composite_key_fk",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "A",
+              ""
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "A",
+              ""
+            ],
+            [
+              "A",
+              ""
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_10_composite_key_fk/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_10_composite_key_fk",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "é",
+              ""
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "é",
+              ""
+            ],
+            [
+              "é",
+              ""
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_10_composite_key_fk/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_10_composite_key_fk",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "0",
+              "A"
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [
+            [
+              "0",
+              "A"
+            ],
+            [
+              "0",
+              "A"
+            ]
+          ],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/boundary-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "boundary",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/boundary-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "boundary",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/boundary-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "boundary",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/boundary-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "boundary",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ],
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ],
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/random-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "random",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/random-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "random",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/random-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "random",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ],
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_11_null_predicate/random-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_11_null_predicate",
+    "method": "random",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              null
+            ]
+          ],
+          "width": 1
+        },
+        {
+          "rows": [],
+          "width": 1
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_12_count_within_row8/query_aware-0-witness.json",
+    "cohort": "original",
+    "case_id": "original_12_count_within_row8",
+    "method": "query_aware",
+    "repeat": 0,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "A",
+              7
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_12_count_within_row8/query_aware-1-witness.json",
+    "cohort": "original",
+    "case_id": "original_12_count_within_row8",
+    "method": "query_aware",
+    "repeat": 1,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "0",
+              7
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_12_count_within_row8/query_aware-2-witness.json",
+    "cohort": "original",
+    "case_id": "original_12_count_within_row8",
+    "method": "query_aware",
+    "repeat": 2,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "0",
+              7
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [],
+          "width": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "original/original_12_count_within_row8/query_aware-3-witness.json",
+    "cohort": "original",
+    "case_id": "original_12_count_within_row8",
+    "method": "query_aware",
+    "repeat": 3,
+    "status": "verified",
+    "row_bound_verified": true,
+    "explicit_domains_verified": true,
+    "independent": {
+      "verified": true,
+      "source_constraints_enforced": true,
+      "strict_types_checked": true,
+      "bag_mismatch": true,
+      "reverse_insertion_same_bags": true,
+      "observations": [
+        {
+          "rows": [
+            [
+              "é",
+              7
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "rows": [],
+          "width": 2
+        }
+      ]
+    }
+  }
+]

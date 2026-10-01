@@ -39,10 +39,12 @@ querywitness search schema.json reference.sql candidate.sql \
 
 Exit code **1 means a counterexample was found** for `search`; it is an expected test failure, not a crash. Exit 0 with `no_counterexample_within_budget` means only that the completed tests agreed. Check the JSON status, especially exit 3 for inconclusive or incomplete searches. See the [CLI reference](docs/CLI.md).
 
+The optional `--strategy query_aware` uses resolvable literals and relational hints while preserving every explicit schema domain. Its exact pools, skipped hints and generation accounting are recorded in the result. Read the [query-aware contract](docs/QUERY_AWARE.md) before comparing its coverage with the original samplers.
+
 ## What it does
 
 - Enforces an explicit JSON contract for INTEGER, REAL, and TEXT columns, nullability, finite domains, primary keys, unique keys, and foreign keys, including composite keys
-- Generates small instances with paired, deterministic random and boundary-biased strategies
+- Generates small instances with deterministic random/boundary strategies and an opt-in query-aware strategy with recorded finite pools
 - Defaults to bag comparison, preserving duplicates; also offers explicit set and ordered policies
 - Keeps SQL errors, unsupported syntax, and resource exhaustion separate from output mismatches
 - Reduces successful mismatches with schema-valid row deletion and reports whether row-1-minimality was established
@@ -74,11 +76,17 @@ querywitness benchmark --out my-evaluation --trials 16 --repeats 8 --seed 202609
 
 See the [dataset and evaluation card](docs/DATASET_CARD.md), [reproduction protocol](docs/REPRODUCIBILITY.md), and [related-work matrix](docs/RELATED_WORK.md). Test database generation, query mutation testing, and delta debugging have substantial prior art. QueryWitness makes no first-of-kind, state-of-the-art, formal verification, or novelty guarantee.
 
+
+### Query-aware 0.2 development result
+
+The optional strategy detected 18/45 already-inspected external development tasks versus 14/45 per unchanged sampler, gaining five and losing one previously detected task. It is not uniformly better. On 16 newly authored frozen pairs, it detected all 11 known distinguishable cases within row8 versus six per baseline, with zero control mismatches. The [full methods, negatives and licensing limits](docs/QUERY_AWARE_EVALUATION.md) distinguish external aggregate findings from the public reproducible original-only study. No held-out, recall or equivalence claim is made.
+
 ## Documentation
 
 - [Command line](docs/CLI.md) and [Python API](docs/API.md)
 - [SQL, schema, and comparison contract](docs/CONTRACT.md)
 - [Generation, search, reduction, and replay](docs/ALGORITHM.md)
+- [Query-aware finite-domain generation](docs/QUERY_AWARE.md)
 - [Dataset and evaluation card](docs/DATASET_CARD.md)
 - [Reproducibility and measurement protocol](docs/REPRODUCIBILITY.md)
 - [Related work and contribution boundaries](docs/RELATED_WORK.md)

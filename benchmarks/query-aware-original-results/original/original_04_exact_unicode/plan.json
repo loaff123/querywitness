@@ -1,0 +1,54 @@
+{
+  "case_id": "original_04_exact_unicode",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "3478947f815a383eac092ce7c57bef4f0585fa0b9ea1e691ac39bdf4cf86c56a",
+      "reference": "f88b3a4436458d20e1f949d9a6190a8b3b2db6d8d7589b681d9b14b61adf2ead"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "text",
+        "explicit_domain": false,
+        "pool": [
+          "",
+          "0",
+          "01",
+          "A",
+          "B",
+          "mañana/雪/🙂/é",
+          "mañana/雪/🙂/é",
+          "x",
+          "é"
+        ],
+        "table": "label",
+        "type": "TEXT"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [],
+    "max_rows": 8,
+    "preferred": [
+      [
+        "label",
+        "text",
+        [
+          "mañana/雪/🙂/é",
+          "mañana/雪/🙂/é"
+        ]
+      ]
+    ],
+    "schema_sha256": "f5b8cdc780dd2eaa00fb0dbb43b43e52a53e0a5eb56a8f16d1aff51c61c9fa5b",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "3478947f815a383eac092ce7c57bef4f0585fa0b9ea1e691ac39bdf4cf86c56a",
+      "reference": "f88b3a4436458d20e1f949d9a6190a8b3b2db6d8d7589b681d9b14b61adf2ead"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "7b406beed92e0ec72f3389d7059ee94aa8a5c6297d288011e8a18c6e04fe54b0",
+  "compile_seconds": 0.0015535470010945573
+}

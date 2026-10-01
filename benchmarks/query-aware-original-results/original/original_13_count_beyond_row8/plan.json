@@ -1,0 +1,53 @@
+{
+  "case_id": "original_13_count_beyond_row8",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "fb9474f93c4df11f2d2ccc6d56210b09ffca8f4b984f5d9cab08d3bf7aff0e95",
+      "reference": "a55a652513714a48ce8a27e5bc10bc45ac6249123f2c65eb01669077c2b6771e"
+    },
+    "counts": [
+      8
+    ],
+    "effective_domains": [
+      {
+        "column": "category",
+        "explicit_domain": false,
+        "pool": [
+          "",
+          "0",
+          "01",
+          "A",
+          "B",
+          "x",
+          "é"
+        ],
+        "table": "ballot",
+        "type": "TEXT"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [
+      [
+        "ballot",
+        "category"
+      ]
+    ],
+    "joins": [],
+    "max_rows": 8,
+    "preferred": [],
+    "schema_sha256": "d5317e0168d5963de0f4e0b13d21a7b7d30aaf07c52445d261aa1119eab4570e",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "fb9474f93c4df11f2d2ccc6d56210b09ffca8f4b984f5d9cab08d3bf7aff0e95",
+      "reference": "a55a652513714a48ce8a27e5bc10bc45ac6249123f2c65eb01669077c2b6771e"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": [
+      "COUNT threshold 10 exceeds conservative base-table upper bound 8 at 8 rows/table; no predicate conclusion is implied",
+      "COUNT threshold 9 exceeds conservative base-table upper bound 8 at 8 rows/table; no predicate conclusion is implied"
+    ]
+  },
+  "plan_sha256": "9e22c84fb480b774d73fc78e7d6f271f440163d66d92a3d51a0a0725651be956",
+  "compile_seconds": 0.001918155001476407
+}

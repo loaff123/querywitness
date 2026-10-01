@@ -48,7 +48,7 @@ class CLIBoundaryTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         for command in ('search', 'demo', 'replay', 'catalog', 'benchmark'):
             self.assertIn(command, result.stdout)
-        self.assertEqual(self.runcli('--version').stdout.strip(), 'querywitness 0.1.0')
+        self.assertEqual(self.runcli('--version').stdout.strip(), 'querywitness 0.2.0')
 
     def test_missing_command_is_usage_error(self):
         result = self.runcli()

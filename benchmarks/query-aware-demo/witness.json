@@ -1,0 +1,154 @@
+{
+  "format": "querywitness/witness",
+  "format_version": 1,
+  "tool_version": "0.2.0",
+  "schema": {
+    "tables": [
+      {
+        "name": "label",
+        "columns": [
+          {
+            "name": "text",
+            "type": "TEXT",
+            "nullable": true
+          }
+        ],
+        "primary_key": [],
+        "unique": [],
+        "foreign_keys": []
+      }
+    ]
+  },
+  "instance": {
+    "label": [
+      [
+        "mañana/雪/🙂/é"
+      ]
+    ]
+  },
+  "reference": "SELECT text FROM label WHERE text = 'mañana/雪/🙂/é'",
+  "candidate": "SELECT text FROM label WHERE text = 'mañana/雪/🙂/é'",
+  "policy": "bag",
+  "execution_limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  },
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 0,
+    "candidate_rows": 1,
+    "reference_only_count": 0,
+    "candidate_only_count": 1
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "text"
+    ],
+    "rows": [],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "text"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "mañana/雪/🙂/é"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "provenance": {
+    "sqlite_version": "3.53.1",
+    "sqlglot_version": "27.29.0",
+    "python_version": "3.12.14",
+    "schema_sha256": "f5b8cdc780dd2eaa00fb0dbb43b43e52a53e0a5eb56a8f16d1aff51c61c9fa5b",
+    "instance_sha256": "ae43b603acdb287f97ab2cc9e370bdd3aa42bc7a96dd4ac0a5f1a8a4cc3169b6",
+    "reference_sha256": "f88b3a4436458d20e1f949d9a6190a8b3b2db6d8d7589b681d9b14b61adf2ead",
+    "candidate_sha256": "3478947f815a383eac092ce7c57bef4f0585fa0b9ea1e691ac39bdf4cf86c56a"
+  },
+  "search": {
+    "source": "post-evaluation supplementary demo from saved original-suite witness",
+    "seed": 20260930,
+    "strategy": "query_aware",
+    "case_id": "original_04_exact_unicode",
+    "pre_reduction_instance_sha256": "6a693afcd3511a4af17e02769fb1d76a57ab86854ef7654bba8d208c5cc6c954",
+    "generation_plan": {
+      "case_id": "original_04_exact_unicode",
+      "plan": {
+        "ast_sha256": {
+          "candidate": "3478947f815a383eac092ce7c57bef4f0585fa0b9ea1e691ac39bdf4cf86c56a",
+          "reference": "f88b3a4436458d20e1f949d9a6190a8b3b2db6d8d7589b681d9b14b61adf2ead"
+        },
+        "counts": [],
+        "effective_domains": [
+          {
+            "column": "text",
+            "explicit_domain": false,
+            "pool": [
+              "",
+              "0",
+              "01",
+              "A",
+              "B",
+              "mañana/雪/🙂/é",
+              "mañana/雪/🙂/é",
+              "x",
+              "é"
+            ],
+            "table": "label",
+            "type": "TEXT"
+          }
+        ],
+        "generator_version": "query-aware-1",
+        "groups": [],
+        "joins": [],
+        "max_rows": 8,
+        "preferred": [
+          [
+            "label",
+            "text",
+            [
+              "mañana/雪/🙂/é",
+              "mañana/雪/🙂/é"
+            ]
+          ]
+        ],
+        "schema_sha256": "f5b8cdc780dd2eaa00fb0dbb43b43e52a53e0a5eb56a8f16d1aff51c61c9fa5b",
+        "skips": [],
+        "source_sha256": {
+          "candidate": "3478947f815a383eac092ce7c57bef4f0585fa0b9ea1e691ac39bdf4cf86c56a",
+          "reference": "f88b3a4436458d20e1f949d9a6190a8b3b2db6d8d7589b681d9b14b61adf2ead"
+        },
+        "sql_bytes": 32768,
+        "sqlglot_version": "27.29.0",
+        "warnings": []
+      },
+      "plan_sha256": "7b406beed92e0ec72f3389d7059ee94aa8a5c6297d288011e8a18c6e04fe54b0",
+      "compile_seconds": 0.0015535470010945573
+    }
+  },
+  "reduction": {
+    "status": "minimized",
+    "checks": 6,
+    "initial_rows": 8,
+    "final_rows": 1,
+    "row_1_minimal": true,
+    "inconclusive_checks": 0,
+    "guarantee": "No schema-valid single-row deletion preserves a successful result mismatch"
+  },
+  "notice": "An observed counterexample under this SQLite contract, not a proof of query equivalence or a universal SQL claim. Integrity is a checksum, not authentication.",
+  "integrity_sha256": "da78a84ba1ff72771c176c0dbe295ae317849189afce86b65282673ef59285fa"
+}

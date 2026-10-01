@@ -1,0 +1,52 @@
+{
+  "case_id": "original_16_redundant_count_equivalent",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "7bd291ba53c066b4de9028df4b9f7d9a6519aad83060e8e3b225d60ac13bd73e",
+      "reference": "33f7c05ec80e195cd63855438dd9dd821af1b29c4377a2f1dc062299fa1a8ddc"
+    },
+    "counts": [
+      0,
+      1,
+      2
+    ],
+    "effective_domains": [
+      {
+        "column": "category",
+        "explicit_domain": false,
+        "pool": [
+          "",
+          "0",
+          "01",
+          "A",
+          "B",
+          "x",
+          "é"
+        ],
+        "table": "tag",
+        "type": "TEXT"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [
+      [
+        "tag",
+        "category"
+      ]
+    ],
+    "joins": [],
+    "max_rows": 8,
+    "preferred": [],
+    "schema_sha256": "9dd9bc01b88487d19bbefc307cb51ba52879a491d620219f14e29062de0174d9",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "7bd291ba53c066b4de9028df4b9f7d9a6519aad83060e8e3b225d60ac13bd73e",
+      "reference": "33f7c05ec80e195cd63855438dd9dd821af1b29c4377a2f1dc062299fa1a8ddc"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "07b4782faa7befef8d72615aeb23ecc4dd764c1f8877c1a1eae9313b313feeb1",
+  "compile_seconds": 0.0018026979960268363
+}

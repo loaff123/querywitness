@@ -1,0 +1,115 @@
+{
+  "case_id": "original_03_near_int64_min",
+  "cohort": "original",
+  "source_index": null,
+  "source_row_sha256": null,
+  "fixture_case_sha256": "cf42d7209e73f2c50016146f4c6f8ffc15806ac536749cb6f46ac8a003969c19",
+  "pair_sha256": "a7a9408082a5e5a6bb20711d912242fc47102c050d26ed1f79a9aa5fde4a4346",
+  "plan_sha256": "72ac5bfa20107a16ee06ecd281945578ed359e43c05344af29a6bcbbce2684dd",
+  "policy": "bag",
+  "method": "query_aware",
+  "repeat": 0,
+  "trial": 1,
+  "seed": 20260931,
+  "instance": {
+    "reading": [
+      [
+        -9223372036854775800
+      ],
+      [
+        -9223372036854775799
+      ],
+      [
+        -9223372036854775798
+      ],
+      [
+        -2
+      ],
+      [
+        -1
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  "instance_sha256": "70c15b0ca5b5e227283784f0514aac58b92cccf7fa1544d021cc638962ecfffc",
+  "table_rows": {
+    "reading": 8
+  },
+  "generator_stats": {
+    "schedule": "join_distinct",
+    "attempted_rows": 8,
+    "accepted_rows": 8,
+    "rejected_rows": 0,
+    "requested_rows": {
+      "reading": 8
+    },
+    "attempt_budget": 320
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "value"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "-9223372036854775799"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "value"
+    ],
+    "rows": [
+      [
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "plain_observations": [
+    {
+      "rows": [
+        [
+          -9223372036854775799
+        ]
+      ],
+      "width": 1
+    },
+    {
+      "rows": [
+        [
+          0
+        ]
+      ],
+      "width": 1
+    }
+  ],
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 1,
+    "reference_only_count": 1,
+    "candidate_only_count": 1
+  }
+}

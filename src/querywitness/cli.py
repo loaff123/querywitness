@@ -92,7 +92,7 @@ def _parser() -> argparse.ArgumentParser:
     search_parser.add_argument('--out', help='New output directory; existing paths are never overwritten')
     search_parser.add_argument('--trials', type=_bounded_integer(1, 10000), default=100)
     search_parser.add_argument('--seed', type=_bounded_integer(0, 2**63 - 1), default=0)
-    search_parser.add_argument('--strategy', choices=('boundary', 'random'), default='boundary')
+    search_parser.add_argument('--strategy', choices=('boundary', 'random', 'query_aware'), default='boundary')
     search_parser.add_argument('--policy', choices=('bag', 'set', 'ordered'), default='bag')
     search_parser.add_argument('--max-rows', type=_bounded_integer(1, 32), default=8)
     search_parser.add_argument('--seconds', type=float, default=60.0, help='Search wall-time budget (0–3600 seconds)')

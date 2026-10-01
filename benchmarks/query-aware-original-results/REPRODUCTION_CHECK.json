@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "completed_trials": 12288,
+  "seconds": 24.225500977001502,
+  "finished_utc": "2026-09-30T23:54:52Z",
+  "witness_checks": {
+    "trial_records": 12288,
+    "saved_witnesses": 92,
+    "verified": 92,
+    "quarantined": 0,
+    "oracle_control_violations": 0
+  },
+  "recorded_comparison": {
+    "compared_trials": 12288,
+    "different_trials": 0,
+    "status": "identical_ignoring_timing",
+    "ignored_fields": "seconds and all *_seconds instrumentation fields",
+    "differences": []
+  },
+  "purpose": "Full standalone original-only reproduction against archived records; separate from the initial evaluation denominator",
+  "reproducer_sha256": "c443d14b22120c545e895a9a78377ffcc6fbfcf6a6d8d46665bd403f8cb27b8e",
+  "source_commit": "ffb7c74ec8e899cb3ef60590231fffa2cbbe2e5c"
+}

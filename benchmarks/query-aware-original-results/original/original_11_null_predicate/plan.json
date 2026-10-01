@@ -1,0 +1,48 @@
+{
+  "case_id": "original_11_null_predicate",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "abf9ae5d8fceee6dce92aeb18cd93abf7a2a24741ca664936fa1a8f0e1169e2a",
+      "reference": "ec3020fdb0962f5162ac79049f7227d8101bc11868768f872e07a247c6d332ff"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "value",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          10,
+          100
+        ],
+        "table": "maybe",
+        "type": "INTEGER"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [],
+    "max_rows": 8,
+    "preferred": [],
+    "schema_sha256": "5aea90eed8a9bab047d0f54641b616f088b210d8454bbe5eec04b73f246a8fbc",
+    "skips": [
+      "Pattern/IS predicate does not contribute literal hints: value IS NULL",
+      "Unsupported, coercing or out-of-range comparison literal: value = NULL"
+    ],
+    "source_sha256": {
+      "candidate": "abf9ae5d8fceee6dce92aeb18cd93abf7a2a24741ca664936fa1a8f0e1169e2a",
+      "reference": "ec3020fdb0962f5162ac79049f7227d8101bc11868768f872e07a247c6d332ff"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": [
+      "No query hints resolved; sampling uses finite default or explicit pools"
+    ]
+  },
+  "plan_sha256": "b46c46888ab6c1cb6d6b975b551a6af4ed615af8ac1106c67d2f63e89f866e3d",
+  "compile_seconds": 0.001422205001290422
+}

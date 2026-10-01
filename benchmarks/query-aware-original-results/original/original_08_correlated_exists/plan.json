@@ -1,0 +1,109 @@
+{
+  "case_id": "original_08_correlated_exists",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "88e83895b9952ffc47143b52e3ebfaca89433b6c282c600e0bb75aaea579567e",
+      "reference": "52c78c4d2c7c8bb1ebdee3ba15c0c50868e5d6f8aa38a392c399b601329a968a"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "id",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "account",
+        "type": "INTEGER"
+      },
+      {
+        "column": "account_id",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "event",
+        "type": "INTEGER"
+      },
+      {
+        "column": "code",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          10,
+          100,
+          61278,
+          61279,
+          61280
+        ],
+        "table": "event",
+        "type": "INTEGER"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [
+      [
+        [
+          "account",
+          "id"
+        ],
+        [
+          "event",
+          "account_id"
+        ]
+      ]
+    ],
+    "max_rows": 8,
+    "preferred": [
+      [
+        "event",
+        "code",
+        [
+          61278,
+          61279,
+          61280
+        ]
+      ]
+    ],
+    "schema_sha256": "37877c1ab521e34ee13526abaf1ba046282a718cbeac10cfe9030efef18e0d45",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "4b69df25585ce8246c3ff4a608eb1c216ffdc39ea9a2a42a23d91a5d376aa12a",
+      "reference": "e5a5d1a3bd140777d87cf503141bdd897932f7bfa7136031fdf8d847690e62a1"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "6761104c86ade85d5268c85f8f0d1a6c3d9743a8dc33a6bebec42616f5ab5994",
+  "compile_seconds": 0.0023900099986349232
+}

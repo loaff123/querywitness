@@ -1,0 +1,23 @@
+{
+  "methods": [
+    "random",
+    "boundary",
+    "query_aware"
+  ],
+  "repeat_seeds": [
+    20260930,
+    20261930,
+    20262930,
+    20263930
+  ],
+  "trials": 64,
+  "max_rows": 8,
+  "policy": "bag",
+  "limits": {
+    "rows": 10000,
+    "bytes": 2000000,
+    "vm_steps": 1000000,
+    "seconds": 2.0,
+    "sql_bytes": 32768
+  }
+}

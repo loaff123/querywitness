@@ -1,0 +1,275 @@
+{
+  "case_id": "original_09_multicolumn_natural_join",
+  "cohort": "original",
+  "source_index": null,
+  "source_row_sha256": null,
+  "fixture_case_sha256": "93b7e2e82e589546ca0f376d089e2ed7e6fe9116e606fe6b593aab96d0f0c56e",
+  "pair_sha256": "56e22b79496907665ae59dcea82931127e2c1b10df5180adf896742aae503ec7",
+  "plan_sha256": "ef02895ecc14a2f527d75d33015a12c7f455a6adefdf39a4e95a022347af1db8",
+  "policy": "bag",
+  "method": "boundary",
+  "repeat": 2,
+  "trial": 0,
+  "seed": 20262930,
+  "instance": {
+    "left_side": [
+      [
+        2,
+        "0",
+        "A"
+      ],
+      [
+        0,
+        "é",
+        "A"
+      ],
+      [
+        -2,
+        "B",
+        "B"
+      ],
+      [
+        -1,
+        "B",
+        "A"
+      ],
+      [
+        10,
+        "é",
+        "01"
+      ],
+      [
+        10,
+        "x",
+        ""
+      ],
+      [
+        2,
+        "x",
+        "01"
+      ],
+      [
+        -1,
+        "",
+        "01"
+      ]
+    ],
+    "right_side": [
+      [
+        0,
+        "A",
+        1
+      ],
+      [
+        10,
+        "0",
+        2
+      ],
+      [
+        10,
+        "B",
+        1
+      ],
+      [
+        2,
+        "0",
+        -2
+      ],
+      [
+        100,
+        "A",
+        100
+      ],
+      [
+        -2,
+        "A",
+        2
+      ],
+      [
+        100,
+        "",
+        100
+      ],
+      [
+        100,
+        "0",
+        0
+      ]
+    ]
+  },
+  "instance_sha256": "86ac58347ffa66ea77ab264a9f62780c646fe571eafa07c3dc7a7058354b5ea9",
+  "table_rows": {
+    "left_side": 8,
+    "right_side": 8
+  },
+  "generator_stats": null,
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "payload",
+      "score"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "A"
+        },
+        {
+          "type": "integer",
+          "value": "-2"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "payload",
+      "score"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "A"
+        },
+        {
+          "type": "integer",
+          "value": "-2"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "A"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "B"
+        },
+        {
+          "type": "integer",
+          "value": "2"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "01"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "01"
+        },
+        {
+          "type": "integer",
+          "value": "2"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": ""
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": ""
+        },
+        {
+          "type": "integer",
+          "value": "2"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "01"
+        },
+        {
+          "type": "integer",
+          "value": "-2"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "plain_observations": [
+    {
+      "rows": [
+        [
+          "A",
+          -2
+        ]
+      ],
+      "width": 2
+    },
+    {
+      "rows": [
+        [
+          "A",
+          -2
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "B",
+          2
+        ],
+        [
+          "01",
+          1
+        ],
+        [
+          "01",
+          2
+        ],
+        [
+          "",
+          1
+        ],
+        [
+          "",
+          2
+        ],
+        [
+          "01",
+          -2
+        ]
+      ],
+      "width": 2
+    }
+  ],
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 8,
+    "reference_only_count": 0,
+    "candidate_only_count": 7
+  }
+}

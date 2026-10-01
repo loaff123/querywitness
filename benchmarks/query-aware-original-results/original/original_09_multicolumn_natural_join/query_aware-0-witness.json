@@ -1,0 +1,168 @@
+{
+  "case_id": "original_09_multicolumn_natural_join",
+  "cohort": "original",
+  "source_index": null,
+  "source_row_sha256": null,
+  "fixture_case_sha256": "93b7e2e82e589546ca0f376d089e2ed7e6fe9116e606fe6b593aab96d0f0c56e",
+  "pair_sha256": "56e22b79496907665ae59dcea82931127e2c1b10df5180adf896742aae503ec7",
+  "plan_sha256": "ef02895ecc14a2f527d75d33015a12c7f455a6adefdf39a4e95a022347af1db8",
+  "policy": "bag",
+  "method": "query_aware",
+  "repeat": 0,
+  "trial": 4,
+  "seed": 20260934,
+  "instance": {
+    "left_side": [
+      [
+        -1,
+        "B",
+        "01"
+      ]
+    ],
+    "right_side": [
+      [
+        1,
+        "",
+        -1
+      ],
+      [
+        -1,
+        "01",
+        -2
+      ],
+      [
+        0,
+        "0",
+        -1
+      ],
+      [
+        -1,
+        "é",
+        2
+      ],
+      [
+        -1,
+        "0",
+        -1
+      ],
+      [
+        -1,
+        "A",
+        0
+      ]
+    ]
+  },
+  "instance_sha256": "43daba185d72139198eb83900ef4357a4838743955354e638b8e86da6562627b",
+  "table_rows": {
+    "left_side": 1,
+    "right_side": 6
+  },
+  "generator_stats": {
+    "schedule": "random",
+    "attempted_rows": 7,
+    "accepted_rows": 7,
+    "rejected_rows": 0,
+    "requested_rows": {
+      "left_side": 1,
+      "right_side": 6
+    },
+    "attempt_budget": 280
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "payload",
+      "score"
+    ],
+    "rows": [],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "payload",
+      "score"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "01"
+        },
+        {
+          "type": "integer",
+          "value": "-2"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "01"
+        },
+        {
+          "type": "integer",
+          "value": "-1"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "01"
+        },
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "01"
+        },
+        {
+          "type": "integer",
+          "value": "2"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "plain_observations": [
+    {
+      "rows": [],
+      "width": 2
+    },
+    {
+      "rows": [
+        [
+          "01",
+          -2
+        ],
+        [
+          "01",
+          -1
+        ],
+        [
+          "01",
+          0
+        ],
+        [
+          "01",
+          2
+        ]
+      ],
+      "width": 2
+    }
+  ],
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 0,
+    "candidate_rows": 4,
+    "reference_only_count": 0,
+    "candidate_only_count": 4
+  }
+}

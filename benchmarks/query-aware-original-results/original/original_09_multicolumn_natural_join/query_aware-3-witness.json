@@ -1,0 +1,145 @@
+{
+  "case_id": "original_09_multicolumn_natural_join",
+  "cohort": "original",
+  "source_index": null,
+  "source_row_sha256": null,
+  "fixture_case_sha256": "93b7e2e82e589546ca0f376d089e2ed7e6fe9116e606fe6b593aab96d0f0c56e",
+  "pair_sha256": "56e22b79496907665ae59dcea82931127e2c1b10df5180adf896742aae503ec7",
+  "plan_sha256": "ef02895ecc14a2f527d75d33015a12c7f455a6adefdf39a4e95a022347af1db8",
+  "policy": "bag",
+  "method": "query_aware",
+  "repeat": 3,
+  "trial": 5,
+  "seed": 20263935,
+  "instance": {
+    "left_side": [
+      [
+        10,
+        "é",
+        "0"
+      ],
+      [
+        0,
+        "x",
+        "0"
+      ],
+      [
+        100,
+        "0",
+        "01"
+      ],
+      [
+        -2,
+        "0",
+        "é"
+      ],
+      [
+        2,
+        "",
+        "x"
+      ],
+      [
+        1,
+        "01",
+        "x"
+      ]
+    ],
+    "right_side": [
+      [
+        1,
+        "B",
+        -1
+      ],
+      [
+        0,
+        "A",
+        0
+      ]
+    ]
+  },
+  "instance_sha256": "bbf8c146def31b0a0a33b6f5246a0772874624f2c2102ead655048e59bcebbf5",
+  "table_rows": {
+    "left_side": 6,
+    "right_side": 2
+  },
+  "generator_stats": {
+    "schedule": "random",
+    "attempted_rows": 8,
+    "accepted_rows": 8,
+    "rejected_rows": 0,
+    "requested_rows": {
+      "left_side": 6,
+      "right_side": 2
+    },
+    "attempt_budget": 320
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "payload",
+      "score"
+    ],
+    "rows": [],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "payload",
+      "score"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "0"
+        },
+        {
+          "type": "integer",
+          "value": "0"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "x"
+        },
+        {
+          "type": "integer",
+          "value": "-1"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "plain_observations": [
+    {
+      "rows": [],
+      "width": 2
+    },
+    {
+      "rows": [
+        [
+          "0",
+          0
+        ],
+        [
+          "x",
+          -1
+        ]
+      ],
+      "width": 2
+    }
+  ],
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 0,
+    "candidate_rows": 2,
+    "reference_only_count": 0,
+    "candidate_only_count": 2
+  }
+}

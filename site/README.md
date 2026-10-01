@@ -58,3 +58,5 @@ and print styles. Inspect desktop and mobile rendering before publication.
 The benchmark scope is development-set synthetic coverage. Seed repeats are not
 independent tasks. A row-1-minimal label means no schema-valid single-row deletion
 preserves the successful mismatch; it does not mean globally minimal.
+
+The supplementary exact-Unicode example is a separately reduced query-aware witness from the original frozen development suite. Its bundle checksum and successful observations are checked during the build. It is copied without altering the historic v1 benchmark counts.

@@ -96,3 +96,16 @@ if result["status"] == "counterexample":
 `querywitness.catalog.load_catalog()` reads the bundled JSON catalog. `validate_catalog()` returns a dictionary with family count, fixture execution count, and failures.
 
 `querywitness.benchmark.run_benchmark(destination, *, trials=16, repeats=8, seed=20260930, max_rows=8, family_ids=None)` writes evaluation artifacts and returns the summary. `family_ids` is an optional collection of catalog IDs. The benchmark uses bag comparison and default execution limits. See [reproduction and equal-budget accounting](REPRODUCIBILITY.md).
+
+## Query-aware generation
+
+```python
+from querywitness.query_plan import compile_plan
+from querywitness.query_generate import generate_query_aware
+
+plan = compile_plan(schema, reference_sql, candidate_sql, max_rows=8)
+instance, statistics = generate_query_aware(schema, plan, seed=19)
+manifest = plan.to_dict()
+```
+
+Use `search(..., strategy="query_aware")` for ordinary searches. Keep the original schema and plan together; mismatched schemas are rejected. Plans disclose exact finite pools and unsupported hints. See [the contract and limitations](QUERY_AWARE.md).

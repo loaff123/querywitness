@@ -1,0 +1,1430 @@
+{
+  "suite_name": "QueryWitness original query-aware development validation",
+  "format_version": 1,
+  "classification": "newly authored development validation; NOT external generalization",
+  "provenance": {
+    "author": "Independently authored original fixtures, without inspecting generator implementation or external corpus",
+    "authored_utc_date": "2026-09-30",
+    "source_used": "querywitness/docs/CONTRACT.md only",
+    "product_generator_inspected": false,
+    "external_corpus_or_results_inspected": false,
+    "expected_rows": "Hand-authored in author_fixtures.py before any generator execution; independently checked using Python standard-library sqlite3.",
+    "freeze_rule": "Freeze fixtures.json, validator, authoring source, and this provenance with SHA256SUMS before generator runs; preserve these bytes during evaluation."
+  },
+  "evaluation_bound": {
+    "max_rows_per_table": 8,
+    "policy": "bag"
+  },
+  "interpretation": "Different means a demonstrated witness exists, not that an incomplete generator must find it. Equivalent controls must never produce a false-positive witness. original_13 is globally different but provably equivalent within row8.",
+  "cases": [
+    {
+      "id": "original_01_negative_literal",
+      "tags": [
+        "uncommon_negative_integer",
+        "literal"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "reading",
+            "columns": [
+              {
+                "name": "value",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT value FROM reading WHERE value = -734921",
+      "candidate_sql": "SELECT value FROM reading WHERE value = 0",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "The literal row and zero row are distinct exact signed-64 INTEGER values.",
+      "fixtures": [
+        {
+          "name": "literal_zero_neighbor_and_null",
+          "instance": {
+            "reading": [
+              [
+                -734921
+              ],
+              [
+                0
+              ],
+              [
+                -734920
+              ],
+              [
+                null
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              -734921
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              0
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_02_near_int64_max",
+      "tags": [
+        "near_signed64_max",
+        "literal"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "reading",
+            "columns": [
+              {
+                "name": "value",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT value FROM reading WHERE value = 9223372036854775799",
+      "candidate_sql": "SELECT value FROM reading WHERE value = 0",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "The literal row and zero row are distinct exact signed-64 INTEGER values.",
+      "fixtures": [
+        {
+          "name": "literal_zero_neighbor_and_null",
+          "instance": {
+            "reading": [
+              [
+                9223372036854775799
+              ],
+              [
+                0
+              ],
+              [
+                9223372036854775800
+              ],
+              [
+                null
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              9223372036854775799
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              0
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_03_near_int64_min",
+      "tags": [
+        "near_signed64_min",
+        "literal"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "reading",
+            "columns": [
+              {
+                "name": "value",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT value FROM reading WHERE value = -9223372036854775799",
+      "candidate_sql": "SELECT value FROM reading WHERE value = 0",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "The literal row and zero row are distinct exact signed-64 INTEGER values.",
+      "fixtures": [
+        {
+          "name": "literal_zero_neighbor_and_null",
+          "instance": {
+            "reading": [
+              [
+                -9223372036854775799
+              ],
+              [
+                0
+              ],
+              [
+                -9223372036854775798
+              ],
+              [
+                null
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              -9223372036854775799
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              0
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_04_exact_unicode",
+      "tags": [
+        "exact_unicode",
+        "text_literal",
+        "no_normalization"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "label",
+            "columns": [
+              {
+                "name": "text",
+                "type": "TEXT",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT text FROM label WHERE text = 'mañana/雪/🙂/é'",
+      "candidate_sql": "SELECT text FROM label WHERE text = 'mañana/雪/🙂/é'",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "SQLite BINARY text equality distinguishes the final decomposed e+U+0301 from U+00E9.",
+      "fixtures": [
+        {
+          "name": "both_normalization_forms",
+          "instance": {
+            "label": [
+              [
+                "mañana/雪/🙂/é"
+              ],
+              [
+                "mañana/雪/🙂/é"
+              ],
+              [
+                null
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              "mañana/雪/🙂/é"
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              "mañana/雪/🙂/é"
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_05_domain_forbids_literal",
+      "tags": [
+        "explicit_domain",
+        "equivalent_control"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "restricted",
+            "columns": [
+              {
+                "name": "value",
+                "type": "INTEGER",
+                "nullable": true,
+                "domain": [
+                  3,
+                  19
+                ]
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT value FROM restricted WHERE value = -460213",
+      "candidate_sql": "SELECT value FROM restricted WHERE 0 = 1",
+      "policy": "bag",
+      "global_relation": "equivalent",
+      "relation_with_at_most_8_rows_per_table": "equivalent",
+      "oracle_rationale": "Legal values are only 3, 19, or NULL. Equality to -460213 is never TRUE; both bags are always empty.",
+      "fixtures": [
+        {
+          "name": "all_legal_values_and_duplicate",
+          "instance": {
+            "restricted": [
+              [
+                3
+              ],
+              [
+                19
+              ],
+              [
+                null
+              ],
+              [
+                3
+              ]
+            ]
+          },
+          "expected_reference_rows": [],
+          "expected_candidate_rows": []
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_06_qualified_alias",
+      "tags": [
+        "aliases",
+        "literal"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "measurement",
+            "columns": [
+              {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+              },
+              {
+                "name": "signal",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [
+              "id"
+            ],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT m.id AS result_id FROM measurement AS m WHERE m.signal = 48263",
+      "candidate_sql": "SELECT q.id AS ignored_output_name FROM measurement AS q WHERE q.signal = 48264",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "Qualified references resolve to the same table; the two signal literals select different primary keys.",
+      "fixtures": [
+        {
+          "name": "two_signals",
+          "instance": {
+            "measurement": [
+              [
+                5,
+                48263
+              ],
+              [
+                6,
+                48264
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              5
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              6
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_07_duplicate_sensitive_join",
+      "tags": [
+        "join",
+        "bag_multiplicity",
+        "distinct"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "source",
+            "columns": [
+              {
+                "name": "key",
+                "type": "INTEGER",
+                "nullable": false
+              },
+              {
+                "name": "label",
+                "type": "TEXT",
+                "nullable": false
+              }
+            ],
+            "primary_key": [
+              "key"
+            ],
+            "unique": [],
+            "foreign_keys": []
+          },
+          {
+            "name": "copy",
+            "columns": [
+              {
+                "name": "key",
+                "type": "INTEGER",
+                "nullable": false
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT s.label FROM source AS s JOIN copy AS c ON c.key = s.key",
+      "candidate_sql": "SELECT DISTINCT s.label FROM source AS s JOIN copy AS c ON c.key = s.key",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "Two matching copy rows repeat the same projected label; DISTINCT removes one occurrence.",
+      "fixtures": [
+        {
+          "name": "one_source_two_copies",
+          "instance": {
+            "source": [
+              [
+                23,
+                "repeated"
+              ]
+            ],
+            "copy": [
+              [
+                23
+              ],
+              [
+                23
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              "repeated"
+            ],
+            [
+              "repeated"
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              "repeated"
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_08_correlated_exists",
+      "tags": [
+        "correlated_exists",
+        "aliases",
+        "foreign_key"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "account",
+            "columns": [
+              {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+              }
+            ],
+            "primary_key": [
+              "id"
+            ],
+            "unique": [],
+            "foreign_keys": []
+          },
+          {
+            "name": "event",
+            "columns": [
+              {
+                "name": "account_id",
+                "type": "INTEGER",
+                "nullable": false
+              },
+              {
+                "name": "code",
+                "type": "INTEGER",
+                "nullable": false
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "account_id"
+                ],
+                "references": {
+                  "table": "account",
+                  "columns": [
+                    "id"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reference_sql": "SELECT a.id FROM account AS a WHERE EXISTS (SELECT 1 FROM event AS e WHERE e.account_id = a.id AND e.code = 61279)",
+      "candidate_sql": "SELECT a.id FROM account AS a WHERE EXISTS (SELECT 1 FROM event AS e WHERE e.code = 61279)",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "Only account 11 owns the qualifying event, while the uncorrelated predicate also selects account 12.",
+      "fixtures": [
+        {
+          "name": "one_owner_one_nonowner",
+          "instance": {
+            "account": [
+              [
+                11
+              ],
+              [
+                12
+              ]
+            ],
+            "event": [
+              [
+                11,
+                61279
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              11
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              11
+            ],
+            [
+              12
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_09_multicolumn_natural_join",
+      "tags": [
+        "natural_join",
+        "multicolumn_join",
+        "text"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "left_side",
+            "columns": [
+              {
+                "name": "key",
+                "type": "INTEGER",
+                "nullable": false
+              },
+              {
+                "name": "region",
+                "type": "TEXT",
+                "nullable": false
+              },
+              {
+                "name": "payload",
+                "type": "TEXT",
+                "nullable": false
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          },
+          {
+            "name": "right_side",
+            "columns": [
+              {
+                "name": "key",
+                "type": "INTEGER",
+                "nullable": false
+              },
+              {
+                "name": "region",
+                "type": "TEXT",
+                "nullable": false
+              },
+              {
+                "name": "score",
+                "type": "INTEGER",
+                "nullable": false
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT l.payload, r.score FROM left_side AS l NATURAL JOIN right_side AS r",
+      "candidate_sql": "SELECT l.payload, r.score FROM left_side AS l JOIN right_side AS r ON l.key = r.key",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "NATURAL JOIN equates both shared columns key and region; the candidate omits region.",
+      "fixtures": [
+        {
+          "name": "same_key_two_regions",
+          "instance": {
+            "left_side": [
+              [
+                7,
+                "outer",
+                "chosen"
+              ]
+            ],
+            "right_side": [
+              [
+                7,
+                "inner",
+                10
+              ],
+              [
+                7,
+                "outer",
+                20
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              "chosen",
+              20
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              "chosen",
+              10
+            ],
+            [
+              "chosen",
+              20
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 2
+    },
+    {
+      "id": "original_10_composite_key_fk",
+      "tags": [
+        "composite_primary_key",
+        "composite_foreign_key",
+        "join"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "parent",
+            "columns": [
+              {
+                "name": "tenant",
+                "type": "INTEGER",
+                "nullable": false
+              },
+              {
+                "name": "code",
+                "type": "INTEGER",
+                "nullable": false
+              },
+              {
+                "name": "label",
+                "type": "TEXT",
+                "nullable": false
+              }
+            ],
+            "primary_key": [
+              "tenant",
+              "code"
+            ],
+            "unique": [],
+            "foreign_keys": []
+          },
+          {
+            "name": "child",
+            "columns": [
+              {
+                "name": "tenant",
+                "type": "INTEGER",
+                "nullable": false
+              },
+              {
+                "name": "code",
+                "type": "INTEGER",
+                "nullable": false
+              },
+              {
+                "name": "note",
+                "type": "TEXT",
+                "nullable": false
+              }
+            ],
+            "primary_key": [
+              "tenant",
+              "code"
+            ],
+            "unique": [],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "tenant",
+                  "code"
+                ],
+                "references": {
+                  "table": "parent",
+                  "columns": [
+                    "tenant",
+                    "code"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reference_sql": "SELECT c.note, p.label FROM child AS c JOIN parent AS p ON c.tenant = p.tenant AND c.code = p.code",
+      "candidate_sql": "SELECT c.note, p.label FROM child AS c JOIN parent AS p ON c.code = p.code",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "The child references exactly (1,7). Dropping the tenant join predicate incorrectly matches parent (2,7).",
+      "fixtures": [
+        {
+          "name": "two_tenants_reuse_code",
+          "instance": {
+            "parent": [
+              [
+                1,
+                7,
+                "north"
+              ],
+              [
+                2,
+                7,
+                "south"
+              ]
+            ],
+            "child": [
+              [
+                1,
+                7,
+                "chosen"
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              "chosen",
+              "north"
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              "chosen",
+              "north"
+            ],
+            [
+              "chosen",
+              "south"
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 2
+    },
+    {
+      "id": "original_11_null_predicate",
+      "tags": [
+        "null_semantics"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "maybe",
+            "columns": [
+              {
+                "name": "value",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT value FROM maybe WHERE value IS NULL",
+      "candidate_sql": "SELECT value FROM maybe WHERE value = NULL",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "IS NULL selects the NULL row; equality to NULL evaluates UNKNOWN even for NULL.",
+      "fixtures": [
+        {
+          "name": "null_and_integer",
+          "instance": {
+            "maybe": [
+              [
+                null
+              ],
+              [
+                4
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              null
+            ]
+          ],
+          "expected_candidate_rows": []
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_12_count_within_row8",
+      "tags": [
+        "count_threshold",
+        "within_row8"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "ballot",
+            "columns": [
+              {
+                "name": "category",
+                "type": "TEXT",
+                "nullable": false
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT category, COUNT(*) FROM ballot GROUP BY category HAVING COUNT(*) >= 7",
+      "candidate_sql": "SELECT category, COUNT(*) FROM ballot GROUP BY category HAVING COUNT(*) >= 8",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "different",
+      "oracle_rationale": "Exactly seven rows in one group satisfy only the reference HAVING predicate.",
+      "fixtures": [
+        {
+          "name": "seven_votes",
+          "instance": {
+            "ballot": [
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              "a",
+              7
+            ]
+          ],
+          "expected_candidate_rows": []
+        },
+        {
+          "name": "eight_votes_control",
+          "instance": {
+            "ballot": [
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              "a",
+              8
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              "a",
+              8
+            ]
+          ]
+        },
+        {
+          "name": "empty_control",
+          "instance": {
+            "ballot": []
+          },
+          "expected_reference_rows": [],
+          "expected_candidate_rows": []
+        }
+      ],
+      "expected_column_count": 2
+    },
+    {
+      "id": "original_13_count_beyond_row8",
+      "tags": [
+        "count_threshold",
+        "beyond_row8",
+        "bounded_equivalent"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "ballot",
+            "columns": [
+              {
+                "name": "category",
+                "type": "TEXT",
+                "nullable": false
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT category, COUNT(*) FROM ballot GROUP BY category HAVING COUNT(*) >= 9",
+      "candidate_sql": "SELECT category, COUNT(*) FROM ballot GROUP BY category HAVING COUNT(*) >= 10",
+      "policy": "bag",
+      "global_relation": "different",
+      "relation_with_at_most_8_rows_per_table": "equivalent",
+      "oracle_rationale": "No group in a table of at most eight rows can reach either threshold. Exactly nine rows are a global witness.",
+      "fixtures": [
+        {
+          "name": "nine_votes_outside_row8",
+          "instance": {
+            "ballot": [
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              "a",
+              9
+            ]
+          ],
+          "expected_candidate_rows": []
+        },
+        {
+          "name": "eight_votes_bounded_control",
+          "instance": {
+            "ballot": [
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ]
+            ]
+          },
+          "expected_reference_rows": [],
+          "expected_candidate_rows": []
+        },
+        {
+          "name": "ten_votes_control",
+          "instance": {
+            "ballot": [
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ],
+              [
+                "a"
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              "a",
+              10
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              "a",
+              10
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 2
+    },
+    {
+      "id": "original_14_ordinary_equivalent",
+      "tags": [
+        "equivalent_control",
+        "ordinary_predicate",
+        "null_semantics"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "number",
+            "columns": [
+              {
+                "name": "value",
+                "type": "INTEGER",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT value FROM number WHERE value <= 37",
+      "candidate_sql": "SELECT value FROM number WHERE NOT (value > 37)",
+      "policy": "bag",
+      "global_relation": "equivalent",
+      "relation_with_at_most_8_rows_per_table": "equivalent",
+      "oracle_rationale": "For legal INTEGER values the predicates have identical truth values; both are UNKNOWN on NULL and preserve duplicates.",
+      "fixtures": [
+        {
+          "name": "around_boundary_and_null",
+          "instance": {
+            "number": [
+              [
+                36
+              ],
+              [
+                37
+              ],
+              [
+                37
+              ],
+              [
+                38
+              ],
+              [
+                null
+              ],
+              [
+                -4
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              36
+            ],
+            [
+              37
+            ],
+            [
+              37
+            ],
+            [
+              -4
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              36
+            ],
+            [
+              37
+            ],
+            [
+              37
+            ],
+            [
+              -4
+            ]
+          ]
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_15_redundant_join_equivalent",
+      "tags": [
+        "equivalent_control",
+        "redundant_join",
+        "foreign_key",
+        "primary_key"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "lookup",
+            "columns": [
+              {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+              }
+            ],
+            "primary_key": [
+              "id"
+            ],
+            "unique": [],
+            "foreign_keys": []
+          },
+          {
+            "name": "record",
+            "columns": [
+              {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+              },
+              {
+                "name": "lookup_id",
+                "type": "INTEGER",
+                "nullable": false
+              }
+            ],
+            "primary_key": [
+              "id"
+            ],
+            "unique": [],
+            "foreign_keys": [
+              {
+                "columns": [
+                  "lookup_id"
+                ],
+                "references": {
+                  "table": "lookup",
+                  "columns": [
+                    "id"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reference_sql": "SELECT r.id FROM record AS r",
+      "candidate_sql": "SELECT r.id FROM record AS r JOIN lookup AS l ON r.lookup_id = l.id",
+      "policy": "bag",
+      "global_relation": "equivalent",
+      "relation_with_at_most_8_rows_per_table": "equivalent",
+      "oracle_rationale": "The non-NULL foreign key guarantees a parent exists and its primary key guarantees exactly one match per record.",
+      "fixtures": [
+        {
+          "name": "shared_parent_and_unused_parent",
+          "instance": {
+            "lookup": [
+              [
+                2
+              ],
+              [
+                8
+              ],
+              [
+                9
+              ]
+            ],
+            "record": [
+              [
+                31,
+                2
+              ],
+              [
+                32,
+                2
+              ],
+              [
+                33,
+                8
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              31
+            ],
+            [
+              32
+            ],
+            [
+              33
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              31
+            ],
+            [
+              32
+            ],
+            [
+              33
+            ]
+          ]
+        },
+        {
+          "name": "empty_both_tables",
+          "instance": {
+            "lookup": [],
+            "record": []
+          },
+          "expected_reference_rows": [],
+          "expected_candidate_rows": []
+        }
+      ],
+      "expected_column_count": 1
+    },
+    {
+      "id": "original_16_redundant_count_equivalent",
+      "tags": [
+        "equivalent_control",
+        "redundant_count_predicate",
+        "null_group"
+      ],
+      "schema": {
+        "tables": [
+          {
+            "name": "tag",
+            "columns": [
+              {
+                "name": "category",
+                "type": "TEXT",
+                "nullable": true
+              }
+            ],
+            "primary_key": [],
+            "unique": [],
+            "foreign_keys": []
+          }
+        ]
+      },
+      "reference_sql": "SELECT category, COUNT(*) FROM tag GROUP BY category",
+      "candidate_sql": "SELECT category, COUNT(*) FROM tag GROUP BY category HAVING COUNT(*) >= 1",
+      "policy": "bag",
+      "global_relation": "equivalent",
+      "relation_with_at_most_8_rows_per_table": "equivalent",
+      "oracle_rationale": "Every emitted GROUP BY group contains at least one input row; empty input emits no group.",
+      "fixtures": [
+        {
+          "name": "duplicate_and_null_groups",
+          "instance": {
+            "tag": [
+              [
+                null
+              ],
+              [
+                "k"
+              ],
+              [
+                "k"
+              ]
+            ]
+          },
+          "expected_reference_rows": [
+            [
+              null,
+              1
+            ],
+            [
+              "k",
+              2
+            ]
+          ],
+          "expected_candidate_rows": [
+            [
+              null,
+              1
+            ],
+            [
+              "k",
+              2
+            ]
+          ]
+        },
+        {
+          "name": "empty_control",
+          "instance": {
+            "tag": []
+          },
+          "expected_reference_rows": [],
+          "expected_candidate_rows": []
+        }
+      ],
+      "expected_column_count": 2
+    }
+  ]
+}

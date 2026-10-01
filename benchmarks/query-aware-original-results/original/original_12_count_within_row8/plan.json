@@ -1,0 +1,52 @@
+{
+  "case_id": "original_12_count_within_row8",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "da998da40b206c6246d32bfbed8dd74c46c190e98de6b01278eb72ac2d2f2605",
+      "reference": "21d03d7e336d7960fae2568121ee303461fc9aae06caab61f054cdf37472cdc6"
+    },
+    "counts": [
+      6,
+      7,
+      8
+    ],
+    "effective_domains": [
+      {
+        "column": "category",
+        "explicit_domain": false,
+        "pool": [
+          "",
+          "0",
+          "01",
+          "A",
+          "B",
+          "x",
+          "é"
+        ],
+        "table": "ballot",
+        "type": "TEXT"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [
+      [
+        "ballot",
+        "category"
+      ]
+    ],
+    "joins": [],
+    "max_rows": 8,
+    "preferred": [],
+    "schema_sha256": "d5317e0168d5963de0f4e0b13d21a7b7d30aaf07c52445d261aa1119eab4570e",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "da998da40b206c6246d32bfbed8dd74c46c190e98de6b01278eb72ac2d2f2605",
+      "reference": "21d03d7e336d7960fae2568121ee303461fc9aae06caab61f054cdf37472cdc6"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "5e7ba0363b3466d617601dce2b7a1653a98686814eac758143ae1fb28c244709",
+  "compile_seconds": 0.002310595002199989
+}

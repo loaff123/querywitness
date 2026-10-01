@@ -1,0 +1,16 @@
+{
+  "frozen_at_utc": "2026-09-30T23:32:27.797264+00:00",
+  "classification": "Publication-safe provenance export of original pre-run development-validation suite; not external generalization",
+  "manifest_sha256": "1f20a9a4fa63ca7d3fcc20a3a6388f9135655c0dbcd6513a4ac0e3ba2d4a5d03",
+  "fixtures_sha256": "52ac95c4e3c4930dcaa7804f81cadb01c92fb2e23449697420c43cb701e1a60a",
+  "original_fixtures_sha256": "ece01af307d0a3c67cdc86c7909cc2d854cac2b59be285493e325827df4755ca",
+  "original_manifest_sha256": "29fa02fc876acdc782d67c5a4b87c73f1b200ecc1f34b0fbdcd52bd369313c47",
+  "original_freeze_sha256": "d597a35705311e0bd23c958c40d949dcd7b8b3ab0ef6bd10d127bb226354ffbb",
+  "original_frozen_at_utc": "2026-09-30T23:29:15.263205+00:00",
+  "contract_sha256": "0919632cc84085060b54c06b3cca8902a05269bb1578262cc6766887aa5fd847",
+  "semantic_cases_identical": true,
+  "case_count": 16,
+  "fixture_count": 22,
+  "generator_calls_by_fixture_author_before_export_freeze": 0,
+  "external_corpus_or_result_reads": 0
+}

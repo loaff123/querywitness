@@ -1,0 +1,139 @@
+{
+  "case_id": "original_09_multicolumn_natural_join",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "df9c8d1a819a032aa9af3a7be7e13627c303460e7ab64fd96c00acda6db3c1f5",
+      "reference": "4d30cdfe9818677e4ec5e2c6a3820893d7c5e17d93ec79ae313eb7eaf89448cb"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "key",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          10,
+          100
+        ],
+        "table": "left_side",
+        "type": "INTEGER"
+      },
+      {
+        "column": "payload",
+        "explicit_domain": false,
+        "pool": [
+          "",
+          "0",
+          "01",
+          "A",
+          "B",
+          "x",
+          "é"
+        ],
+        "table": "left_side",
+        "type": "TEXT"
+      },
+      {
+        "column": "region",
+        "explicit_domain": false,
+        "pool": [
+          "",
+          "0",
+          "01",
+          "A",
+          "B",
+          "x",
+          "é"
+        ],
+        "table": "left_side",
+        "type": "TEXT"
+      },
+      {
+        "column": "key",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          10,
+          100
+        ],
+        "table": "right_side",
+        "type": "INTEGER"
+      },
+      {
+        "column": "region",
+        "explicit_domain": false,
+        "pool": [
+          "",
+          "0",
+          "01",
+          "A",
+          "B",
+          "x",
+          "é"
+        ],
+        "table": "right_side",
+        "type": "TEXT"
+      },
+      {
+        "column": "score",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          10,
+          100
+        ],
+        "table": "right_side",
+        "type": "INTEGER"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [
+      [
+        [
+          "left_side",
+          "key"
+        ],
+        [
+          "right_side",
+          "key"
+        ]
+      ],
+      [
+        [
+          "left_side",
+          "region"
+        ],
+        [
+          "right_side",
+          "region"
+        ]
+      ]
+    ],
+    "max_rows": 8,
+    "preferred": [],
+    "schema_sha256": "9acdff2b1b7ea92aabb6788fe57e7fccc8f0de93f0b30568ed77b3dc1adb7ca6",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "df9c8d1a819a032aa9af3a7be7e13627c303460e7ab64fd96c00acda6db3c1f5",
+      "reference": "4d30cdfe9818677e4ec5e2c6a3820893d7c5e17d93ec79ae313eb7eaf89448cb"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "ef02895ecc14a2f527d75d33015a12c7f455a6adefdf39a4e95a022347af1db8",
+  "compile_seconds": 0.00435333899804391
+}

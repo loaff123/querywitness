@@ -1,0 +1,79 @@
+{
+  "case_id": "original_06_qualified_alias",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "dac5e1fe17b00bcac320978ad4b1b74bde0a32aa0a8339e74097ae2e8e03d4da",
+      "reference": "234ce991fc480c7ccbb31dc636e16a00faf13e8fe9f0c1645aa24ca6492ffbb4"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "id",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "measurement",
+        "type": "INTEGER"
+      },
+      {
+        "column": "signal",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          10,
+          100,
+          48262,
+          48263,
+          48264,
+          48265
+        ],
+        "table": "measurement",
+        "type": "INTEGER"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [],
+    "max_rows": 8,
+    "preferred": [
+      [
+        "measurement",
+        "signal",
+        [
+          48262,
+          48263,
+          48264,
+          48265
+        ]
+      ]
+    ],
+    "schema_sha256": "dfd3568500ce17f1c587eda3f93a231901e435b9ae2a0d33c810d09343fad11c",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "dac5e1fe17b00bcac320978ad4b1b74bde0a32aa0a8339e74097ae2e8e03d4da",
+      "reference": "234ce991fc480c7ccbb31dc636e16a00faf13e8fe9f0c1645aa24ca6492ffbb4"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "022b0dd8e67bc3529b0b45613b755352485f32d7b6f34c239e13407185f44e76",
+  "compile_seconds": 0.0020181699946988374
+}

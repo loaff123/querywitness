@@ -1,0 +1,96 @@
+{
+  "case_id": "original_07_duplicate_sensitive_join",
+  "plan": {
+    "ast_sha256": {
+      "candidate": "2745e91c2c5610d44fb900fa5d8572073c858618ba5dec46420dfdd3b647c57a",
+      "reference": "f6aee2a25833c35037141580c24df067d15dd1b8de0ea514c4fe31a4128b007c"
+    },
+    "counts": [],
+    "effective_domains": [
+      {
+        "column": "key",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "copy",
+        "type": "INTEGER"
+      },
+      {
+        "column": "key",
+        "explicit_domain": false,
+        "pool": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          100
+        ],
+        "table": "source",
+        "type": "INTEGER"
+      },
+      {
+        "column": "label",
+        "explicit_domain": false,
+        "pool": [
+          "",
+          "0",
+          "01",
+          "A",
+          "B",
+          "x",
+          "é"
+        ],
+        "table": "source",
+        "type": "TEXT"
+      }
+    ],
+    "generator_version": "query-aware-1",
+    "groups": [],
+    "joins": [
+      [
+        [
+          "copy",
+          "key"
+        ],
+        [
+          "source",
+          "key"
+        ]
+      ]
+    ],
+    "max_rows": 8,
+    "preferred": [],
+    "schema_sha256": "f66d5855ecaa25738a26d01ea00209a6eef22316681f82db79f8285393cc61db",
+    "skips": [],
+    "source_sha256": {
+      "candidate": "2745e91c2c5610d44fb900fa5d8572073c858618ba5dec46420dfdd3b647c57a",
+      "reference": "f6aee2a25833c35037141580c24df067d15dd1b8de0ea514c4fe31a4128b007c"
+    },
+    "sql_bytes": 32768,
+    "sqlglot_version": "27.29.0",
+    "warnings": []
+  },
+  "plan_sha256": "096bf4cb5d80db5cea19fe226a3515d7191bd52bc7a87b021eed337c08d882b0",
+  "compile_seconds": 0.0022116709951660596
+}

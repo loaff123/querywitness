@@ -1,0 +1,41 @@
+{
+  "classification": "Newly authored original DEVELOPMENT validation; not held-out external generalization",
+  "source_commit": "ffb7c74ec8e899cb3ef60590231fffa2cbbe2e5c",
+  "source_version": "0.2.0",
+  "source_files_sha256": {
+    "src/querywitness/__init__.py": "f85c2a71eb0402c39060ee3554eb1221e95c0d975da04b9540f0ee7d8c93c5f4",
+    "src/querywitness/__main__.py": "e1c5433a3a9d3b92acd845231503437ca4ad848e333c7b9038fe470fe5994bb8",
+    "src/querywitness/artifacts.py": "f1035156a088be69913fb7a85a0a0f6f9ac56677c0222d07e45e2cc360a83c35",
+    "src/querywitness/benchmark.py": "e8ad88676c0bd56660db236e70ff364978bcc26cb0e39036ec2fa1bb4a2bd8ec",
+    "src/querywitness/catalog.py": "beca94ebfe435415bfd72b0d86b28a2bf7627455ecda3f12554dff3043159421",
+    "src/querywitness/cli.py": "a26fedc29c92ee0a5dee43846b698928974cbad19c332a530fb490b1e4bf2446",
+    "src/querywitness/compare.py": "d19f00c0d7272fda7d5f209849dea7992b18e3084c8ad9ebe27d68fddf55e31c",
+    "src/querywitness/engine.py": "36a9e23a80024d42cbc426cafba79bc40975509bd625bee14cf4eec704f055de",
+    "src/querywitness/generate.py": "dbd35f2b1f119f8044016856dabfd43128a7e719406a8687193f977b6b5bc522",
+    "src/querywitness/query_generate.py": "37bd42ea0afc1312e8f4e12950c74f85b0ea0f1b8b1f39dc898c11255cc3a3b8",
+    "src/querywitness/query_plan.py": "090c8514f689481cc9b46aa6c8022957c0b323ec34dcc760d3cba26c8f60ca44",
+    "src/querywitness/reduce.py": "14d3d95bc42132f1a9b255b3df4a5da687996719da420a83b570a49e7a8bf123",
+    "src/querywitness/schema.py": "a83c1187807f4fbd1d3b5b76314ceee442631d6e45996490b3680f2740cc9c26",
+    "src/querywitness/search.py": "9d3549177e1f91d15283cc507cc7de100e87343cb32673a524d77ba1c54b1935",
+    "src/querywitness/semantics.py": "94e83bbe79c961c843f38c56ae655432f44f2178e030e5a4b0d61f3b09773af0"
+  },
+  "fixture_case_semantic_sha256": "126a48b7416c8628d0438973f3f286c4654983074d89b9ba398270e5a5981b8c",
+  "fixture_cases_byte_semantic_identical_to_independently_frozen_original": true,
+  "fixture_policy": "Only top-level internal provenance/path labels were sanitized in the public suite; all case objects are unchanged.",
+  "results_policy": "Plans, case summaries and witness JSON are exact copied bytes. Each gzip decompresses to the exact original trial JSONL bytes; runtime path labels are omitted. Cohort-level summaries and checks contain only original-suite records.",
+  "reproduction": "python scripts/evaluate_query_aware_original.py run --output NEW_DIRECTORY --compare-recorded benchmarks/query-aware-original-results",
+  "limits": "Equal trial, maximum accepted-row and query-execution budgets. Effective value pools, actual row counts, generation attempts and wall-clock work are not equal.",
+  "case_count": 16,
+  "methods": [
+    "random",
+    "boundary",
+    "query_aware"
+  ],
+  "repeats": 4,
+  "trials_per_case_method_repeat": 64,
+  "total_trial_records": 12288,
+  "first_witnesses": 92,
+  "independently_verified": 92,
+  "max_rows_per_table": 8,
+  "publication_scope": "This evidence contains only the independently authored original suite."
+}

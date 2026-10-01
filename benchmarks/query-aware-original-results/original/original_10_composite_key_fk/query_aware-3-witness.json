@@ -1,0 +1,166 @@
+{
+  "case_id": "original_10_composite_key_fk",
+  "cohort": "original",
+  "source_index": null,
+  "source_row_sha256": null,
+  "fixture_case_sha256": "360c542a9db3f7261c85a8c21974823bbc91ab699455be40451ec50152c0f819",
+  "pair_sha256": "69a8751e0b4244154faa94f5d30cf7e9da0c8b4ec6ee96b0cd2dbc07b5941191",
+  "plan_sha256": "9ab925c014326b1844e361004f1a10905e9c743bd7497f582774595b2b4f3969",
+  "policy": "bag",
+  "method": "query_aware",
+  "repeat": 3,
+  "trial": 2,
+  "seed": 20263932,
+  "instance": {
+    "parent": [
+      [
+        100,
+        -1,
+        "A"
+      ],
+      [
+        -1,
+        -1,
+        "A"
+      ],
+      [
+        0,
+        0,
+        "A"
+      ],
+      [
+        1,
+        1,
+        "A"
+      ],
+      [
+        2,
+        2,
+        "A"
+      ],
+      [
+        3,
+        3,
+        "A"
+      ],
+      [
+        4,
+        4,
+        "A"
+      ],
+      [
+        5,
+        5,
+        "A"
+      ]
+    ],
+    "child": [
+      [
+        100,
+        -1,
+        "0"
+      ]
+    ]
+  },
+  "instance_sha256": "32a167ddcb7ef28d4ca92afde1f4c09d2f4d6e4cc0280f3afe2d522e9ac92330",
+  "table_rows": {
+    "parent": 8,
+    "child": 1
+  },
+  "generator_stats": {
+    "schedule": "count_target",
+    "attempted_rows": 328,
+    "accepted_rows": 9,
+    "rejected_rows": 319,
+    "requested_rows": {
+      "parent": 8,
+      "child": 8
+    },
+    "attempt_budget": 640
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "note",
+      "label"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "0"
+        },
+        {
+          "type": "text",
+          "value": "A"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "note",
+      "label"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "0"
+        },
+        {
+          "type": "text",
+          "value": "A"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "0"
+        },
+        {
+          "type": "text",
+          "value": "A"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "plain_observations": [
+    {
+      "rows": [
+        [
+          "0",
+          "A"
+        ]
+      ],
+      "width": 2
+    },
+    {
+      "rows": [
+        [
+          "0",
+          "A"
+        ],
+        [
+          "0",
+          "A"
+        ]
+      ],
+      "width": 2
+    }
+  ],
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 2,
+    "reference_only_count": 0,
+    "candidate_only_count": 1
+  }
+}

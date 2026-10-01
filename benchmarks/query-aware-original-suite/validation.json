@@ -1,0 +1,378 @@
+{
+  "status": "PASS",
+  "sqlite_version": "3.53.1",
+  "suite_classification": "newly authored development validation; NOT external generalization",
+  "case_count": 16,
+  "hand_authored_fixture_count": 22,
+  "globally_different_pairs": 12,
+  "globally_equivalent_controls": 4,
+  "row8_different_pairs": 11,
+  "additional_exhaustive_bounded_instances": 210,
+  "negative_legality_checks": 2,
+  "results": [
+    {
+      "case_id": "original_01_negative_literal",
+      "fixture": "literal_zero_neighbor_and_null",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          -734921
+        ]
+      ],
+      "candidate_rows": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "original_02_near_int64_max",
+      "fixture": "literal_zero_neighbor_and_null",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          9223372036854775799
+        ]
+      ],
+      "candidate_rows": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "original_03_near_int64_min",
+      "fixture": "literal_zero_neighbor_and_null",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          -9223372036854775799
+        ]
+      ],
+      "candidate_rows": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "original_04_exact_unicode",
+      "fixture": "both_normalization_forms",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          "mañana/雪/🙂/é"
+        ]
+      ],
+      "candidate_rows": [
+        [
+          "mañana/雪/🙂/é"
+        ]
+      ]
+    },
+    {
+      "case_id": "original_05_domain_forbids_literal",
+      "fixture": "all_legal_values_and_duplicate",
+      "equal": true,
+      "within_row8": true,
+      "reference_rows": [],
+      "candidate_rows": []
+    },
+    {
+      "case_id": "original_06_qualified_alias",
+      "fixture": "two_signals",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          5
+        ]
+      ],
+      "candidate_rows": [
+        [
+          6
+        ]
+      ]
+    },
+    {
+      "case_id": "original_07_duplicate_sensitive_join",
+      "fixture": "one_source_two_copies",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          "repeated"
+        ],
+        [
+          "repeated"
+        ]
+      ],
+      "candidate_rows": [
+        [
+          "repeated"
+        ]
+      ]
+    },
+    {
+      "case_id": "original_08_correlated_exists",
+      "fixture": "one_owner_one_nonowner",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          11
+        ]
+      ],
+      "candidate_rows": [
+        [
+          11
+        ],
+        [
+          12
+        ]
+      ]
+    },
+    {
+      "case_id": "original_09_multicolumn_natural_join",
+      "fixture": "same_key_two_regions",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          "chosen",
+          20
+        ]
+      ],
+      "candidate_rows": [
+        [
+          "chosen",
+          10
+        ],
+        [
+          "chosen",
+          20
+        ]
+      ]
+    },
+    {
+      "case_id": "original_10_composite_key_fk",
+      "fixture": "two_tenants_reuse_code",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          "chosen",
+          "north"
+        ]
+      ],
+      "candidate_rows": [
+        [
+          "chosen",
+          "north"
+        ],
+        [
+          "chosen",
+          "south"
+        ]
+      ]
+    },
+    {
+      "case_id": "original_11_null_predicate",
+      "fixture": "null_and_integer",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          null
+        ]
+      ],
+      "candidate_rows": []
+    },
+    {
+      "case_id": "original_12_count_within_row8",
+      "fixture": "seven_votes",
+      "equal": false,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          "a",
+          7
+        ]
+      ],
+      "candidate_rows": []
+    },
+    {
+      "case_id": "original_12_count_within_row8",
+      "fixture": "eight_votes_control",
+      "equal": true,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          "a",
+          8
+        ]
+      ],
+      "candidate_rows": [
+        [
+          "a",
+          8
+        ]
+      ]
+    },
+    {
+      "case_id": "original_12_count_within_row8",
+      "fixture": "empty_control",
+      "equal": true,
+      "within_row8": true,
+      "reference_rows": [],
+      "candidate_rows": []
+    },
+    {
+      "case_id": "original_13_count_beyond_row8",
+      "fixture": "nine_votes_outside_row8",
+      "equal": false,
+      "within_row8": false,
+      "reference_rows": [
+        [
+          "a",
+          9
+        ]
+      ],
+      "candidate_rows": []
+    },
+    {
+      "case_id": "original_13_count_beyond_row8",
+      "fixture": "eight_votes_bounded_control",
+      "equal": true,
+      "within_row8": true,
+      "reference_rows": [],
+      "candidate_rows": []
+    },
+    {
+      "case_id": "original_13_count_beyond_row8",
+      "fixture": "ten_votes_control",
+      "equal": true,
+      "within_row8": false,
+      "reference_rows": [
+        [
+          "a",
+          10
+        ]
+      ],
+      "candidate_rows": [
+        [
+          "a",
+          10
+        ]
+      ]
+    },
+    {
+      "case_id": "original_14_ordinary_equivalent",
+      "fixture": "around_boundary_and_null",
+      "equal": true,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          36
+        ],
+        [
+          37
+        ],
+        [
+          37
+        ],
+        [
+          -4
+        ]
+      ],
+      "candidate_rows": [
+        [
+          36
+        ],
+        [
+          37
+        ],
+        [
+          37
+        ],
+        [
+          -4
+        ]
+      ]
+    },
+    {
+      "case_id": "original_15_redundant_join_equivalent",
+      "fixture": "shared_parent_and_unused_parent",
+      "equal": true,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          31
+        ],
+        [
+          32
+        ],
+        [
+          33
+        ]
+      ],
+      "candidate_rows": [
+        [
+          31
+        ],
+        [
+          32
+        ],
+        [
+          33
+        ]
+      ]
+    },
+    {
+      "case_id": "original_15_redundant_join_equivalent",
+      "fixture": "empty_both_tables",
+      "equal": true,
+      "within_row8": true,
+      "reference_rows": [],
+      "candidate_rows": []
+    },
+    {
+      "case_id": "original_16_redundant_count_equivalent",
+      "fixture": "duplicate_and_null_groups",
+      "equal": true,
+      "within_row8": true,
+      "reference_rows": [
+        [
+          null,
+          1
+        ],
+        [
+          "k",
+          2
+        ]
+      ],
+      "candidate_rows": [
+        [
+          null,
+          1
+        ],
+        [
+          "k",
+          2
+        ]
+      ]
+    },
+    {
+      "case_id": "original_16_redundant_count_equivalent",
+      "fixture": "empty_control",
+      "equal": true,
+      "within_row8": true,
+      "reference_rows": [],
+      "candidate_rows": []
+    }
+  ]
+}

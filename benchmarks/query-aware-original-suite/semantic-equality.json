@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "comparison": "All schema, SQL, expected outcomes, classifications, rationales and fixture rows are exactly equal to the original suite.",
+  "only_fixture_change": "Replaced internal authorship identifier with publication-safe generic provenance.",
+  "original_fixtures_sha256": "ece01af307d0a3c67cdc86c7909cc2d854cac2b59be285493e325827df4755ca",
+  "export_fixtures_sha256": "52ac95c4e3c4930dcaa7804f81cadb01c92fb2e23449697420c43cb701e1a60a",
+  "canonical_cases_sha256": "126a48b7416c8628d0438973f3f286c4654983074d89b9ba398270e5a5981b8c",
+  "case_count": 16,
+  "fixture_count": 22
+}

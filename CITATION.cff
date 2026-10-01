@@ -4,7 +4,7 @@ message: >-
   commit, SQLite runtime, catalog hash, comparison policy, and experiment budget.
 type: software
 title: "QueryWitness: Bounded SQLite Counterexample Search and Replay"
-version: 0.1.0
+version: 0.2.0
 authors:
   - name: "loaff123"
     website: "https://github.com/loaff123"

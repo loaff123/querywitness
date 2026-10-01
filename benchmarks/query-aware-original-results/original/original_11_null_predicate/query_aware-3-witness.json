@@ -1,0 +1,95 @@
+{
+  "case_id": "original_11_null_predicate",
+  "cohort": "original",
+  "source_index": null,
+  "source_row_sha256": null,
+  "fixture_case_sha256": "0e6586b86c7e654fd0d0f685b239a23ac4773303815ca4c3f16b9680f3f2a01f",
+  "pair_sha256": "8de8a1d2ff747bc4cb2ceb1ba18cefcead58046a540c1612aa6e560e72b7130f",
+  "plan_sha256": "b46c46888ab6c1cb6d6b975b551a6af4ed615af8ac1106c67d2f63e89f866e3d",
+  "policy": "bag",
+  "method": "query_aware",
+  "repeat": 3,
+  "trial": 5,
+  "seed": 20263935,
+  "instance": {
+    "maybe": [
+      [
+        0
+      ],
+      [
+        null
+      ],
+      [
+        1
+      ],
+      [
+        -1
+      ],
+      [
+        -1
+      ]
+    ]
+  },
+  "instance_sha256": "311b0801feb207aa350b719f1617e81146de2e70e637edad9e581477502018a4",
+  "table_rows": {
+    "maybe": 5
+  },
+  "generator_stats": {
+    "schedule": "random",
+    "attempted_rows": 5,
+    "accepted_rows": 5,
+    "rejected_rows": 0,
+    "requested_rows": {
+      "maybe": 5
+    },
+    "attempt_budget": 200
+  },
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "value"
+    ],
+    "rows": [
+      [
+        {
+          "type": "null",
+          "value": null
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "value"
+    ],
+    "rows": [],
+    "detail": null
+  },
+  "plain_observations": [
+    {
+      "rows": [
+        [
+          null
+        ]
+      ],
+      "width": 1
+    },
+    {
+      "rows": [],
+      "width": 1
+    }
+  ],
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 0,
+    "reference_only_count": 1,
+    "candidate_only_count": 0
+  }
+}

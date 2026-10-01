@@ -22,12 +22,36 @@ def search(schema:Schema,reference:str,candidate:str,*,trials=100,seed=0,strateg
     start=time.monotonic()
     provenance={'schema_version':'1.0','schema_sha256':hashlib.sha256(json.dumps(schema.to_dict(),sort_keys=True,separators=(',',':')).encode()).hexdigest(),'execution_limits':asdict(limits),'max_rows':max_rows,'search_seconds':seconds,'generator_version':'0.1.0','sqlite_version':sqlite3.sqlite_version,'sqlglot_version':PARSER_VERSION,'seed':seed,'strategy':strategy,'policy':policy,'trial_budget':trials,'reference_sha256':hashlib.sha256(reference.encode()).hexdigest(),'candidate_sha256':hashlib.sha256(candidate.encode()).hexdigest()}
     evaluated=inconclusive=0;errors=[]
+    plan=None
+    if strategy=='query_aware':
+        from .query_plan import compile_plan, PlanningBudgetExceeded
+        from .query_generate import generate_query_aware
+        provenance.update(generated_trials=0,query_executions=0,both_empty_trials=0,
+                          generation_attempted_rows=0,generation_rejected_rows=0,
+                          generation_accepted_rows=0,generator_version='query-aware-1')
+        try:plan=compile_plan(schema,reference,candidate,max_rows=max_rows,sql_bytes=limits.sql_bytes,deadline=start+seconds)
+        except PlanningBudgetExceeded as e:
+            return {**provenance,'status':'search_budget_exhausted','detail':str(e),'budget_stage':'planning','evaluated':0,'inconclusive':0}
+        except GenerationError as e:
+            return {**provenance,'status':'unsupported_generation','detail':str(e),'evaluated':0,'inconclusive':0}
+        provenance['generation_plan']=plan.to_dict()
     for index in range(trials):
         if time.monotonic()-start>=seconds:return {**provenance,'status':'search_budget_exhausted','evaluated':evaluated,'inconclusive':inconclusive,'errors':errors}
         current_seed=seed+index
-        try:instance=generate_instance(schema,current_seed,strategy,max_rows)
+        try:
+            if plan is None:instance=generate_instance(schema,current_seed,strategy,max_rows)
+            else:
+                instance,stats=generate_query_aware(schema,plan,current_seed)
+                provenance['generated_trials']+=1
+                for key in ('attempted_rows','rejected_rows','accepted_rows'):
+                    provenance['generation_'+key]+=stats[key]
         except GenerationError as e:return {**provenance,'status':'unsupported_generation','detail':str(e),'evaluated':evaluated,'inconclusive':inconclusive}
+        if plan is not None and time.monotonic()-start>=seconds:
+            return {**provenance,'status':'search_budget_exhausted','budget_stage':'generation','evaluated':evaluated,'inconclusive':inconclusive,'errors':errors}
         a=execute(schema,instance,reference,limits,policy=policy);b=execute(schema,instance,candidate,limits,policy=policy);comparison=compare_results(a,b,policy);evaluated+=1
+        if plan is not None:
+            provenance['query_executions']+=2
+            provenance['both_empty_trials']+=int(a.status==b.status=='ok' and not a.rows and not b.rows)
         if comparison['status']=='inconclusive':
             inconclusive+=1
             if len(errors)<10:errors.append({'seed':current_seed,'reference_status':a.status,'candidate_status':b.status,'reference_detail':a.detail,'candidate_detail':b.detail})

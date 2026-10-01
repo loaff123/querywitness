@@ -69,3 +69,5 @@ Unlike search, each random/boundary benchmark run consumes its entire trial budg
 Do not interpret exit 0 as query equivalence. Use the JSON `status` and the command's meaning. In CI, a search exit 1 may be the intended regression signal. Benchmark returns 3 if any comparisons are inconclusive; otherwise it returns 1 for control mismatches and 0 for a completed run. Catalog validation and benchmark failures should be inspected rather than counted as semantic detections.
 
 JSON files are limited to 16 MB and duplicate keys/nonfinite JSON numbers are rejected. SQL input is limited to 32,768 UTF-8 bytes. Standard output and generated files may contain supplied SQL or data; treat captured logs accordingly.
+
+The opt-in `--strategy query_aware` records exact effective pools, parser/source provenance, hint skips and generation accounting. Explicit schema domains are never widened. See [the query-aware contract](QUERY_AWARE.md).

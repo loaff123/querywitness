@@ -1,0 +1,208 @@
+{
+  "case_id": "original_09_multicolumn_natural_join",
+  "cohort": "original",
+  "source_index": null,
+  "source_row_sha256": null,
+  "fixture_case_sha256": "93b7e2e82e589546ca0f376d089e2ed7e6fe9116e606fe6b593aab96d0f0c56e",
+  "pair_sha256": "56e22b79496907665ae59dcea82931127e2c1b10df5180adf896742aae503ec7",
+  "plan_sha256": "ef02895ecc14a2f527d75d33015a12c7f455a6adefdf39a4e95a022347af1db8",
+  "policy": "bag",
+  "method": "random",
+  "repeat": 1,
+  "trial": 0,
+  "seed": 20261930,
+  "instance": {
+    "left_side": [
+      [
+        2,
+        "B",
+        "x"
+      ],
+      [
+        -2,
+        "A",
+        "B"
+      ],
+      [
+        -2,
+        "",
+        "A"
+      ],
+      [
+        100,
+        "é",
+        "é"
+      ],
+      [
+        -1,
+        "",
+        "A"
+      ],
+      [
+        10,
+        "01",
+        "0"
+      ],
+      [
+        0,
+        "A",
+        "é"
+      ],
+      [
+        -2,
+        "B",
+        "0"
+      ]
+    ],
+    "right_side": [
+      [
+        2,
+        "B",
+        1
+      ],
+      [
+        -2,
+        "0",
+        1
+      ],
+      [
+        100,
+        "0",
+        2
+      ]
+    ]
+  },
+  "instance_sha256": "87572558888ff1f5e82f72f289f21f0e8b620e95cfb0c6b8facf871408a136ee",
+  "table_rows": {
+    "left_side": 8,
+    "right_side": 3
+  },
+  "generator_stats": null,
+  "reference_observation": {
+    "status": "ok",
+    "columns": [
+      "payload",
+      "score"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "x"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "candidate_observation": {
+    "status": "ok",
+    "columns": [
+      "payload",
+      "score"
+    ],
+    "rows": [
+      [
+        {
+          "type": "text",
+          "value": "x"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "B"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "A"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "é"
+        },
+        {
+          "type": "integer",
+          "value": "2"
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "value": "0"
+        },
+        {
+          "type": "integer",
+          "value": "1"
+        }
+      ]
+    ],
+    "detail": null
+  },
+  "plain_observations": [
+    {
+      "rows": [
+        [
+          "x",
+          1
+        ]
+      ],
+      "width": 2
+    },
+    {
+      "rows": [
+        [
+          "x",
+          1
+        ],
+        [
+          "B",
+          1
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "é",
+          2
+        ],
+        [
+          "0",
+          1
+        ]
+      ],
+      "width": 2
+    }
+  ],
+  "comparison": {
+    "policy": "bag",
+    "reference_status": "ok",
+    "candidate_status": "ok",
+    "status": "mismatch",
+    "reason": "observed_rows",
+    "reference_rows": 1,
+    "candidate_rows": 5,
+    "reference_only_count": 0,
+    "candidate_only_count": 4
+  }
+}
