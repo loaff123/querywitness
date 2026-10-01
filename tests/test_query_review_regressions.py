@@ -49,7 +49,11 @@ class QueryReviewTests(unittest.TestCase):
 
     def test_planning_deadline_returns_budget_status_without_query_execution(self):
         from querywitness.search import search
-        result=search(self.schema,'SELECT n FROM items','SELECT n FROM items',strategy='query_aware',seconds=1e-9,trials=8)
+        from unittest.mock import patch
+        ticks=iter((10.0,11.0))
+        # A deterministic clock avoids assumptions about Windows tick resolution.
+        with patch('querywitness.search.time.monotonic',side_effect=lambda: next(ticks,11.0)):
+            result=search(self.schema,'SELECT n FROM items','SELECT n FROM items',strategy='query_aware',seconds=0.5,trials=8)
         self.assertEqual(result['status'],'search_budget_exhausted')
         self.assertEqual(result['query_executions'],0)
         self.assertEqual(result['evaluated'],0)

@@ -33,6 +33,11 @@ def canonical(value):
 def digest(value):
     return hashlib.sha256(canonical(value)).hexdigest()
 
+def relative_posix(path, root):
+    """Serialize relative artifact paths identically on Windows and POSIX."""
+    return path.relative_to(root).as_posix()
+
+
 def file_digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -490,7 +495,7 @@ def verify_output(out, save=False):
                 if first is None:
                     continue
                 witness = read_json(path)
-                report = {'path': str(path.relative_to(out)), 'cohort': 'original',
+                report = {'path': relative_posix(path, out), 'cohort': 'original',
                           'case_id': case['case_id'], 'method': method, 'repeat': repeat}
                 try:
                     if witness['trial'] != first['trial'] or witness['seed'] != first['seed']:
@@ -530,7 +535,7 @@ def make_manifest(out):
         if path.name == 'trials.jsonl.gz':
             raw = read_trial_bytes(path)
             entry.update(decompressed_bytes=len(raw), decompressed_sha256=bytes_digest(raw), records=len(raw.splitlines()))
-        files[str(path.relative_to(out))] = entry
+        files[relative_posix(path, out)] = entry
     return {'format_version': 1, 'cohort': 'original', 'case_count': 16, 'trial_records': 12288,
             'compression': 'gzip, blank filename, mtime=0, exact decompressed bytes preserved', 'files': files}
 
@@ -549,7 +554,7 @@ def run_original(out, compare_to=None):
     cases = original_cases()
     config = default_config()
     out.mkdir(parents=True, exist_ok=False)
-    before = {str(path.relative_to(SOURCE)): file_digest(path)
+    before = {relative_posix(path, SOURCE): file_digest(path)
               for directory in (SOURCE/'src', FIXTURES) for path in sorted(directory.rglob('*'))
               if path.is_file() and '__pycache__' not in path.parts and not path.name.endswith('.pyc')}
     write_json(out/'input-freeze.json', {'classification': 'original DEVELOPMENT validation; not external generalization',

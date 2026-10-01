@@ -51,7 +51,7 @@ class OriginalReproducerTests(unittest.TestCase):
 
     def test_original_fixture_case_identity(self):
         m = load(self)
-        source = json.loads((m.FIXTURES/'fixtures.json').read_text())['cases']
+        source = json.loads((m.FIXTURES/'fixtures.json').read_text(encoding='utf-8'))['cases']
         cases = m.original_cases()
         for original,case in zip(source,cases):
             self.assertEqual(case['fixture_case_sha256'],m.digest(original))
@@ -62,12 +62,12 @@ class OriginalReproducerTests(unittest.TestCase):
         m = load(self)
         results=ROOT/'benchmarks/query-aware-original-results'
         self.assertTrue(results.exists())
-        manifest=json.loads((results/'MANIFEST.json').read_text())
+        manifest=json.loads((results/'MANIFEST.json').read_text(encoding='utf-8'))
         self.assertEqual(manifest['trial_records'],12288)
         seen=set()
         for path in sorted((results/'original').glob('*/trials.jsonl.gz')):
             raw=gzip.decompress(path.read_bytes())
-            relative=str(path.relative_to(results))
+            relative=path.relative_to(results).as_posix()
             entry=manifest['files'][relative]
             self.assertEqual(m.bytes_digest(path.read_bytes()),entry['sha256'])
             self.assertEqual(m.bytes_digest(raw),entry['decompressed_sha256'])
@@ -107,6 +107,15 @@ class OriginalReproducerTests(unittest.TestCase):
         result=subprocess.run([sys.executable,'-O',str(path),'verify'],capture_output=True,text=True)
         self.assertNotEqual(result.returncode,0)
         self.assertIn('Python -O is unsupported',result.stderr)
+
+    def test_windows_relative_paths_serialize_as_posix(self):
+        from pathlib import PureWindowsPath
+        m=load(self)
+        self.assertTrue(hasattr(m, 'relative_posix'), 'portable manifest path serializer is missing')
+        root=PureWindowsPath('C:/evidence')
+        path=root/'original'/'original_04_exact_unicode'/'trials.jsonl.gz'
+        self.assertEqual(m.relative_posix(path,root),
+                         'original/original_04_exact_unicode/trials.jsonl.gz')
 
 
 if __name__=='__main__':unittest.main()
