@@ -9,7 +9,8 @@ from .compare import compare_results
 class BudgetExceeded(Exception):pass
 
 def minimize(schema:Schema,instance:dict,reference:str,candidate:str,policy='bag',max_checks=500,seconds=30.0,limits:ExecutionLimits|None=None,*,deletion_mode='row')->dict:
-    if deletion_mode not in ('row','fk-closure'):raise ValueError('Unknown deletion mode')
+    if deletion_mode not in ('row','fk-closure'):
+        raise ValueError('Unknown deletion mode')
     if deletion_mode=='fk-closure':
         from .fk_closure import minimize_fk_closure
         return minimize_fk_closure(schema,instance,reference,candidate,policy,max_checks,seconds,limits)
