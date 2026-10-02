@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from pathlib import Path
 import stat
 import sys
@@ -77,6 +78,16 @@ def _bounded_integer(low: int, high: int):
     return parse
 
 
+def _bounded_seconds(value: str) -> float:
+    try:
+        seconds = float(value)
+    except ValueError:
+        raise argparse.ArgumentTypeError('Expected finite seconds from 0 to 300') from None
+    if not math.isfinite(seconds) or not 0 < seconds <= 300:
+        raise argparse.ArgumentTypeError('Expected finite seconds from 0 to 300')
+    return seconds
+
+
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog='querywitness',
@@ -98,12 +109,20 @@ def _parser() -> argparse.ArgumentParser:
     search_parser.add_argument('--seconds', type=float, default=60.0, help='Search wall-time budget (0–3600 seconds)')
     search_parser.add_argument('--no-minimize', action='store_true', help='Keep the generated witness without row reduction')
 
+    search_parser.add_argument('--reduction-mode', choices=('row', 'fk-closure'), default='row')
+
     demo_parser = commands.add_parser('demo', help='Write a known, hand-authored catalog counterexample')
     demo_parser.add_argument('family', nargs='?', default='count_nullable')
     demo_parser.add_argument('--out', required=True, help='New output directory')
 
+    demo_parser.add_argument('--reduction-mode', choices=('row', 'fk-closure'), default='row')
+
     replay_parser = commands.add_parser('replay', help='Verify a witness checksum and repeat its observations')
     replay_parser.add_argument('witness', help='Witness JSON file')
+
+    replay_parser.add_argument('--verify-minimality', action='store_true', help='Independently audit all singleton FK closures')
+    replay_parser.add_argument('--minimality-checks', type=_bounded_integer(1, 10000), default=500)
+    replay_parser.add_argument('--minimality-seconds', type=_bounded_seconds, default=30.0)
 
     catalog_parser = commands.add_parser('catalog', help='List synthetic families or validate their oracle fixtures')
     catalog_parser.add_argument('--validate', action='store_true')
@@ -119,6 +138,8 @@ def _parser() -> argparse.ArgumentParser:
 
 
 def _search(args) -> int:
+    if args.no_minimize and args.reduction_mode != 'row':
+        raise ValueError('--no-minimize conflicts with --reduction-mode fk-closure')
     destination = _destination(args.out)
     schema = Schema.from_dict(_load_json(args.schema))
     reference = _read_text(args.reference, MAX_SQL_BYTES)
@@ -130,9 +151,13 @@ def _search(args) -> int:
         instance = result['instance']
         reduction_meta = None
         if not args.no_minimize:
-            reduction = minimize(schema, instance, reference, candidate, policy=args.policy)
+            reduction = minimize(schema, instance, reference, candidate, policy=args.policy,
+                                 deletion_mode=args.reduction_mode)
             instance = reduction['instance']
             reduction_meta = {key: value for key, value in reduction.items() if key != 'instance'}
+            if args.reduction_mode == 'fk-closure' and not reduction['witness_reproduced']:
+                _print_json({'status': reduction['status'], 'reduction': reduction_meta})
+                return 3
         result['reduction'] = reduction_meta
         if destination is not None:
             search_meta = {key: value for key, value in result.items()
@@ -160,8 +185,12 @@ def _demo(args) -> int:
         raise ValueError(f'Unknown catalog family: {args.family}; use querywitness catalog')
     case = cases[args.family]
     schema = Schema.from_dict(case['schema'])
-    reduction = minimize(schema, case['revealing'], case['reference'], case['mutant'])
+    reduction = minimize(schema, case['revealing'], case['reference'], case['mutant'],
+                         deletion_mode=args.reduction_mode)
     reduction_meta = {key: value for key, value in reduction.items() if key != 'instance'}
+    if args.reduction_mode == 'fk-closure' and not reduction['witness_reproduced']:
+        _print_json({'status': reduction['status'], 'reduction': reduction_meta})
+        return 3
     value = build_witness(schema, reduction['instance'], case['reference'], case['mutant'],
                           search={'source': 'catalog_revealing_fixture', 'family': args.family},
                           reduction=reduction_meta)
@@ -177,8 +206,14 @@ def _run(args) -> int:
     if args.command == 'demo':
         return _demo(args)
     if args.command == 'replay':
-        result = replay(_load_json(args.witness))
+        result = replay(_load_json(args.witness), verify_minimality=args.verify_minimality,
+                        minimality_checks=args.minimality_checks, minimality_seconds=args.minimality_seconds)
         _print_json(result)
+        if args.verify_minimality:
+            audit = result['minimality_verification']['status']
+            if result['status'] == 'observation_changed' or audit == 'refuted':
+                return 1
+            return 0 if result['status'] == 'reproduced' and audit == 'verified' else 3
         return 0 if result['status'] == 'reproduced' else (3 if result['status'] == 'inconclusive' else 1)
     if args.command == 'catalog':
         if args.validate:

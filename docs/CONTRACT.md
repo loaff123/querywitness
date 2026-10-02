@@ -112,3 +112,18 @@ Validation and database construction support explicit instances with self-refere
 Default `ExecutionLimits`: 10,000 output rows, a 2,000,000-byte output/SQLite value bound, 1,000,000 approximate SQLite VM steps, 2 seconds per query execution, and 32,768 SQL UTF-8 bytes. Additional SQLite limits include 64 result columns, expression depth 100, 25 compound SELECT terms, zero attached databases, and zero query parameters. Parsed trees are capped at 4,096 nodes and depth 80.
 
 The output-byte counter uses encoded string representations of returned cells; it is not an exact process-memory meter. Progress checks are cooperative, every 100 VM operations. Parsing and database setup are not controlled by that SQLite callback. These limits reduce accidental runaway work; they are not OS-level memory, CPU, or wall-clock isolation.
+
+
+## FK-closure reduction boundary
+
+The optional least-deletion graph relies on this exact contract: matching column
+types, finite numeric values, BINARY text equality and declared unique parent keys.
+INTEGER keys are exact; REAL integers are restricted to the exactly representable
+binary64 range. Signed zero and equal integer/REAL key values match. NULL-containing
+unique parents can repeat, but no fully non-NULL FK depends on them. The graph
+neither generalizes to mixed affinities/custom collations/nonunique parent keys
+nor changes schema/engine semantics. Any future expansion needs graph re-review.
+
+Every closure candidate still passes the full schema and actual guarded SQLite
+execution. No CASCADE or SET NULL behavior is introduced. The new local-minimality
+claim and separately bounded replay audit are defined in [the method](ALGORITHM.md#foreign-key-closure-reduction-opt-in).

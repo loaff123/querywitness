@@ -32,3 +32,16 @@ Three guarantees must remain distinct: formal equivalence for a stated language/
 - No exhaustive name/trademark clearance or guarantee of novelty
 
 Future comparative work would need compatible SQL/schema/comparison contracts, installed baseline versions, matched resource accounting, prespecified workloads, and published failures. Citation alone is not a baseline experiment. Sources linked here retain their own licenses; the original synthetic catalog is not a redistribution of those datasets or implementations.
+
+
+## FK-closure deletion
+
+The opt-in closure operator is a small constraint-preserving extension of ordinary
+delta-debugging deletion. It is not a new minimization theory. [RATest (SIGMOD
+2019)](https://www.miaozhengjie.com/assets/pdf/ratest-sigmod19.pdf) already studies
+smallest counterexample subinstances and encodes FK implications in a
+provenance/solver formulation. QueryWitness instead traverses concrete reverse-FK
+dependencies under its unique-parent schema contract. Its final singleton-closure
+scan establishes only operation-relative 1-minimality, not RATest-style optimality
+or comparable performance. The motivating example and non-global counterexample
+are in [the method](ALGORITHM.md#foreign-key-closure-reduction-opt-in).

@@ -8,7 +8,11 @@ from .compare import compare_results
 
 class BudgetExceeded(Exception):pass
 
-def minimize(schema:Schema,instance:dict,reference:str,candidate:str,policy='bag',max_checks=500,seconds=30.0,limits:ExecutionLimits|None=None)->dict:
+def minimize(schema:Schema,instance:dict,reference:str,candidate:str,policy='bag',max_checks=500,seconds=30.0,limits:ExecutionLimits|None=None,*,deletion_mode='row')->dict:
+    if deletion_mode not in ('row','fk-closure'):raise ValueError('Unknown deletion mode')
+    if deletion_mode=='fk-closure':
+        from .fk_closure import minimize_fk_closure
+        return minimize_fk_closure(schema,instance,reference,candidate,policy,max_checks,seconds,limits)
     if type(max_checks) is not int or not 1<=max_checks<=10000:raise ValueError('Invalid reduction check budget')
     if not isinstance(seconds,(float,int)) or not math.isfinite(seconds) or not 0<seconds<=300:raise ValueError('Invalid reduction time budget')
     schema.validate_instance(instance);current=deepcopy(instance);checks=0;start=time.monotonic();inconclusive=0

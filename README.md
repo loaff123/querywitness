@@ -85,6 +85,16 @@ The optional strategy detected 18/45 already-inspected external development task
 
 On a frozen source-informed cohort, unchanged random/boundary/query-aware strategies found **24/27, 24/27 and 27/27** known-different pairs. Every method covered all three upstream bug clusters; 28 intended controls had no observed mismatch. The three extra pairs are related, query-aware produced fewer mismatch trials and took longer in generation, and the study is not blind or a population-recall estimate. See the [source-backed report and public reproduction package](docs/SQLGLOT_REGRESSION_VALIDATION.md).
 
+### Opt-in FK-closure reduction
+
+`search` and `demo` accept `--reduction-mode fk-closure`, preserving the default
+row-deletion mode. A parent and every dependent child can then be removed as one
+least constraint-preserving closure, without editing values or changing SQL.
+The result is closure-1-minimal only after a complete decisive final scan, not
+globally smallest. Ordinary replay reproduces observations; use
+`replay witness.json --verify-minimality` for a separate bounded audit.
+See [the operation, accounting and limitations](docs/ALGORITHM.md#foreign-key-closure-reduction-opt-in).
+
 ## Documentation
 
 - [Command line](docs/CLI.md) and [Python API](docs/API.md)

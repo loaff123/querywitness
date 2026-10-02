@@ -1,6 +1,7 @@
 import json
 import os
 from pathlib import Path
+import sqlite3
 import subprocess
 import sys
 import tempfile
@@ -92,6 +93,36 @@ class CLIBoundaryTests(unittest.TestCase):
             witness = json.loads((out / 'witness.json').read_text())
             self.assertEqual(witness['reduction'], summary['reduction'])
             self.assertEqual(self.runcli('replay', out / 'witness.json').returncode, 0)
+
+    def test_search_exports_query_files_ending_in_comments_without_newlines(self):
+        with tempfile.TemporaryDirectory() as root:
+            schema, reference, candidate = self.inputs(root)
+            reference.write_bytes(b'SELECT 1 -- trailing comment')
+            candidate.write_bytes(b'SELECT 2 -- trailing comment;')
+            out = Path(root) / 'out'
+            result = self.runcli('search', schema, reference, candidate, '--out', out,
+                                 '--trials', 1, '--strategy', 'boundary', '--seed', 0)
+            self.assertEqual(result.returncode, 1, result.stderr)
+            summary = json.loads((out / 'result.json').read_text())
+            self.assertEqual(summary['status'], 'counterexample')
+            self.assertEqual(summary['instance'], {'t': []})
+            witness = json.loads((out / 'witness.json').read_text())
+            self.assertEqual(witness['reference'], reference.read_bytes().decode('utf-8'))
+            self.assertEqual(witness['candidate'], candidate.read_bytes().decode('utf-8'))
+            replay = self.runcli('replay', out / 'witness.json')
+            self.assertEqual(replay.returncode, 0, replay.stderr)
+            self.assertEqual(json.loads(replay.stdout)['status'], 'reproduced')
+            db = sqlite3.connect(':memory:')
+            statements = []
+            try:
+                db.set_trace_callback(statements.append)
+                db.executescript((out / 'fixture.sql').read_text() + '\nSELECT 3;')
+            finally:
+                db.close()
+            queries = [statement for statement in statements if 'SELECT ' in statement]
+            self.assertEqual(len(queries), 3, statements)
+            for number, statement in enumerate(queries, 1):
+                self.assertIn(f'SELECT {number}', statement)
 
     def test_search_no_witness_still_saves_summary(self):
         with tempfile.TemporaryDirectory() as root:
